@@ -55,6 +55,7 @@ public class TabFragmentShootCond1 extends Fragment {
         meteoSrLayout = (LinearLayout)view.findViewById(R.id.linearMeteoSr);
         initSpinner();
         initButtons();
+        initEditors();
         eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
         meteoSrLayout.setVisibility(LinearLayout.GONE);
 
@@ -101,9 +102,6 @@ public class TabFragmentShootCond1 extends Fragment {
                 edtMeteoT40 = (EditText) view.findViewById(R.id.edtMeteoT40);
                 arrEditMeteoT[8] = edtMeteoT40;
 
-                editTemper = (EditText) view.findViewById(R.id.editTemper);
-
-
                 for(int i = 0; i < arrEditMeteoT.length; i++)
                     arrEditMeteoT[i].setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), i)));
             }
@@ -126,6 +124,14 @@ public class TabFragmentShootCond1 extends Fragment {
             }
         });
         //btnSСFill = (Button) view.findViewById(R.id.btnSСFill);
+    }
+
+    private void initEditors() {
+        editPress = (EditText) view.findViewById(R.id.editPress);
+        editTemper = (EditText) view.findViewById(R.id.editTemper);
+        editDirection = (EditText) view.findViewById(R.id.editDirection);
+        editWindSpeed = (EditText) view.findViewById(R.id.editWindSpeed);
+        editHeightMeteo = (EditText) view.findViewById(R.id.editHeightMeteo);
     }
 
      private double delTv(double realT, int hYbull){
