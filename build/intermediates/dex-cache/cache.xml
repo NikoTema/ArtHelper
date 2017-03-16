@@ -2,130 +2,148 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.0.1_5e59c949f843c1f17953c23d69d856674f09b724.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.1_eb101f311ac21c03f94a2e692a0987eaddcdd8c3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.0_989e03675f9ced2fd4882028e35b6bc72eaa601b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations-java5/15.0/7011b4551a8451906759b05814c58b9eb829ea9b/annotations-java5-15.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7011b4551a8451906759b05814c58b9eb829ea9b">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/annotations-java5-15.0_42ac1676d6d8bab7826d80da447a9a4646e1eb03.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_b6d790e68b94684435fd1d26ea4ef175c899ecc4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.0_3735581e0ea34e79214bbb5f4f979162bba078e3.jar" />
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_f842730fedc72dc099c1ae10ac25b2d9ff745e04/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.0.1_cd2d7b8d2272f1bf245fcab6a25c6acc6926389d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.0_834438257a5158fd3aeb284cdbc2e836cb0a9c24.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.0_c0d982161ddcdc17769fae44700ff936f375b4f7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.0_143cc8e1d6b17a91df01b81d23da5242050cd9f8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.0_ec93ba6d1efd9e56eefa06e0d317d6ae64b1ec7b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.0_d23b91bda60352cec72c8825c3837ff987dfe635.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_4235545e3ffb06e2e3bfca18bc6172f550a28897.jar" />
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_fe492be03f1fe2ae12501a02a9fad463a3abfce7/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.0.1_d59e05731b7d6961527b92fdd115659afdd39a05/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_d705b1bcb7cb6fb6677e0605d74f5b1b11d7e47e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_211f599ae9b77f571cfe412cad5546820c60f53f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.1_9536fd79cda1a05f2b1b709c5e46bf8fb7bbb2fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_a561929b2da8f83188a51c58009f25c12d743f16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_8a4f25db6ca85d613fab4f9c52592bdd7ce0ecb2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_90641cfdd4e6fc6cd9e5913d79c2ecb24cc779e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_e13ba2a46b2623fd9cbbe1f6eb46246fb4a7344c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations-java5/15.0/7011b4551a8451906759b05814c58b9eb829ea9b/annotations-java5-15.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7011b4551a8451906759b05814c58b9eb829ea9b">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/annotations-java5-15.0_50bc31ed26473a32369ffec8bd6ea6e428a87460/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9575a654540f7b4c1f18d20050463dbaa4bd0008">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_fc3ea51f53f5763bb81ce42d7a869c7d0be4bef7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eceed936e350b1edba7a7d6f49b3d54abf92b7f6">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_52ef414f6158a82b88f8d62969fd6ce5404f585a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.1_61d8881015c0476f6fb9acf2edaa301841ebd13e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.0_59ae12ecae1a849f7a8213dd869487fc4bf1c45a.jar" />
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_43983d1c856272c0a35ee2ca0936fed884b2fb61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_1c242885314e693b01634016d1571cd276638fde/classes.dex" />
     </item>
 
 </items>

@@ -26,6 +26,7 @@ public class TabFragmentShootCond1 extends Fragment {
     private LinearLayout eathContitionsLayout, meteoSrLayout;
     private EditText editPress, editTemper, editDirection, editWindSpeed, editHeightMeteo;
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
+    private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
 
     private IWeatherReceiver mIWeatherReceiver = new IWeatherReceiver() {
         @Override
@@ -82,6 +83,8 @@ public class TabFragmentShootCond1 extends Fragment {
                 eathContitionsLayout.setVisibility(LinearLayout.GONE);
                 meteoSrLayout.setVisibility(LinearLayout.VISIBLE);
 
+                //<----------------------Tv--------------------------->
+
                 EditText[] arrEditMeteoT = new EditText[9];
                 edtMeteoT02 = (EditText) view.findViewById(R.id.edtMeteoT02);
                 arrEditMeteoT[0] = edtMeteoT02;
@@ -104,6 +107,35 @@ public class TabFragmentShootCond1 extends Fragment {
 
                 for(int i = 0; i < arrEditMeteoT.length; i++)
                     arrEditMeteoT[i].setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), i)));
+
+                //<------------------------------------------------------------>
+
+                //<------------------------Aw----------------------------------->
+
+                EditText[] arrEditMeteoAw = new EditText[9];
+                edtMeteoAw02 = (EditText) view.findViewById(R.id.edtMeteoAw02);
+                arrEditMeteoAw[0] = edtMeteoAw02;
+                edtMeteoAw04 = (EditText) view.findViewById(R.id.edtMeteoAw04);
+                arrEditMeteoAw[1] = edtMeteoAw04;
+                edtMeteoAw08 = (EditText) view.findViewById(R.id.edtMeteoAw08);
+                arrEditMeteoAw[2] = edtMeteoAw08;
+                edtMeteoAw12 = (EditText) view.findViewById(R.id.edtMeteoAw12);
+                arrEditMeteoAw[3] = edtMeteoAw12;
+                edtMeteoAw16 = (EditText) view.findViewById(R.id.edtMeteoAw16);
+                arrEditMeteoAw[4] = edtMeteoAw16;
+                edtMeteoAw20 = (EditText) view.findViewById(R.id.edtMeteoAw20);
+                arrEditMeteoAw[5] = edtMeteoAw20;
+                edtMeteoAw24 = (EditText) view.findViewById(R.id.edtMeteoAw24);
+                arrEditMeteoAw[6] = edtMeteoAw24;
+                edtMeteoAw30 = (EditText) view.findViewById(R.id.edtMeteoAw30);
+                arrEditMeteoAw[7] = edtMeteoAw30;
+                edtMeteoAw40 = (EditText) view.findViewById(R.id.edtMeteoAw40);
+                arrEditMeteoAw[8] = edtMeteoAw40;
+
+                for(int i = 0; i < arrEditMeteoAw.length; i++)
+                    arrEditMeteoAw[i].setText(strDelTv(delAw(Double.parseDouble(editWindSpeed.getText().toString()), i)));
+
+                //<------------------------------------------------------------>
             }
         });
 
@@ -134,7 +166,7 @@ public class TabFragmentShootCond1 extends Fragment {
         editHeightMeteo = (EditText) view.findViewById(R.id.editHeightMeteo);
     }
 
-     private double delTv(double realT, int hYbull){
+    private double delTv(double realT, int hYbull){
 
         double arrDelTv[] = {0.5, 1, 1.5, 2, 3.5, 4.5};
         double retDelTv = 0;
@@ -204,6 +236,12 @@ public class TabFragmentShootCond1 extends Fragment {
          return retDelTv;
      }
 
+    private double delAw(double realAw, int hYbull)
+    {
+        int arrDelAw[] = {1, 2, 3, 3, 4, 4, 4, 5, 5};
+
+        return (double)((int)realAw + arrDelAw[hYbull]);
+    }
 
     private String strDelTv(double delTv){
         String retStrDelTv = "";
