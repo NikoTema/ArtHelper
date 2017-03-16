@@ -6,11 +6,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.weather.Channel;
@@ -21,6 +23,9 @@ import com.example.arteme.myapplication.weather.data.Item;
 public class TabFragmentShootCond1 extends Fragment {
 
     private static final int LAYOUT = R.layout.tab1_shootcond;
+    ArrayAdapter<CharSequence> adapterWindSpeed;
+    Spinner spinnerWindSpeed;
+    int posWindSpeed;
     private View view;
     private Button btnSССompose, btnSСDownload, btnSСFill, btnSCBack;
     private LinearLayout eathContitionsLayout, meteoSrLayout;
@@ -65,10 +70,9 @@ public class TabFragmentShootCond1 extends Fragment {
 
     private void initSpinner(){
 
-        Spinner spinnerWindSpeed;
         spinnerWindSpeed = (Spinner) view.findViewById(R.id.windSpeedSpinner);
 
-        ArrayAdapter<CharSequence> adapterWindSpeed = ArrayAdapter.createFromResource(getContext(),
+        adapterWindSpeed = ArrayAdapter.createFromResource(getContext(),
                 R.array.wind_speed_array, android.R.layout.simple_spinner_item);
 
         spinnerWindSpeed.setAdapter(adapterWindSpeed);
@@ -133,7 +137,7 @@ public class TabFragmentShootCond1 extends Fragment {
                 arrEditMeteoAw[8] = edtMeteoAw40;
 
                 for(int i = 0; i < arrEditMeteoAw.length; i++)
-                    arrEditMeteoAw[i].setText(strDelTv(delAw(Double.parseDouble(editWindSpeed.getText().toString()), i)));
+                    arrEditMeteoAw[i].setText(strDelTv(delAw(Double.parseDouble(editDirection.getText().toString()), i)));
 
                 //<------------------------------------------------------------>
             }
@@ -238,6 +242,20 @@ public class TabFragmentShootCond1 extends Fragment {
 
     private double delAw(double realAw, int hYbull)
     {
+        spinnerWindSpeed.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent,
+                                       View itemSelected, int selectedItemPosition, long selectedId) {
+                posWindSpeed = selectedItemPosition;
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        if(posWindSpeed == 1) {
+            int arrDelAwv[] = {0, 1, 2, 2, 3, 3, 3, 4, 4};
+            return (double)(int)realAw + arrDelAwv[hYbull];
+        }
+
         int arrDelAw[] = {1, 2, 3, 3, 4, 4, 4, 5, 5};
 
         return (double)((int)realAw + arrDelAw[hYbull]);
