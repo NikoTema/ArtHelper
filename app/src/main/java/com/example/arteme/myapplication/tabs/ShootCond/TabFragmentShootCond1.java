@@ -1,5 +1,9 @@
 package com.example.arteme.myapplication.tabs.ShootCond;
 
+import android.content.Context;
+import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
 import com.example.arteme.myapplication.weather.WeatherGetter;
@@ -27,6 +32,7 @@ public class TabFragmentShootCond1 extends Fragment {
     private EditText editPress, editTemper, editDirection, editWindSpeed, editHeightMeteo;
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
     private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
+    private ToastUtil mToastUtil;
 
     private IWeatherReceiver mIWeatherReceiver = new IWeatherReceiver() {
         @Override
@@ -59,6 +65,7 @@ public class TabFragmentShootCond1 extends Fragment {
         initEditors();
         eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
         meteoSrLayout.setVisibility(LinearLayout.GONE);
+        mToastUtil = new ToastUtil(getActivity());
 
         return view;
     }
@@ -143,6 +150,15 @@ public class TabFragmentShootCond1 extends Fragment {
         btnSСDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //mToastUtil.showErrorToast(getString(R.string.meteo_connection_error));
+                if(!isConnectivityEnabled()) {
+                    mToastUtil.showErrorToast(getString(R.string.meteo_connection_error));
+                    return;
+                }
+                else if (!isGPSEnabled()) {
+                    mToastUtil.showErrorToast(getString(R.string.meteo_gps_error));
+                    return;
+                }
                 new WeatherGetter(getContext(), mIWeatherReceiver).uploadWeather();
             }
         });
@@ -270,4 +286,18 @@ public class TabFragmentShootCond1 extends Fragment {
 
         return delTv;
     }
+
+    private boolean isConnectivityEnabled() {
+        ConnectivityManager cm =
+                (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+
+    }
+
+    private boolean isGPSEnabled() {
+        final LocationManager manager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
+        return manager.isProviderEnabled( LocationManager.GPS_PROVIDER);
+    }
+
 }

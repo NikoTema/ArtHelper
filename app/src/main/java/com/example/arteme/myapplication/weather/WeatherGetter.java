@@ -32,7 +32,6 @@ public class WeatherGetter implements LocationListener, IYahooRespondReceiver {
         boolean isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         boolean error = true;
         Criteria locationCriteria = new Criteria();
-
         if (isNetworkEnabled) {
             locationCriteria.setAccuracy(Criteria.ACCURACY_COARSE);
         } else if (isGPSEnabled) {
@@ -58,7 +57,6 @@ public class WeatherGetter implements LocationListener, IYahooRespondReceiver {
         }
 
     }
-
 
     @Override
     public void onLocationChanged(Location location) {
