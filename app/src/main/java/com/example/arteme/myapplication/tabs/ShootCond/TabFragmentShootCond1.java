@@ -1,12 +1,8 @@
 package com.example.arteme.myapplication.tabs.ShootCond;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
+import com.example.arteme.myapplication.weather.WeatherGetter;
 import com.example.arteme.myapplication.weather.data.Item;
 
 public class TabFragmentShootCond1 extends Fragment {
@@ -32,7 +27,6 @@ public class TabFragmentShootCond1 extends Fragment {
     private EditText editPress, editTemper, editDirection, editWindSpeed, editHeightMeteo;
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
     private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
-    private Toast mToast;
 
     private IWeatherReceiver mIWeatherReceiver = new IWeatherReceiver() {
         @Override
@@ -63,7 +57,6 @@ public class TabFragmentShootCond1 extends Fragment {
         initSpinner();
         initButtons();
         initEditors();
-        initToast(inflater);
         eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
         meteoSrLayout.setVisibility(LinearLayout.GONE);
 
@@ -150,14 +143,9 @@ public class TabFragmentShootCond1 extends Fragment {
         btnSСDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //if (!isNetworkConnectivity())
-                //new WeatherGetter(getContext(), mIWeatherReceiver).uploadWeather();m
-                mToast.show();
-
+                new WeatherGetter(getContext(), mIWeatherReceiver).uploadWeather();
             }
         });
-
-
 
         btnSCBack = (Button) view.findViewById(R.id.btnBackMeteo);
         btnSCBack.setOnClickListener(new View.OnClickListener(){
@@ -170,30 +158,12 @@ public class TabFragmentShootCond1 extends Fragment {
         //btnSСFill = (Button) view.findViewById(R.id.btnSСFill);
     }
 
-    private boolean isNetworkConnectivity() {
-        ConnectivityManager cm =
-                (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        return activeNetwork.isConnectedOrConnecting();
-    }
-
     private void initEditors() {
         editPress = (EditText) view.findViewById(R.id.editPress);
         editTemper = (EditText) view.findViewById(R.id.editTemper);
         editDirection = (EditText) view.findViewById(R.id.editDirection);
         editWindSpeed = (EditText) view.findViewById(R.id.editWindSpeed);
         editHeightMeteo = (EditText) view.findViewById(R.id.editHeightMeteo);
-    }
-
-    private void initToast(LayoutInflater inflater) {
-        View toastLayout = inflater.inflate(R.layout.custom_toast, (ViewGroup)view.findViewById(R.id.custom_toast_container));
-        TextView textView = (TextView) toastLayout.findViewById(R.id.textError);
-        textView.setText("custome toast");
-        mToast = new Toast(getContext());
-        mToast.setGravity(Gravity.TOP, 0, 0);
-        mToast.setDuration(Toast.LENGTH_SHORT);
-        mToast.setView(toastLayout);
     }
 
     private double delTv(double realT, int hYbull){
