@@ -8,4 +8,5 @@
     <color name="colorTextHeader">#C62828</color>
     <color name="colorHeaderTab">#B2EBF2</color>
     <color name="colorDefaultText">#060001</color>
+    <color name="colorError">#e20c0f</color>
 </resources>

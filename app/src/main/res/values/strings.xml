@@ -65,4 +65,7 @@
     <string name="tab4_temper">темп</string>
     <string name="btn_back">Назад</string>
 
+    <string name="meteo_connection_error">Ошибка загрузки метеоданных! Проверьте подключение сети!</string>
+    <string name="meteo_gps_error">Ошибка загрузки метеоданных! Активируйте GPS!</string>
+
 </resources>
