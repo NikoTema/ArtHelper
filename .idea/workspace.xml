@@ -10,63 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79eacfdf-1055-46ee-814f-7233d7231850" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi-v11/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi-v9/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi-v11/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi-v9/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi-v11/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi-v9/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi-v11/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi-v9/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_succ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/gradle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Style.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperActivityToast.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperToast.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Toaster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/AccessibilityUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/AnimationUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/BackgroundUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/ListenerUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/PaletteUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_kitkat.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_lollipop.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_standard.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_kitkat.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_lollipop.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_standard.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_bar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_circle.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_toast.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/weather/WeatherGetter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/weather/WeatherGetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/.gitignore" afterPath="$PROJECT_DIR$/library/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/library/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Style.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Style.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperActivityToast.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperActivityToast.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperToast.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperToast.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Toaster.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Toaster.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/PaletteUtils.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/PaletteUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_kitkat.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_kitkat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_lollipop.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_lollipop.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_standard.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_standard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_kitkat.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_kitkat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_lollipop.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_lollipop.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_standard.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_standard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_button.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_button.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_bar.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_circle.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_circle.xml" />
     </list>
     <ignored path="ArtHelper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,8 +97,8 @@
       <file leaf-file-name="ToastUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="570">
+              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#401#402#0" expanded="true" />
@@ -2789,6 +2750,16 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtHelperFromTeam" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
@@ -2907,7 +2878,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -3432,12 +3403,19 @@
       <option name="project" value="LOCAL" />
       <updated>1489824092464</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added new library and done toasts">
+      <created>1489828765083</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1489828765083</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="14" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3453,7 +3431,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3523,7 +3501,8 @@
     <MESSAGE value="Added permissions to manifests" />
     <MESSAGE value="Check weather classes - work" />
     <MESSAGE value="test with toast" />
-    <option name="LAST_COMMIT_MESSAGE" value="test with toast" />
+    <MESSAGE value="added new library and done toasts" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new library and done toasts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3967,8 +3946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#401#402#0" expanded="true" />
