@@ -9,26 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79eacfdf-1055-46ee-814f-7233d7231850" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/.gitignore" afterPath="$PROJECT_DIR$/library/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/library/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Style.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Style.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperActivityToast.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperActivityToast.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperToast.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/SuperToast.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Toaster.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/Toaster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/PaletteUtils.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/github/johnpersano/supertoasts/library/utils/PaletteUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_kitkat.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_kitkat.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_lollipop.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_lollipop.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_standard.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-v21/selector_button_standard.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_kitkat.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_kitkat.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_lollipop.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_lollipop.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_standard.xml" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/selector_button_standard.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_button.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_bar.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_circle.xml" afterPath="$PROJECT_DIR$/library/src/main/res/layout/supertoast_progress_circle.xml" />
-    </list>
+    <list default="true" id="79eacfdf-1055-46ee-814f-7233d7231850" name="Default" comment="" />
     <ignored path="ArtHelper.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
