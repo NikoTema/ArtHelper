@@ -3,225 +3,225 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout
-    android:id="@+id/linearEathConditions"
-    android:visibility="gone"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/headerTab1ShootCond"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textColor="@color/colorTextHeader"
-        android:text="@string/tab1_shootcond"
-        android:layout_gravity="center"
-        android:layout_marginTop="110dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
-
     <LinearLayout
+        android:id="@+id/linearEathConditions"
+        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_tab_size"
-            android:layout_gravity="left"
-            android:text="@string/tab1_press"/>
+            android:id="@+id/headerTab1ShootCond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorTextHeader"
+            android:text="@string/tab1_shootcond"
+            android:layout_gravity="center"
+            android:layout_marginTop="110dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/textBlack"
-            android:orientation="vertical"
-            android:layout_weight="2">
-            <EditText
-                android:id="@+id/editPress"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/textButton"
-                android:gravity="center"
-                android:inputType="number"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                />
+                android:layout_weight="1"
+                android:textSize="@dimen/text_tab_size"
+                android:layout_gravity="left"
+                android:text="@string/tab1_press"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textBlack"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <EditText
+                    android:id="@+id/editPress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/textButton"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_tab_size"
-            android:layout_gravity="left"
-            android:text="@string/tab1_temper"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/textBlack"
-            android:orientation="vertical"
-            android:layout_weight="2">
-            <EditText
-                android:id="@+id/editTemper"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/textButton"
-                android:gravity="center"
-                android:inputType="number"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                />
+                android:layout_weight="1"
+                android:textSize="@dimen/text_tab_size"
+                android:layout_gravity="left"
+                android:text="@string/tab1_temper"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textBlack"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <EditText
+                    android:id="@+id/editTemper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/textButton"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_tab_size"
-            android:layout_gravity="left"
-            android:text="@string/tab1_direction"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/textBlack"
-            android:orientation="vertical"
-            android:layout_weight="2">
-            <EditText
-                android:id="@+id/editDirection"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/textButton"
-                android:gravity="center"
-                android:inputType="number"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                />
+                android:layout_weight="1"
+                android:textSize="@dimen/text_tab_size"
+                android:layout_gravity="left"
+                android:text="@string/tab1_direction"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textBlack"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <EditText
+                    android:id="@+id/editDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/textButton"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <Spinner
-            android:id="@+id/windSpeedSpinner"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <Spinner
+                android:id="@+id/windSpeedSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textBlack"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <EditText
+                    android:id="@+id/editWindSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/textButton"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_tab_size"
+                android:layout_gravity="left"
+                android:text="@string/tab1_height_meteo"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textBlack"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <EditText
+                    android:id="@+id/editHeightMeteo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/textButton"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/textBlack"
-            android:orientation="vertical"
-            android:layout_weight="2">
-            <EditText
-                android:id="@+id/editWindSpeed"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <Button
+                android:id="@+id/btnSССompose"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/textButton"
-                android:gravity="center"
-                android:inputType="number"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_tab_size"
-            android:layout_gravity="left"
-            android:text="@string/tab1_height_meteo"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/textBlack"
-            android:orientation="vertical"
-            android:layout_weight="2">
-            <EditText
-                android:id="@+id/editHeightMeteo"
+                android:text="@string/btn_sc_compose"
+                android:textColor="@color/textButton"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="10dp" />
+            <Button
+                android:id="@+id/btnSСFill"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/textButton"
-                android:gravity="center"
-                android:inputType="number"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp" />
+                android:text="@string/btn_sc_fill"
+                android:textColor="@color/textButton"
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <Button
+                android:id="@+id/btnSСDownload"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/btn_sc_download"
+                android:textColor="@color/textButton"
+                android:background="@color/colorPrimary" />
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <Button
-            android:id="@+id/btnSССompose"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/btn_sc_compose"
-            android:textColor="@color/textButton"
-            android:background="@color/colorPrimary"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:id="@+id/btnSСFill"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/btn_sc_fill"
-            android:textColor="@color/textButton"
-            android:background="@color/colorPrimary"
-            android:layout_marginLeft="10dp" />
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <Button
-            android:id="@+id/btnSСDownload"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/btn_sc_download"
-            android:textColor="@color/textButton"
-            android:background="@color/colorPrimary" />
-        </LinearLayout>
-</LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearMeteoSr"
@@ -408,6 +408,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW02"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -457,6 +458,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW04"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -505,6 +507,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW08"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -553,6 +556,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -601,6 +605,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW16"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -649,6 +654,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW20"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -697,6 +703,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW24"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -745,6 +752,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW30"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -793,6 +801,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtMeteoW40"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
