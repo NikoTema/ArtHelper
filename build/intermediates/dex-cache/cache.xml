@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a0992fbbc112e5206b9b94d432d952fa2bd8fd75">
+        sha1="8f6a91edeee3e9b008385795e2b6b979138a9f9d">
         <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_fc3ea51f53f5763bb81ce42d7a869c7d0be4bef7/classes.dex" />
     </item>
     <item
@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3bec8e0bc2b7b37d77d64cf994481b88bc971090">
+        sha1="9bfbc2192795148d9e88c45038e11db8ab39472f">
         <dex dex="/Users/arteme/AndroidStudioProjects/ArtHelper/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_52ef414f6158a82b88f8d62969fd6ce5404f585a/classes.dex" />
     </item>
     <item
