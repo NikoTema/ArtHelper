@@ -16,7 +16,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.SavedDataFromTab1ShootCond;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
@@ -25,7 +27,7 @@ import com.example.arteme.myapplication.weather.data.Item;
 
 public class TabFragmentShootCond1 extends Fragment {
 
-    private static final int LAYOUT = R.layout.tab1_shootcond;
+    public static final int LAYOUT = R.layout.tab1_shootcond;
     private View view;
     private Button btnSССompose, btnSСDownload, btnSСFill, btnSCBack;
     private LinearLayout eathContitionsLayout, meteoSrLayout;
@@ -33,6 +35,48 @@ public class TabFragmentShootCond1 extends Fragment {
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
     private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
     private ToastUtil mToastUtil;
+    private Bundle mBundle;
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(mBundle != null) {
+            reStoreData(mBundle);
+        }
+    }
+
+    private void reStoreData(Bundle bundle) {
+        SavedDataFromTab1ShootCond savedDataFromTab1ShootCond = (SavedDataFromTab1ShootCond) bundle.getSerializable("savedData");
+        if (savedDataFromTab1ShootCond == null) return;
+        editPress.setText(savedDataFromTab1ShootCond.press);
+        editDirection.setText(savedDataFromTab1ShootCond.windD);
+        editHeightMeteo.setText(savedDataFromTab1ShootCond.heightMeteo);
+        editWindSpeed.setText(savedDataFromTab1ShootCond.windS);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        storeDataInBundle();
+        ((ActivityShootCond) getActivity()).saveBundle(LAYOUT, mBundle);
+    }
+
+    private void storeDataInBundle() {
+        SavedDataFromTab1ShootCond savedDataFromTab1ShootCond =
+                new SavedDataFromTab1ShootCond(
+                        editPress.getText().toString(),
+                        editTemper.getText().toString(),
+                        editDirection.getText().toString(),
+                        editWindSpeed.getText().toString(),
+                        editHeightMeteo.getText().toString());
+        mBundle = new Bundle();
+        mBundle.putSerializable("savedData", savedDataFromTab1ShootCond);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
 
     private IWeatherReceiver mIWeatherReceiver = new IWeatherReceiver() {
         @Override
@@ -46,14 +90,6 @@ public class TabFragmentShootCond1 extends Fragment {
         }
     };
 
-    public static TabFragmentShootCond1 getInstance(){
-        Bundle args = new Bundle();
-        TabFragmentShootCond1 fragment = new TabFragmentShootCond1();
-        fragment.setArguments(args);
-
-        return fragment;
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanseState){
@@ -66,7 +102,9 @@ public class TabFragmentShootCond1 extends Fragment {
         eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
         meteoSrLayout.setVisibility(LinearLayout.GONE);
         mToastUtil = new ToastUtil(getActivity());
-
+        if (getArguments() != null) {
+            reStoreData(getArguments());
+        }
         return view;
     }
 
@@ -79,7 +117,6 @@ public class TabFragmentShootCond1 extends Fragment {
                 R.array.wind_speed_array, android.R.layout.simple_spinner_item);
 
         spinnerWindSpeed.setAdapter(adapterWindSpeed);
-
     }
 
     private void initButtons() {
@@ -158,6 +195,10 @@ public class TabFragmentShootCond1 extends Fragment {
                 else if (!isGPSEnabled()) {
                     mToastUtil.showErrorToast(getString(R.string.meteo_gps_error));
                     return;
+                }
+                String s = editDirection.getText().toString();
+                if(!s.isEmpty()) {
+                    System.out.println(s);
                 }
                 new WeatherGetter(getContext(), mIWeatherReceiver).uploadWeather();
             }

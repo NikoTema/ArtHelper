@@ -11,7 +11,7 @@ import com.example.arteme.myapplication.R;
 
 public class TabFragmentShootCond2 extends Fragment {
 
-    private static final int LAYOUT = R.layout.tab2_shootcond;
+    public static final int LAYOUT = R.layout.tab2_shootcond;
     private View view;
 
     public static TabFragmentShootCond2 getInstance(){
