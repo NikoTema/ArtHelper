@@ -52,6 +52,7 @@ public class TabFragmentShootCond1 extends Fragment {
         editDirection.setText(savedDataFromTab1ShootCond.windD);
         editHeightMeteo.setText(savedDataFromTab1ShootCond.heightMeteo);
         editWindSpeed.setText(savedDataFromTab1ShootCond.windS);
+        editTemper.setText(savedDataFromTab1ShootCond.temp);
     }
 
     @Override

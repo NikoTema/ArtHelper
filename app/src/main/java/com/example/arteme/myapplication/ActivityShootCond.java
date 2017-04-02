@@ -1,5 +1,6 @@
 package com.example.arteme.myapplication;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -13,11 +14,19 @@ import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond2;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond3;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond4;
 import com.example.arteme.myapplication.tabs.TabsPagerFrAdShootCond;
+import com.google.gson.Gson;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ActivityShootCond extends AppCompatActivity {
 
+    public static final String SHOOTCOND_TAB1 = "shootCondTab1";
+    public static final String SHOOTCOND_TAB2 = "shootCondTab2";
+    public static final String SHOOTCOND_TAB3 = "shootCondTab3";
+    public static final String SHOOTCOND_TAB4 = "shootCondTab4";
+
+
+    private SharedPreferences mSharedPreferences;
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
@@ -30,7 +39,7 @@ public class ActivityShootCond extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shootcond);
-
+        mSharedPreferences = getSharedPreferences(MainActivity.APP_SHARED_PREFS, MODE_PRIVATE);
         initToolbar();
         initNavigationView();
         initTabs();
@@ -52,6 +61,7 @@ public class ActivityShootCond extends AppCompatActivity {
     private void initTabs() {
 
         viewPager = (ViewPager) findViewById(R.id.viewPagerShootCond);
+        readTabBundleFromShared();
         TabsPagerFrAdShootCond adapter = new TabsPagerFrAdShootCond(getSupportFragmentManager(), getBundleArrayList());
         viewPager.setAdapter(adapter);
 
@@ -59,13 +69,26 @@ public class ActivityShootCond extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    private ArrayList<Bundle> getBundleArrayList() {
-        ArrayList<Bundle> arrayList = new ArrayList<>();
-        arrayList.add(mBundleTab1);
-        arrayList.add(mBundleTab2);
-        arrayList.add(mBundleTab3);
-        arrayList.add(mBundleTab4);
-        return arrayList;
+    private void readTabBundleFromShared() {
+        Gson gson = new Gson();
+        String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
+        mBundleTab1 = new Bundle();
+        mBundleTab1.putSerializable("savedData", gson.fromJson(json, SavedDataFromTab1ShootCond.class));
+        json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
+        mBundleTab2 = gson.fromJson(json,Bundle.class);
+        json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
+        mBundleTab3 = gson.fromJson(json,Bundle.class);
+        json = mSharedPreferences.getString(SHOOTCOND_TAB4, "");
+        mBundleTab4 = gson.fromJson(json,Bundle.class);
+    }
+
+    private HashMap<String, Bundle> getBundleArrayList() {
+        HashMap<String, Bundle> result = new HashMap<>();
+        result.put(SHOOTCOND_TAB1, mBundleTab1);
+        result.put(SHOOTCOND_TAB2, mBundleTab2);
+        result.put(SHOOTCOND_TAB3, mBundleTab3);
+        result.put(SHOOTCOND_TAB4, mBundleTab4);
+        return result;
     }
 
     @Override
@@ -76,6 +99,28 @@ public class ActivityShootCond extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveBundleInSharedPrefs();
+    }
+
+    private void saveBundleInSharedPrefs() {
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(mBundleTab1.getSerializable("savedData"));
+        editor.putString(SHOOTCOND_TAB1,json);
+        json = gson.toJson(mBundleTab2);
+        editor.putString(SHOOTCOND_TAB2,json);
+        json = gson.toJson(mBundleTab3);
+        editor.putString(SHOOTCOND_TAB3,json);
+        json = gson.toJson(mBundleTab4);
+        editor.putString(SHOOTCOND_TAB4,json);
+        editor.apply();
+
+    }
+
 
     public void saveBundle(int tag, Bundle bundle) {
         switch (tag) {

@@ -5,21 +5,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond1;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond2;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond3;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond4;
 
-import java.util.ArrayList;
-
-import static android.R.attr.fragment;
+import java.util.HashMap;
 
 public class TabsPagerFrAdShootCond extends FragmentPagerAdapter {
 
     private String[] tabs;
-    private ArrayList<Bundle> mBundles;
+    private HashMap<String, Bundle> mBundles;
 
-    public TabsPagerFrAdShootCond(FragmentManager fm, ArrayList<Bundle> bundles){
+    public TabsPagerFrAdShootCond(FragmentManager fm, HashMap<String, Bundle> bundles){
         super(fm);
         tabs = new String[]{"Метео", "Баллистика", "Разведка", "Поправки"};
         mBundles = bundles;
@@ -52,7 +51,7 @@ public class TabsPagerFrAdShootCond extends FragmentPagerAdapter {
 
     private Fragment getTab1Instance() {
         Bundle args;
-        if ((args = mBundles.get(0)) == null) args = new Bundle();
+        if ((args = mBundles.get(ActivityShootCond.SHOOTCOND_TAB1)) == null) args = new Bundle();
         TabFragmentShootCond1 fragment = new TabFragmentShootCond1();
         fragment.setArguments(args);
         return fragment;
