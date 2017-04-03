@@ -6,6 +6,7 @@
     <string name="btn_sc_compose">Составить</string>
     <string name="btn_sc_fill">Заполнить</string>
     <string name="btn_sc_download">Загрузить</string>
+    <string name="btn_save">Сохранить</string>
 
     <string name="tab1_comord">Средства поражения</string>
     <string name="tab2_comord"> Координаты КНП и ОП</string>
