@@ -94,6 +94,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtXknp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -105,6 +106,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtYknp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -116,6 +118,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtHknp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -147,6 +150,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtXop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -158,6 +162,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtYop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -169,6 +174,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtHop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

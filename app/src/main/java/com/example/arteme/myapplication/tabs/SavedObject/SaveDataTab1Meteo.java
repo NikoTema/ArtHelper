@@ -1,15 +1,15 @@
-package com.example.arteme.myapplication;
+package com.example.arteme.myapplication.tabs.SavedObject;
 
 import java.io.Serializable;
 
-public class SavedDataFromTab1ShootCond implements Serializable {
+public class SaveDataTab1Meteo implements Serializable {
     public String press;
     public String temp;
     public String windD;
     public String windS;
     public String heightMeteo;
 
-    public SavedDataFromTab1ShootCond(String pres, String tmpr, String windd, String winds, String hmeteo) {
+    public SaveDataTab1Meteo(String pres, String tmpr, String windd, String winds, String hmeteo) {
         press = pres;
         temp = tmpr;
         windD = windd;

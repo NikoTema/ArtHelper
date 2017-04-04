@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond1;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond2;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond3;
@@ -73,7 +74,7 @@ public class ActivityShootCond extends AppCompatActivity {
         Gson gson = new Gson();
         String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
         mBundleTab1 = new Bundle();
-        mBundleTab1.putSerializable("savedData", gson.fromJson(json, SavedDataFromTab1ShootCond.class));
+        mBundleTab1.putSerializable("savedData", gson.fromJson(json, SaveDataTab1Meteo.class));
         json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
         mBundleTab2 = gson.fromJson(json,Bundle.class);
         json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");

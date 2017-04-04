@@ -86,6 +86,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -95,6 +96,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -124,6 +126,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -133,6 +136,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -162,6 +166,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -171,6 +176,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -200,6 +206,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -209,6 +216,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -238,6 +246,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -247,6 +256,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -276,6 +286,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD12"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -285,6 +296,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA12"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -314,6 +326,7 @@
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModD14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -323,6 +336,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
+                android:id="@+id/edtModA14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

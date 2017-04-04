@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.arteme.myapplication.R;
 
@@ -18,6 +19,7 @@ public class TabFragmentShootCond3 extends Fragment {
     public static final int LAYOUT = R.layout.tab3_shootcond;
     private View view;
     private Button btnSСPGZ;
+    private EditText edtXc, edtYc, edtHc, edtDk, edtAc1, edtAc2;
 
     public static TabFragmentShootCond3 getInstance(){
         Bundle args = new Bundle();
@@ -40,6 +42,12 @@ public class TabFragmentShootCond3 extends Fragment {
         btnSСPGZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                edtXc = (EditText) view.findViewById(R.id.edtXc);
+                edtYc = (EditText) view.findViewById(R.id.edtYc);
+                edtHc = (EditText) view.findViewById(R.id.edtHc);
+                edtDk = (EditText) view.findViewById(R.id.editDk);
+                edtAc1 = (EditText) view.findViewById(R.id.editAc1);
+                edtAc2 = (EditText) view.findViewById(R.id.editAc2);
             }
         });
     }

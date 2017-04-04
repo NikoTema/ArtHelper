@@ -5,21 +5,18 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import com.example.arteme.myapplication.R;
-import com.example.arteme.myapplication.SavedDataFromTab2ComOrd;
 
 public class TabFragmentComOrd2 extends  Fragment {
 
     private static final int LAYOUT = R.layout.tab2_comord;
     private View view;
+    EditText edtXknp, edtYknp, edtHknp, edtXop, edtYop, edtHop;
 
     private Button btnCOSave;
 
@@ -44,7 +41,12 @@ public class TabFragmentComOrd2 extends  Fragment {
         btnCOSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                edtXknp = (EditText) view.findViewById(R.id.edtXknp);
+                edtYknp = (EditText) view.findViewById(R.id.edtYknp);
+                edtHknp = (EditText) view.findViewById(R.id.edtHknp);
+                edtXop = (EditText) view.findViewById(R.id.edtXop);
+                edtYop = (EditText) view.findViewById(R.id.edtYop);
+                edtHop = (EditText) view.findViewById(R.id.edtHop);
             }
         });
 

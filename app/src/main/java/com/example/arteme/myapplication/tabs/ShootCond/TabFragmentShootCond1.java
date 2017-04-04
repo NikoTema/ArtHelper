@@ -19,7 +19,7 @@ import android.widget.Spinner;
 
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.R;
-import com.example.arteme.myapplication.SavedDataFromTab1ShootCond;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
@@ -51,13 +51,13 @@ public class TabFragmentShootCond1 extends Fragment {
     }
 
     private void reStoreData(Bundle bundle) {
-        SavedDataFromTab1ShootCond savedDataFromTab1ShootCond = (SavedDataFromTab1ShootCond) bundle.getSerializable("savedData");
-        if (savedDataFromTab1ShootCond == null) return;
-        editPress.setText(savedDataFromTab1ShootCond.press);
-        editDirection.setText(savedDataFromTab1ShootCond.windD);
-        editHeightMeteo.setText(savedDataFromTab1ShootCond.heightMeteo);
-        editWindSpeed.setText(savedDataFromTab1ShootCond.windS);
-        editTemper.setText(savedDataFromTab1ShootCond.temp);
+        SaveDataTab1Meteo saveDataTab1Meteo = (SaveDataTab1Meteo) bundle.getSerializable("savedData");
+        if (saveDataTab1Meteo == null) return;
+        editPress.setText(saveDataTab1Meteo.press);
+        editDirection.setText(saveDataTab1Meteo.windD);
+        editHeightMeteo.setText(saveDataTab1Meteo.heightMeteo);
+        editWindSpeed.setText(saveDataTab1Meteo.windS);
+        editTemper.setText(saveDataTab1Meteo.temp);
     }
 
     @Override
@@ -68,15 +68,15 @@ public class TabFragmentShootCond1 extends Fragment {
     }
 
     private void storeDataInBundle() {
-        SavedDataFromTab1ShootCond savedDataFromTab1ShootCond =
-                new SavedDataFromTab1ShootCond(
+        SaveDataTab1Meteo saveDataTab1Meteo =
+                new SaveDataTab1Meteo(
                         editPress.getText().toString(),
                         editTemper.getText().toString(),
                         editDirection.getText().toString(),
                         editWindSpeed.getText().toString(),
                         editHeightMeteo.getText().toString());
         mBundle = new Bundle();
-        mBundle.putSerializable("savedData", savedDataFromTab1ShootCond);
+        mBundle.putSerializable("savedData", saveDataTab1Meteo);
     }
 
     @Override
