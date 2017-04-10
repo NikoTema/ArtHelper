@@ -68,5 +68,6 @@
 
     <string name="meteo_connection_error">Ошибка загрузки метеоданных! Проверьте подключение сети!</string>
     <string name="meteo_gps_error">Ошибка загрузки метеоданных! Активируйте GPS!</string>
+    <string name="succ_save_data">Данные успешно сохранены</string>
 
 </resources>

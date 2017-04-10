@@ -4,12 +4,12 @@ package com.example.arteme.myapplication.tabs.SavedObject;
 import java.io.Serializable;
 
 public class SaveDataTab3SC implements Serializable{
-    String Xc;
-    String Yc;
-    String Hc;
-    String Dk;
-    String Ac1;
-    String Ac2;
+    public String Xc;
+    public String Yc;
+    public String Hc;
+    public String Dk;
+    public String Ac1;
+    public String Ac2;
 
     public SaveDataTab3SC(String xc, String yc, String hc,
                           String dk, String ac1, String ac2){

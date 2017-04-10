@@ -18,7 +18,7 @@ public class TabsPagerFrAdShootCond extends FragmentPagerAdapter {
     private String[] tabs;
     private HashMap<String, Bundle> mBundles;
 
-    public TabsPagerFrAdShootCond(FragmentManager fm, HashMap<String, Bundle> bundles){
+    public TabsPagerFrAdShootCond(FragmentManager fm, HashMap<String, Bundle> bundles) {
         super(fm);
         tabs = new String[]{"Метео", "Баллистика", "Разведка", "Поправки"};
         mBundles = bundles;
@@ -30,23 +30,23 @@ public class TabsPagerFrAdShootCond extends FragmentPagerAdapter {
     }
 
     @Override
+    public int getCount() {
+        return tabs.length;
+    }
+
+    @Override
     public Fragment getItem(int position) {
         switch (position){
             case 0:
                 return getTab1Instance();
             case 1:
-                return TabFragmentShootCond2.getInstance();
+                return getTab2Instance();
             case 2:
-                return TabFragmentShootCond3.getInstance();
+                return getTab3Instance();
             case 3:
-                return TabFragmentShootCond4.getInstance();
+                return getTab4Instance();
         }
         return null;
-    }
-
-    @Override
-    public int getCount() {
-        return tabs.length;
     }
 
     private Fragment getTab1Instance() {
@@ -56,4 +56,31 @@ public class TabsPagerFrAdShootCond extends FragmentPagerAdapter {
         fragment.setArguments(args);
         return fragment;
     }
+
+    private Fragment getTab2Instance() {
+        Bundle args;
+        if((args = mBundles.get(ActivityShootCond.SHOOTCOND_TAB2)) == null) args = new Bundle();
+        TabFragmentShootCond2 fragment = new TabFragmentShootCond2();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    private Fragment getTab3Instance() {
+        Bundle args;
+        if((args = mBundles.get(ActivityShootCond.SHOOTCOND_TAB3)) == null) args = new Bundle();
+        TabFragmentShootCond3 fragment = new TabFragmentShootCond3();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    private Fragment getTab4Instance() {
+        Bundle args;
+        if((args = mBundles.get(ActivityShootCond.SHOOTCOND_TAB4)) == null) args = new Bundle();
+        TabFragmentShootCond4 fragment = new TabFragmentShootCond4();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+
+
 }

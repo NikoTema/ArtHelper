@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+
 public class MainActivity extends AppCompatActivity {
     public static final String APP_SHARED_PREFS = "com.example.arteme.shared";
-
+    public static final String BUNDLE_SAVED_DATA_KEY = "savedData";
     @Override
     protected void onResume() {
         super.onResume();

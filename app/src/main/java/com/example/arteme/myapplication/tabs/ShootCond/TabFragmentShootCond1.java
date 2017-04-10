@@ -18,15 +18,17 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.example.arteme.myapplication.ActivityShootCond;
+import com.example.arteme.myapplication.ISavedData;
+import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.ToastUtil;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
 import com.example.arteme.myapplication.weather.WeatherGetter;
 import com.example.arteme.myapplication.weather.data.Item;
 
-public class TabFragmentShootCond1 extends Fragment {
+public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab1_shootcond;
     private View view;
@@ -39,7 +41,6 @@ public class TabFragmentShootCond1 extends Fragment {
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
     private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
     private EditText edtMeteoW02, edtMeteoW04, edtMeteoW08, edtMeteoW12, edtMeteoW16, edtMeteoW20, edtMeteoW24, edtMeteoW30, edtMeteoW40;
-    private ToastUtil mToastUtil;
     private Bundle mBundle;
 
     @Override
@@ -50,8 +51,9 @@ public class TabFragmentShootCond1 extends Fragment {
         }
     }
 
-    private void reStoreData(Bundle bundle) {
-        SaveDataTab1Meteo saveDataTab1Meteo = (SaveDataTab1Meteo) bundle.getSerializable("savedData");
+    @Override
+    public void reStoreData(Bundle bundle) {
+        SaveDataTab1Meteo saveDataTab1Meteo = (SaveDataTab1Meteo) bundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
         if (saveDataTab1Meteo == null) return;
         editPress.setText(saveDataTab1Meteo.press);
         editDirection.setText(saveDataTab1Meteo.windD);
@@ -67,7 +69,8 @@ public class TabFragmentShootCond1 extends Fragment {
         ((ActivityShootCond) getActivity()).saveBundle(LAYOUT, mBundle);
     }
 
-    private void storeDataInBundle() {
+    @Override
+    public void storeDataInBundle() {
         SaveDataTab1Meteo saveDataTab1Meteo =
                 new SaveDataTab1Meteo(
                         editPress.getText().toString(),
@@ -76,7 +79,7 @@ public class TabFragmentShootCond1 extends Fragment {
                         editWindSpeed.getText().toString(),
                         editHeightMeteo.getText().toString());
         mBundle = new Bundle();
-        mBundle.putSerializable("savedData", saveDataTab1Meteo);
+        mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, saveDataTab1Meteo);
     }
 
     @Override
@@ -107,7 +110,6 @@ public class TabFragmentShootCond1 extends Fragment {
         initEditors();
         eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
         meteoSrLayout.setVisibility(LinearLayout.GONE);
-        mToastUtil = new ToastUtil(getActivity());
         if (getArguments() != null) {
             reStoreData(getArguments());
         }
@@ -128,6 +130,7 @@ public class TabFragmentShootCond1 extends Fragment {
                                        View itemSelected, int selectedItemPosition, long selectedId) {
                 posWindSpeed = selectedItemPosition;
             }
+
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
@@ -230,11 +233,11 @@ public class TabFragmentShootCond1 extends Fragment {
             public void onClick(View v) {
                 //mToastUtil.showErrorToast(getString(R.string.meteo_connection_error));
                 if(!isConnectivityEnabled()) {
-                    mToastUtil.showErrorToast(getString(R.string.meteo_connection_error));
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.meteo_connection_error));
                     return;
                 }
                 else if (!isGPSEnabled()) {
-                    mToastUtil.showErrorToast(getString(R.string.meteo_gps_error));
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.meteo_gps_error));
                     return;
                 }
                 String s = editDirection.getText().toString();

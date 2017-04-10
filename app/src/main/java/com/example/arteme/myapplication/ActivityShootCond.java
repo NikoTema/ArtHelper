@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond1;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond2;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond3;
@@ -25,7 +26,6 @@ public class ActivityShootCond extends AppCompatActivity {
     public static final String SHOOTCOND_TAB2 = "shootCondTab2";
     public static final String SHOOTCOND_TAB3 = "shootCondTab3";
     public static final String SHOOTCOND_TAB4 = "shootCondTab4";
-
 
     private SharedPreferences mSharedPreferences;
     private Toolbar toolbar;
@@ -63,7 +63,7 @@ public class ActivityShootCond extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewPagerShootCond);
         readTabBundleFromShared();
-        TabsPagerFrAdShootCond adapter = new TabsPagerFrAdShootCond(getSupportFragmentManager(), getBundleArrayList());
+        TabsPagerFrAdShootCond adapter = new TabsPagerFrAdShootCond(getSupportFragmentManager(), getBundleHashMap());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutShootCond);
@@ -74,16 +74,19 @@ public class ActivityShootCond extends AppCompatActivity {
         Gson gson = new Gson();
         String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
         mBundleTab1 = new Bundle();
-        mBundleTab1.putSerializable("savedData", gson.fromJson(json, SaveDataTab1Meteo.class));
+        mBundleTab1.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab1Meteo.class));
         json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
-        mBundleTab2 = gson.fromJson(json,Bundle.class);
+        mBundleTab2 = new Bundle();
+        mBundleTab2.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab2SC.class));
         json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
-        mBundleTab3 = gson.fromJson(json,Bundle.class);
+        mBundleTab3 = new Bundle();
+        //TODO mBundleTab3.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SavedDataFromTab3ShootCond.class));
         json = mSharedPreferences.getString(SHOOTCOND_TAB4, "");
-        mBundleTab4 = gson.fromJson(json,Bundle.class);
+        mBundleTab4 = new Bundle();
+        //TODO mBundleTab4.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SavedDataFromTab4ShootCond.class));
     }
 
-    private HashMap<String, Bundle> getBundleArrayList() {
+    private HashMap<String, Bundle> getBundleHashMap() {
         HashMap<String, Bundle> result = new HashMap<>();
         result.put(SHOOTCOND_TAB1, mBundleTab1);
         result.put(SHOOTCOND_TAB2, mBundleTab2);
@@ -110,13 +113,13 @@ public class ActivityShootCond extends AppCompatActivity {
     private void saveBundleInSharedPrefs() {
         SharedPreferences.Editor editor = mSharedPreferences.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(mBundleTab1.getSerializable("savedData"));
+        String json = gson.toJson(mBundleTab1.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB1,json);
-        json = gson.toJson(mBundleTab2);
+        json = gson.toJson(mBundleTab2.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB2,json);
-        json = gson.toJson(mBundleTab3);
+        json = gson.toJson(mBundleTab3.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB3,json);
-        json = gson.toJson(mBundleTab4);
+        json = gson.toJson(mBundleTab4.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB4,json);
         editor.apply();
 

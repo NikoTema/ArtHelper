@@ -4,15 +4,15 @@ package com.example.arteme.myapplication.tabs.SavedObject;
 import java.io.Serializable;
 
 public class SaveDataTab4SCAc implements Serializable{
-    String modA2;
-    String modA4;
-    String modA6;
-    String modA8;
-    String modA10;
-    String modA12;
-    String modA14;
-    String popA1;
-    String popA2;
+    public String modA2;
+    public String modA4;
+    public String modA6;
+    public String modA8;
+    public String modA10;
+    public String modA12;
+    public String modA14;
+    public String popA1;
+    public String popA2;
 
     public SaveDataTab4SCAc(String moda2, String moda4, String moda6, String moda8,
                              String moda10, String moda12, String moda14,

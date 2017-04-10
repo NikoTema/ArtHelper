@@ -9,14 +9,8 @@ import com.github.johnpersano.supertoasts.library.SuperActivityToast;
 import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 
 public class ToastUtil {
-    private Activity mActivity;
-
-    public ToastUtil(Activity activity) {
-        mActivity = activity;
-    }
-
-    public void showErrorToast(String message) {
-        SuperActivityToast.create(mActivity, new Style(), Style.TYPE_STANDARD)
+    public static void showErrorToast(Activity activity, String message) {
+        SuperActivityToast.create(activity, new Style(), Style.TYPE_STANDARD)
                 .setProgressBarColor(Color.BLUE)
                 .setIconResource(R.drawable.ic_sync_error)
                 .setText(message)
@@ -26,8 +20,8 @@ public class ToastUtil {
                 .setAnimations(Style.ANIMATIONS_POP).show();
     }
 
-    public void showSuccessToast(String message) {
-        SuperActivityToast.create(mActivity, new Style(), Style.TYPE_STANDARD)
+    public static void showSuccessToast(Activity activity, String message) {
+        SuperActivityToast.create(activity, new Style(), Style.TYPE_STANDARD)
                 .setProgressBarColor(Color.BLUE)
                 .setIconResource(R.drawable.ic_succ)
                 .setText(message)

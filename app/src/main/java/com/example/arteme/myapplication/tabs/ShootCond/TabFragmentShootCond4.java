@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 
-public class TabFragmentShootCond4 extends Fragment {
+public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
     public static final int LAYOUT = R.layout.tab4_shootcond;
     private View view;
@@ -51,5 +52,15 @@ public class TabFragmentShootCond4 extends Fragment {
         edtApop2 = (EditText) view.findViewById(R.id.editAPop2);
 
         return view;
+    }
+
+    @Override
+    public void reStoreData(Bundle bundle) {
+        
+    }
+
+    @Override
+    public void storeDataInBundle() {
+
     }
 }

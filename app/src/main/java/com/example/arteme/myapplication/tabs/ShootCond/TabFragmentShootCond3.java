@@ -9,12 +9,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
-public class TabFragmentShootCond3 extends Fragment {
+public class TabFragmentShootCond3 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab3_shootcond;
     private View view;
@@ -64,5 +65,15 @@ public class TabFragmentShootCond3 extends Fragment {
         arrXY[1] = (int)delY + Yknp;
 
         return arrXY;
+    }
+
+    @Override
+    public void reStoreData(Bundle bundle) {
+
+    }
+
+    @Override
+    public void storeDataInBundle() {
+
     }
 }
