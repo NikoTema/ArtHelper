@@ -2,6 +2,7 @@ package com.example.arteme.myapplication.tabs.SavedObject;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class SaveDataTab1BulW implements Serializable{
     public String meteoW02;
@@ -26,5 +27,17 @@ public class SaveDataTab1BulW implements Serializable{
         meteoW24 = w24;
         meteoW30 = w30;
         meteoW40 = w40;
+    }
+
+    public SaveDataTab1BulW(ArrayList<String> stringArrayList) {
+        meteoW02 = stringArrayList.get(0);
+        meteoW04 = stringArrayList.get(1);
+        meteoW08 = stringArrayList.get(2);
+        meteoW12 = stringArrayList.get(3);
+        meteoW16 = stringArrayList.get(4);
+        meteoW20 = stringArrayList.get(5);
+        meteoW24 = stringArrayList.get(6);
+        meteoW30 = stringArrayList.get(7);
+        meteoW40 = stringArrayList.get(8);
     }
 }

@@ -56,7 +56,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
     @Override
     public void reStoreData(Bundle bundle) {
-        
+
     }
 
     @Override

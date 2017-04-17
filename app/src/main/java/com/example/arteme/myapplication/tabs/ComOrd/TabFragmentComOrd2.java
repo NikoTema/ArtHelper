@@ -33,7 +33,7 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanseState){
         view = inflater.inflate(LAYOUT, container, false);
         initButtons();
-        if (getArguments() != null) reStoreData(mBundle = getArguments());
+        if((mBundle = getArguments()) != null) reStoreData(mBundle);
         else mBundle = new Bundle();
         return view;
     }

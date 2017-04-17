@@ -22,15 +22,23 @@ import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulAw;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulTem;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulW;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
 import com.example.arteme.myapplication.weather.WeatherGetter;
 import com.example.arteme.myapplication.weather.data.Item;
 
+import java.util.ArrayList;
+
 public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab1_shootcond;
+    public static final String BUNDLE_SAVED_DATA_KEY_BUL_TEM = "BulTem";
+    public static final String BUNDLE_SAVED_DATA_KEY_BUL_W = "BulW";
+    public static final String BUNDLE_SAVED_DATA_KEY_BUL_AW = "BulAw";
     private View view;
     ArrayAdapter<CharSequence> adapterWindSpeed;
     Spinner spinnerWindSpeed;
@@ -42,6 +50,9 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
     private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
     private EditText edtMeteoW02, edtMeteoW04, edtMeteoW08, edtMeteoW12, edtMeteoW16, edtMeteoW20, edtMeteoW24, edtMeteoW30, edtMeteoW40;
     private Bundle mBundle;
+    private SaveDataTab1BulTem mSaveDataTab1BulTem;
+    private SaveDataTab1BulW mSaveDataTab1BulW;
+    private SaveDataTab1BulAw mSaveDataTab1BulAw;
 
     @Override
     public void onResume() {
@@ -80,6 +91,9 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                         editHeightMeteo.getText().toString());
         mBundle = new Bundle();
         mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, saveDataTab1Meteo);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_BUL_TEM, mSaveDataTab1BulTem);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_BUL_AW, mSaveDataTab1BulAw);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_BUL_W, mSaveDataTab1BulW);
     }
 
     @Override
@@ -165,9 +179,13 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 arrEditMeteoT[7] = edtMeteoT30;
                 edtMeteoT40 = (EditText) view.findViewById(R.id.edtMeteoT40);
                 arrEditMeteoT[8] = edtMeteoT40;
-
-                for(int i = 0; i < arrEditMeteoT.length; i++)
-                    arrEditMeteoT[i].setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), i)));
+                ArrayList<String> strDelArray = new ArrayList<>();
+                for(int i = 0; i < arrEditMeteoT.length; i++) {
+                    String strDelTv = strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), i));
+                    strDelArray.add(strDelTv);
+                    arrEditMeteoT[i].setText(strDelTv);
+                }
+                mSaveDataTab1BulTem = new SaveDataTab1BulTem(strDelArray);
 
                 //<------------------------------------------------------------>
 
@@ -192,10 +210,13 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 arrEditMeteoAw[7] = edtMeteoAw30;
                 edtMeteoAw40 = (EditText) view.findViewById(R.id.edtMeteoAw40);
                 arrEditMeteoAw[8] = edtMeteoAw40;
-
-                for(int i = 0; i < arrEditMeteoAw.length; i++)
-                    arrEditMeteoAw[i].setText(strDelTv(delAw(Double.parseDouble(editDirection.getText().toString()), i)));
-
+                strDelArray.clear();
+                for(int i = 0; i < arrEditMeteoAw.length; i++) {
+                    String strDelTv = strDelTv(delAw(Double.parseDouble(editDirection.getText().toString()), i));
+                    strDelArray.add(strDelTv);
+                    arrEditMeteoAw[i].setText(strDelTv);
+                }
+                mSaveDataTab1BulAw = new SaveDataTab1BulAw(strDelArray);
                 //<------------------------------------------------------------>
 
                 //<------------------------W----------------------------------->
@@ -219,10 +240,13 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 arrEditMeteoW[7] = edtMeteoW30;
                 edtMeteoW40 = (EditText) view.findViewById(R.id.edtMeteoW40);
                 arrEditMeteoW[8] = edtMeteoW40;
-
-                for(int i = 0; i < arrEditMeteoW.length; i++)
-                    arrEditMeteoW[i].setText(strDelTv(delW(Double.parseDouble(editWindSpeed.getText().toString()), i)));
-
+                strDelArray.clear();
+                for(int i = 0; i < arrEditMeteoW.length; i++) {
+                    String strDelTv = strDelTv(delW(Double.parseDouble(editWindSpeed.getText().toString()), i));
+                    strDelArray.add(strDelTv);
+                    arrEditMeteoW[i].setText(strDelTv);
+                }
+                mSaveDataTab1BulW = new SaveDataTab1BulW(strDelArray);
                 //<------------------------------------------------------------>
             }
         });
@@ -254,9 +278,52 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
             public void onClick(View v){
                 eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
                 meteoSrLayout.setVisibility(LinearLayout.GONE);
+                saveEditMeteoAWT();
             }
         });
         //btnSСFill = (Button) view.findViewById(R.id.btnSСFill);
+    }
+
+    private void saveEditMeteoAWT() {
+        getAndPutStringEditT();
+        getAndPutStringEditAw();
+        getAndPutStringEditW();
+        //TODO where save and restore data to big table?
+
+    }
+
+    private void getAndPutStringEditT() {
+        mSaveDataTab1BulTem.meteoT02 = edtMeteoT02.getText().toString();
+        mSaveDataTab1BulTem.meteoT04 = edtMeteoT04.getText().toString();
+        mSaveDataTab1BulTem.meteoT08 = edtMeteoT08.getText().toString();
+        mSaveDataTab1BulTem.meteoT16 = edtMeteoT16.getText().toString();
+        mSaveDataTab1BulTem.meteoT20 = edtMeteoT20.getText().toString();
+        mSaveDataTab1BulTem.meteoT24 = edtMeteoT24.getText().toString();
+        mSaveDataTab1BulTem.meteoT30 = edtMeteoT30.getText().toString();
+        mSaveDataTab1BulTem.meteoT40 = edtMeteoT40.getText().toString();
+
+    }
+
+    private void getAndPutStringEditAw() {
+        mSaveDataTab1BulAw.meteoAw02 = edtMeteoAw02.getText().toString();
+        mSaveDataTab1BulAw.meteoAw04 = edtMeteoAw04.getText().toString();
+        mSaveDataTab1BulAw.meteoAw08 = edtMeteoAw08.getText().toString();
+        mSaveDataTab1BulAw.meteoAw16 = edtMeteoAw16.getText().toString();
+        mSaveDataTab1BulAw.meteoAw20 = edtMeteoAw20.getText().toString();
+        mSaveDataTab1BulAw.meteoAw24 = edtMeteoAw24.getText().toString();
+        mSaveDataTab1BulAw.meteoAw30 = edtMeteoAw30.getText().toString();
+        mSaveDataTab1BulAw.meteoAw40 = edtMeteoAw40.getText().toString();
+    }
+
+    private void getAndPutStringEditW() {
+        mSaveDataTab1BulW.meteoW02 = edtMeteoW02.getText().toString();
+        mSaveDataTab1BulW.meteoW04 = edtMeteoW04.getText().toString();
+        mSaveDataTab1BulW.meteoW08 = edtMeteoW08.getText().toString();
+        mSaveDataTab1BulW.meteoW16 = edtMeteoW16.getText().toString();
+        mSaveDataTab1BulW.meteoW20 = edtMeteoW20.getText().toString();
+        mSaveDataTab1BulW.meteoW24 = edtMeteoW24.getText().toString();
+        mSaveDataTab1BulW.meteoW30 = edtMeteoW30.getText().toString();
+        mSaveDataTab1BulW.meteoW40 = edtMeteoW40.getText().toString();
     }
 
     private void initEditors() {
