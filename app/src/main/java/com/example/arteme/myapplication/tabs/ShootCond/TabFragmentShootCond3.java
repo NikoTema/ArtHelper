@@ -13,6 +13,7 @@ import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 
 import static java.lang.Math.cos;
@@ -26,6 +27,7 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
     private EditText edtXc, edtYc, edtHc, edtDk, edtAc1, edtAc2;
     private Bundle mBundle;
     private SaveDataTab3SC mSaveDataTab3SC;
+    private SaveDataTab2CO mSaveDataTab2CO;
 
     @Override
     public void onResume() {
@@ -41,7 +43,15 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
         initButtons();
         if((mBundle = getArguments()) != null) reStoreData(mBundle);
         else mBundle = new Bundle();
+        readTab2ComOrd();
         return view;
+    }
+
+    private void readTab2ComOrd() {
+        mSaveDataTab2CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2CO();
+        if(mSaveDataTab2CO == null) {
+            //TODO хз что делать смотри сам
+        }
     }
 
     private void initButtons() {

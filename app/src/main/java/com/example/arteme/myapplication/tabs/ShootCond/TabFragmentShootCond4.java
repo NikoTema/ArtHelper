@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 
 public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
@@ -18,6 +20,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private EditText edtModD2,edtModD4, edtModD6, edtModD8, edtModD10, edtModD12, edtModD14;
     private EditText edtModA2,edtModA4, edtModA6, edtModA8, edtModA10, edtModA12, edtModA14;
     private EditText edtApop1, edtApop2;
+    private SaveDataTab1CO mSaveDataTab1CO;
 
     public static TabFragmentShootCond4 getInstance(){
         Bundle args = new Bundle();
@@ -50,8 +53,15 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
         edtApop1 = (EditText) view.findViewById(R.id.editAPop1);
         edtApop2 = (EditText) view.findViewById(R.id.editAPop2);
-
+        readTab1ComOrd();
         return view;
+    }
+
+    private void readTab1ComOrd() {
+        mSaveDataTab1CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab1CO();
+        if(mSaveDataTab1CO == null) {
+            //TODO хз что делать смотри сам
+        }
     }
 
     @Override

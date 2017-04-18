@@ -9,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond1;
@@ -85,6 +87,24 @@ public class ActivityShootCond extends AppCompatActivity {
         json = mSharedPreferences.getString(SHOOTCOND_TAB4, "");
         mBundleTab4 = new Bundle();
         //TODO mBundleTab4.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SavedDataFromTab4ShootCond.class));
+    }
+
+    public SaveDataTab1CO readFromSharedSaveDataTab1CO() {
+        Gson gson = new Gson();
+        String js = mSharedPreferences.getString(ActivityComOrd.COMORD_TAB1, "");
+        return (SaveDataTab1CO) gson.fromJson(js, SaveDataTab1CO.class);
+    }
+
+    public SaveDataTab2CO readFromSharedSaveDataTab2CO() {
+        Gson gson = new Gson();
+        String js = mSharedPreferences.getString(ActivityComOrd.COMORD_TAB2, "");
+        return (SaveDataTab2CO) gson.fromJson(js, SaveDataTab2CO.class);
+    }
+
+    private SaveDataTab2SC readFromSharedSaveDataTab2SC() {
+        Gson gson = new Gson();
+        String js = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
+        return (SaveDataTab2SC) gson.fromJson(js, SaveDataTab2SC.class);
     }
 
     private HashMap<String, Bundle> getBundleHashMap() {
