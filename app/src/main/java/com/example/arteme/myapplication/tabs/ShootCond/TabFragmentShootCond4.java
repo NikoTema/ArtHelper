@@ -6,12 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
+import com.example.arteme.myapplication.tabs.ShohtingTables;
 
 public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
@@ -21,6 +23,8 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private EditText edtModA2,edtModA4, edtModA6, edtModA8, edtModA10, edtModA12, edtModA14;
     private EditText edtApop1, edtApop2;
     private SaveDataTab1CO mSaveDataTab1CO;
+    private ShohtingTables mSaveShohtingTables;
+    Button btnSСCalculate;
 
     public static TabFragmentShootCond4 getInstance(){
         Bundle args = new Bundle();
@@ -34,6 +38,8 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanseState){
         view = inflater.inflate(LAYOUT, container, false);
+
+        initButtons();
 
         edtModD2 = (EditText) view.findViewById(R.id.edtModD2);
         edtModD4 = (EditText) view.findViewById(R.id.edtModD4);
@@ -57,6 +63,18 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
         return view;
     }
 
+    private void initButtons(){
+        btnSСCalculate = (Button) view.findViewById(R.id.btnSСCalculate);
+        btnSСCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double workSystem[][] = {};
+                workSystem = arrSystemCharge();
+
+            }
+        });
+    }
+
     private void readTab1ComOrd() {
         mSaveDataTab1CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab1CO();
         if(mSaveDataTab1CO == null) {
@@ -72,5 +90,29 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     @Override
     public void storeDataInBundle() {
 
+    }
+
+    public double[][] arrSystemCharge(){
+
+        double retArr[][] = new double[16][33];
+
+        switch (mSaveDataTab1CO.spinnerSystemPosition){
+            case 0:
+                switch (mSaveDataTab1CO.spinnerPacketPosition){
+                    case 0:
+                        switch (mSaveDataTab1CO.spinnerChargePosition){
+                            case 0:
+                                retArr = mSaveShohtingTables.charge2s3_3_of25;
+                                break;
+                            case 1:
+                                retArr = mSaveShohtingTables.charge2s3_6_of25;
+                                break;
+                        }
+                        break;
+                }
+                break;
+        }
+
+        return retArr;
     }
 }

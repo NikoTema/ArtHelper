@@ -314,6 +314,7 @@
                 android:orientation="horizontal"
                 android:background="@color/textBlack">
                 <EditText
+                    android:id="@+id/edtDataMeteo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -324,6 +325,7 @@
                     android:background="@color/textButton"
                     android:layout_weight="1"/>
                 <EditText
+                    android:id="@+id/edtHMeteo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -338,6 +340,7 @@
                     android:layout_weight="1"
                     android:background="@color/textBlack">
                     <EditText
+                        android:id="@+id/edtDelHMeteo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -347,6 +350,7 @@
                         android:background="@color/textButton"
                         android:layout_weight="1"/>
                     <EditText
+                        android:id="@+id/edtDelTMeteo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
