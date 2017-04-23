@@ -107,12 +107,8 @@ public class ActivityShootCond extends AppCompatActivity {
         return result;
     }
 
-    public SaveDataTab1GeneralTable readFromSharedSaveDataTab1SCGenTable() {
-        String js = mSharedPreferences.getString(TabFragmentShootCond1.BUNDLE_SAVED_DATA_KEY_GEN_TABLE,"");
-        SaveDataTab1GeneralTable result = ((new Gson()).fromJson(js,SaveDataTab1GeneralTable.class));
-        if (result == null) {
-            result = (SaveDataTab1GeneralTable)mBundleTab1.getSerializable(TabFragmentShootCond1.BUNDLE_SAVED_DATA_KEY_GEN_TABLE);
-        }
+    public SaveDataTab1GeneralTable reStoreGeneralTableTab1() {
+        SaveDataTab1GeneralTable result = (SaveDataTab1GeneralTable)mBundleTab1.getSerializable(TabFragmentShootCond1.BUNDLE_SAVED_DATA_KEY_GEN_TABLE);
         return result;
     }
 
