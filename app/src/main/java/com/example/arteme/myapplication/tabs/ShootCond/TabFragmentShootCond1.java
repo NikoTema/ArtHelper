@@ -25,6 +25,7 @@ import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulAw;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulTem;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulW;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
@@ -36,9 +37,7 @@ import java.util.ArrayList;
 public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab1_shootcond;
-    public static final String BUNDLE_SAVED_DATA_KEY_BUL_TEM = "BulTem";
-    public static final String BUNDLE_SAVED_DATA_KEY_BUL_W = "BulW";
-    public static final String BUNDLE_SAVED_DATA_KEY_BUL_AW = "BulAw";
+    public static final String BUNDLE_SAVED_DATA_KEY_GEN_TABLE = "generalTable";
     private View view;
     ArrayAdapter<CharSequence> adapterWindSpeed;
     Spinner spinnerWindSpeed;
@@ -91,9 +90,8 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                         editHeightMeteo.getText().toString());
         mBundle = new Bundle();
         mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, saveDataTab1Meteo);
-        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_BUL_TEM, mSaveDataTab1BulTem);
-        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_BUL_AW, mSaveDataTab1BulAw);
-        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_BUL_W, mSaveDataTab1BulW);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_GEN_TABLE, new SaveDataTab1GeneralTable(mSaveDataTab1BulAw, mSaveDataTab1BulTem, mSaveDataTab1BulW));
+
     }
 
     @Override
@@ -279,6 +277,8 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
                 meteoSrLayout.setVisibility(LinearLayout.GONE);
                 saveEditMeteoAWT();
+                storeDataInBundle();
+                ((ActivityShootCond) getActivity()).saveBundle(LAYOUT, mBundle);
             }
         });
         //btnSСFill = (Button) view.findViewById(R.id.btnSСFill);

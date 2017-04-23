@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
@@ -74,37 +75,45 @@ public class ActivityShootCond extends AppCompatActivity {
     }
 
     private void readTabBundleFromShared() {
-        Gson gson = new Gson();
         String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
         mBundleTab1 = new Bundle();
-        mBundleTab1.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab1Meteo.class));
-        json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
+        mBundleTab1.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab1Meteo.class));
         mBundleTab2 = new Bundle();
-        mBundleTab2.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab2SC.class));
+        mBundleTab2.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab2SC.class));
         json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
         mBundleTab3 = new Bundle();
-        mBundleTab3.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab3SC.class));
+        mBundleTab3.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab3SC.class));
         json = mSharedPreferences.getString(SHOOTCOND_TAB4, "");
         mBundleTab4 = new Bundle();
-        //TODO mBundleTab4.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SavedDataFromTab4ShootCond.class));
+        //TODO mBundleTab4.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SavedDataFromTab4ShootCond.class));
     }
 
     public SaveDataTab1CO readFromSharedSaveDataTab1CO() {
-        Gson gson = new Gson();
         String js = mSharedPreferences.getString(ActivityComOrd.COMORD_TAB1, "");
-        return (SaveDataTab1CO) gson.fromJson(js, SaveDataTab1CO.class);
+        return (SaveDataTab1CO) (new Gson()).fromJson(js, SaveDataTab1CO.class);
     }
 
     public SaveDataTab2CO readFromSharedSaveDataTab2CO() {
-        Gson gson = new Gson();
         String js = mSharedPreferences.getString(ActivityComOrd.COMORD_TAB2, "");
-        return (SaveDataTab2CO) gson.fromJson(js, SaveDataTab2CO.class);
+        return (SaveDataTab2CO) (new Gson()).fromJson(js, SaveDataTab2CO.class);
     }
 
-    private SaveDataTab2SC readFromSharedSaveDataTab2SC() {
-        Gson gson = new Gson();
+    public SaveDataTab2SC readFromSharedSaveDataTab2SC() {
         String js = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
-        return (SaveDataTab2SC) gson.fromJson(js, SaveDataTab2SC.class);
+        SaveDataTab2SC result = (new Gson()).fromJson(js, SaveDataTab2SC.class);
+        if (result == null) {
+            result = (SaveDataTab2SC) mBundleTab2.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+        }
+        return result;
+    }
+
+    public SaveDataTab1GeneralTable readFromSharedSaveDataTab1SCGenTable() {
+        String js = mSharedPreferences.getString(TabFragmentShootCond1.BUNDLE_SAVED_DATA_KEY_GEN_TABLE,"");
+        SaveDataTab1GeneralTable result = ((new Gson()).fromJson(js,SaveDataTab1GeneralTable.class));
+        if (result == null) {
+            result = (SaveDataTab1GeneralTable)mBundleTab1.getSerializable(TabFragmentShootCond1.BUNDLE_SAVED_DATA_KEY_GEN_TABLE);
+        }
+        return result;
     }
 
     private HashMap<String, Bundle> getBundleHashMap() {

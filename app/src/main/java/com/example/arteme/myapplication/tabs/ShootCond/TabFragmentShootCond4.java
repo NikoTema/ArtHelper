@@ -12,6 +12,8 @@ import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 
 public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
@@ -21,6 +23,9 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private EditText edtModA2,edtModA4, edtModA6, edtModA8, edtModA10, edtModA12, edtModA14;
     private EditText edtApop1, edtApop2;
     private SaveDataTab1CO mSaveDataTab1CO;
+    private SaveDataTab2SC mSaveDataTab2SC;
+    private SaveDataTab1GeneralTable mSaveDataTab1GeneralTable;
+    private Bundle mBundle;
 
     public static TabFragmentShootCond4 getInstance(){
         Bundle args = new Bundle();
@@ -54,13 +59,29 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
         edtApop1 = (EditText) view.findViewById(R.id.editAPop1);
         edtApop2 = (EditText) view.findViewById(R.id.editAPop2);
         readTab1ComOrd();
+        readTab1ShootCond();
+        readTab2ShootCond();
         return view;
     }
 
     private void readTab1ComOrd() {
         mSaveDataTab1CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab1CO();
         if(mSaveDataTab1CO == null) {
-            //TODO хз что делать смотри сам
+            //TODO - 1 хз что делать смотри сам
+        }
+    }
+
+    private void readTab1ShootCond() {
+        mSaveDataTab1GeneralTable = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab1SCGenTable();
+        if(mSaveDataTab1GeneralTable == null) {
+            //TODO - 2 хз что делать смотри сам
+        }
+    }
+
+    private void readTab2ShootCond() {
+        mSaveDataTab2SC = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2SC();
+        if(mSaveDataTab2SC == null) {
+            //TODO - 3 хз что делать смотри сам
         }
     }
 
