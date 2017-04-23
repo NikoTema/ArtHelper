@@ -48,6 +48,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
     private EditText edtMeteoAw02, edtMeteoAw04, edtMeteoAw08, edtMeteoAw12, edtMeteoAw16, edtMeteoAw20, edtMeteoAw24, edtMeteoAw30, edtMeteoAw40;
     private EditText edtMeteoW02, edtMeteoW04, edtMeteoW08, edtMeteoW12, edtMeteoW16, edtMeteoW20, edtMeteoW24, edtMeteoW30, edtMeteoW40;
+    private EditText edtData, edthMeteo, edtdelH, edtDelT;
     private Bundle mBundle;
     private SaveDataTab1BulTem mSaveDataTab1BulTem;
     private SaveDataTab1BulW mSaveDataTab1BulW;
@@ -246,6 +247,16 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 }
                 mSaveDataTab1BulW = new SaveDataTab1BulW(strDelArray);
                 //<------------------------------------------------------------>
+                //<------------------------Top Field----------------------------------->
+                edtData = (EditText) view.findViewById(R.id.edtDataMeteo);
+                edthMeteo = (EditText) view.findViewById(R.id.edtHMeteo);
+                edtdelH = (EditText) view.findViewById(R.id.edtDelHMeteo);
+                edtDelT = (EditText) view.findViewById(R.id.edtDelTMeteo);
+
+                edtData.setText("19103");
+                edthMeteo.setText(parsHMeteo(Integer.valueOf(editHeightMeteo.getText().toString())));
+                edtdelH.setText(parsDelHMeteo(Integer.valueOf(editPress.getText().toString())));
+                edtDelT.setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), 9)));
             }
         });
 
@@ -334,6 +345,35 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         editHeightMeteo = (EditText) view.findViewById(R.id.editHeightMeteo);
     }
 
+    private String parsHMeteo(int hMeteo){
+
+        String retH = "";
+
+        if(hMeteo < 10)
+            retH = "000" + String.valueOf(hMeteo);
+        else if(hMeteo >= 10 & hMeteo < 100)
+            retH = "00" + String.valueOf(hMeteo);
+        else if(hMeteo >= 100 & hMeteo < 1000)
+            retH = "0" + String.valueOf(hMeteo);
+
+        return retH;
+    }
+
+    private String parsDelHMeteo(int delH){
+
+        int retDelH = 0;
+
+        retDelH = delH - 750;
+        if(retDelH < 0)
+            retDelH = 500 + retDelH * (-1);
+        else if (retDelH < 10)
+            return "00" + String.valueOf(retDelH);
+        else if (retDelH >= 10 & retDelH < 100)
+            return "0" + String.valueOf(retDelH);
+
+        return String.valueOf(retDelH);
+    }
+
     private double delTv(double realT, int hYbull){
 
         double arrDelTv[] = {0.5, 1, 1.5, 2, 3.5, 4.5};
@@ -397,6 +437,8 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 case 8:
                     int temH40[] = {-1, -2, -3, -3, -4, -4, -4, -4, -5, -6, -14, -20, -27, -34};
                     retDelTv = minusTv(temH40, retDelTv);
+                    break;
+                case 9:
                     break;
             }
         }

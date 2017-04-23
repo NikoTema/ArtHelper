@@ -20,16 +20,14 @@
     <string name="tab1_mort">Мортирная:</string>
 
     <string-array name="system_array">
-        <item>2Б11</item>
+        <item>2C3</item>
     </string-array>
     <string-array name="packet_array">
-        <item>ОФ45</item>
+        <item>ОФ25</item>
     </string-array>
     <string-array name="charge_array">
-        <item>Полный</item>
-        <item>Уменьшенный</item>
-        <item>Первый</item>
-        <item>Второй</item>
+        <item>Третий</item>
+        <item>Шестой</item>
     </string-array>
     <string-array name="fuse_array">
         <item>РГМ2</item>

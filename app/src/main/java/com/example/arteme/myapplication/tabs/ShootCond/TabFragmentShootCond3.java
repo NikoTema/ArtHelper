@@ -60,6 +60,12 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
         btnSСPGZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double ac = (Double.parseDouble(edtAc1.getText().toString()) + Double.parseDouble(edtAc1.getText().toString()) * 0.01) * 6;
+                int[] arrXYc = {0, 0};
+                arrXYc = Pgz(Double.parseDouble(edtDk.getText().toString()), ac, Integer.parseInt(mSaveDataTab2CO.Xknp), Integer.parseInt(mSaveDataTab2CO.Yknp));
+
+                edtXc.setText(String.valueOf(arrXYc[0]));
+                edtYc.setText(String.valueOf(arrXYc[1]));
             }
         });
     }
