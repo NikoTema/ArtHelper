@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/arteme/AndroidStudioProjects/ArtHelper/library/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/arteme/AndroidStudioProjects/ArtHelper/library/src/debug/shaders"/></dataSet></merger>

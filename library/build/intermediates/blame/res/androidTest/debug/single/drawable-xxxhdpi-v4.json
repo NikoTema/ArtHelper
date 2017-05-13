@@ -12,12 +12,12 @@
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",

@@ -48,12 +48,12 @@
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/abc_tint_edittext.xml"
-    },
-    {
         "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/release/color/abc_tint_switch_track.xml",
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/abc_tint_edittext.xml"
     },
     {
         "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
@@ -68,12 +68,12 @@
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/switch_thumb_material_light.xml"
-    },
-    {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/color/switch_thumb_material_light.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/release/color/abc_tint_spinner.xml",

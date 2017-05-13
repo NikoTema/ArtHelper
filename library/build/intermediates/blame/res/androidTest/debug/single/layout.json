@@ -8,16 +8,16 @@
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_layout.xml",
@@ -56,12 +56,12 @@
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_media_action.xml"
-    },
-    {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_time.xml",
@@ -116,24 +116,24 @@
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_big_media.xml"
-    },
-    {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_lines.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_lines.xml"
     },
     {
         "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_icon.xml",
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_lines.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_lines.xml"
+        "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_view_list_nav_layout.xml",
@@ -152,12 +152,12 @@
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_big_media_narrow.xml"
-    },
-    {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml",
