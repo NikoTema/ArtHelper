@@ -27,6 +27,7 @@ import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulTem;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulW;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1SmallTable;
 import com.example.arteme.myapplication.weather.Channel;
 import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
 import com.example.arteme.myapplication.weather.WeatherGetter;
@@ -53,6 +54,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
     private SaveDataTab1BulTem mSaveDataTab1BulTem;
     private SaveDataTab1BulW mSaveDataTab1BulW;
     private SaveDataTab1BulAw mSaveDataTab1BulAw;
+    private SaveDataTab1SmallTable mSaveDataTab1SmallTable;
 
     @Override
     public void onResume() {
@@ -91,7 +93,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                         editHeightMeteo.getText().toString());
         mBundle = new Bundle();
         mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, saveDataTab1Meteo);
-        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_GEN_TABLE, new SaveDataTab1GeneralTable(mSaveDataTab1BulAw, mSaveDataTab1BulTem, mSaveDataTab1BulW));
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_GEN_TABLE, new SaveDataTab1GeneralTable(mSaveDataTab1BulAw, mSaveDataTab1BulTem, mSaveDataTab1BulW, mSaveDataTab1SmallTable));
 
     }
 
@@ -257,6 +259,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                 edthMeteo.setText(parsHMeteo(Integer.valueOf(editHeightMeteo.getText().toString())));
                 edtdelH.setText(parsDelHMeteo(Integer.valueOf(editPress.getText().toString())));
                 edtDelT.setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), 9)));
+                mSaveDataTab1SmallTable = new SaveDataTab1SmallTable(edtData.getText().toString(),edthMeteo.getText().toString(),edtdelH.getText().toString(),edtDelT.getText().toString());
             }
         });
 
@@ -299,6 +302,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         getAndPutStringEditT();
         getAndPutStringEditAw();
         getAndPutStringEditW();
+        getAndPutStringSmallTable();
         //TODO where save and restore data to big table?
 
     }
@@ -335,6 +339,13 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         mSaveDataTab1BulW.meteoW24 = edtMeteoW24.getText().toString();
         mSaveDataTab1BulW.meteoW30 = edtMeteoW30.getText().toString();
         mSaveDataTab1BulW.meteoW40 = edtMeteoW40.getText().toString();
+    }
+
+    private void getAndPutStringSmallTable() {
+        mSaveDataTab1SmallTable.delT = edtDelT.getText().toString();
+        mSaveDataTab1SmallTable.meteO = edthMeteo.getText().toString();
+        mSaveDataTab1SmallTable.datA = edtData.getText().toString();
+        mSaveDataTab1SmallTable.delH = edtdelH.getText().toString();
     }
 
     private void initEditors() {
