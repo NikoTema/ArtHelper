@@ -14,6 +14,7 @@ import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1SmallTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.ShohtingTables;
 
@@ -32,6 +33,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private SaveDataTab1GeneralTable mSaveDataTab1GeneralTable;
     private Bundle mBundle;
     private ShohtingTables mSaveShohtingTables;
+    private SaveDataTab1SmallTable mSaveDataTab1SmallTable;
     Button btnSСCalculate;
 
     public static TabFragmentShootCond4 getInstance(){
@@ -254,6 +256,15 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
         return delXtz;
     }
+
+    public double retDelH()
+    {
+        double retH = Double.parseDouble(mSaveDataTab1SmallTable.delH);
+        double hMeteo = (Double.parseDouble(mSaveDataTab1SmallTable.meteO) - 100)/10;
+
+        return retH;
+    }
+    
 
     public double retYbull(double arrCharge[][], int retKaret)
     {
