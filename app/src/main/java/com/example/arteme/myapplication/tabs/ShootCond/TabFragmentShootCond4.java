@@ -15,6 +15,7 @@ import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1SmallTable;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.ShohtingTables;
 
@@ -27,13 +28,13 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private EditText edtModD2,edtModD4, edtModD6, edtModD8, edtModD10, edtModD12, edtModD14;
     private EditText edtModA2,edtModA4, edtModA6, edtModA8, edtModA10, edtModA12, edtModA14;
     private EditText edtApop1, edtApop2;
-    EditText[] arrEditModA;
+    EditText[] arrEditModA, arrEditModD;
     private SaveDataTab1CO mSaveDataTab1CO;
+    private SaveDataTab2CO mSaveDataTab2CO;
     private SaveDataTab2SC mSaveDataTab2SC;
     private SaveDataTab1GeneralTable mSaveDataTab1GeneralTable;
     private Bundle mBundle;
     private ShohtingTables mSaveShohtingTables;
-    private SaveDataTab1SmallTable mSaveDataTab1SmallTable;
     Button btnSСCalculate;
 
     public static TabFragmentShootCond4 getInstance(){
@@ -51,13 +52,21 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
         initButtons();
 
+        arrEditModD = new EditText[7];
         edtModD2 = (EditText) view.findViewById(R.id.edtModD2);
+        arrEditModD[0] = edtModD2;
         edtModD4 = (EditText) view.findViewById(R.id.edtModD4);
+        arrEditModD[1] = edtModD4;
         edtModD6 = (EditText) view.findViewById(R.id.edtModD6);
+        arrEditModD[2] = edtModD6;
         edtModD8 = (EditText) view.findViewById(R.id.edtModD8);
+        arrEditModD[3] = edtModD8;
         edtModD10 = (EditText) view.findViewById(R.id.edtModD10);
+        arrEditModD[4] = edtModD10;
         edtModD12 = (EditText) view.findViewById(R.id.edtModD12);
+        arrEditModD[5] = edtModD12;
         edtModD14 = (EditText) view.findViewById(R.id.edtModD14);
+        arrEditModD[6] = edtModD14;
 
         arrEditModA = new EditText[7];
         edtModA2 = (EditText) view.findViewById(R.id.edtModA2);
@@ -80,6 +89,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
         readTab1ComOrd();
         readTab1ShootCond();
         readTab2ShootCond();
+        readTab2ComOrd();
         return view;
     }
 
@@ -90,6 +100,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
             public void onClick(View v) {
 
                 mSaveShohtingTables = new ShohtingTables();
+
                 double workSystem[][] = new double[][] {};
                 workSystem = arrSystemCharge();
                 int karet = 2000;
@@ -99,18 +110,38 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                 {
                     int karetDal = retDalKaret(karet, workSystem);
                     double delDsum = retDelDsum(workSystem, karetDal, karet);
+
+                     //###################__D___##############################
+
+                    double delDwx = 0.1 * retDelXw(workSystem, karetDal, karet) * retWx(workSystem, karetDal);
+
+                    double delDh =  0.1 * retDelXh(workSystem, karetDal, karet) * retDelH();
+
+                    double test = retYbull(workSystem, karetDal);
+                    double delDTv = 0.1 * retDelXtv(workSystem, karetDal, karet) * Double.parseDouble(retTbull(retKaretMeteo(test)));
+
+                    double delDVo = retDelXvo(workSystem, karetDal, karet) * Double.parseDouble(mSaveDataTab2SC.vosum);
+
+                    double delDTz = 0.1 * retDelXtz(workSystem, karetDal, karet) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
+
+                    double delDalSum = delDwx + delDh + delDTv + delDVo + delDTz;
+
+                    //#########################################################
+
                     String formattedDouble = new DecimalFormat("#0.00").format(delDsum);
-                    if (karet < maxDal)
+                    String doubleDal = new DecimalFormat("#0.00").format(delDalSum);
+
+
+                    if (karet < maxDal) {
                         arrEditModA[i].setText(formattedDouble);
-                    else
+                        arrEditModD[i].setText(doubleDal);
+                    }
+                    else {
                         arrEditModA[i].setText("not");
+                        arrEditModD[i].setText("not");
+                    }
                     karet += 2000;
                 }
-
-                int karetDal = retDalKaret(2000, workSystem);
-                double delDwx = 0.1 * retDelXw(workSystem, karetDal, 2000) * retWx(workSystem, karetDal);
-
-                double delDh =  0.1 * retDelXh(workSystem, karetDal, 2000);
 
             }
         });
@@ -134,6 +165,13 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
         mSaveDataTab2SC = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2SC();
         if(mSaveDataTab2SC == null) {
             //TODO - 3 хз что делать смотри сам
+        }
+    }
+
+    private void readTab2ComOrd() {
+        mSaveDataTab2CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2CO();
+        if(mSaveDataTab2CO == null) {
+            //TODO хз что делать смотри сам
         }
     }
 
@@ -259,8 +297,10 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
     public double retDelH()
     {
-        double retH = Double.parseDouble(mSaveDataTab1SmallTable.delH);
-        double hMeteo = (Double.parseDouble(mSaveDataTab1SmallTable.meteO) - 100)/10;
+        double retH = Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.delH);
+        double hMeteo = (Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.meteO) - Double.parseDouble(mSaveDataTab2CO.Hop))/10;
+
+        retH = retH - hMeteo;
 
         return retH;
     }
@@ -371,6 +411,42 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
         }
 
         return retW;
+    }
+
+    public String retTbull(int retKaretMeteo)
+    {
+        String retT = "";
+        switch (retKaretMeteo){
+            case 0:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT02;
+                break;
+            case 1:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT04;
+                break;
+            case 2:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT08;
+                break;
+            case 3:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT12;
+                break;
+            case 4:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT16;
+                break;
+            case 5:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT20;
+                break;
+            case 6:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT24;
+                break;
+            case 7:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT30;
+                break;
+            case 8:
+                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT40;
+                break;
+        }
+
+        return retT;
     }
 
     public int retWz(double arrCharge[][], int retKaret)
