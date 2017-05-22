@@ -7,12 +7,14 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 
 public class TabFragmentShootCond2 extends Fragment implements ISavedData {
@@ -22,6 +24,7 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
     private EditText edtTemperCharge, edtVosum;
     private Bundle mBundle;
     private SaveDataTab2SC mSaveDataTab2SC;
+    private Button btnSave;
 
     @Nullable
     @Override
@@ -29,10 +32,12 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
         view = inflater.inflate(LAYOUT, container, false);
 
         initEditText();
+        initButton();
         if(getArguments() == null) mBundle = new Bundle();
         else reStoreData(mBundle = getArguments());
         return view;
     }
+
 
     private void initEditText() {
         edtTemperCharge = (EditText) view.findViewById(R.id.editTemperCharge);
@@ -53,6 +58,18 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
         });
     }
 
+    private void initButton() {
+        btnSave = (Button) view.findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storeDataInBundle();
+                ((ActivityShootCond)getActivity()).saveBundle(LAYOUT, mBundle);
+                ToastUtil.showSuccessToast(getActivity(), getString(R.string.succ_save_data));
+            }
+        });
+    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -63,8 +80,7 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        storeDataInBundle();
-        ((ActivityShootCond)getActivity()).saveBundle(LAYOUT, mBundle);
+
     }
 
     @Override
@@ -87,4 +103,6 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
     public void storeDataInBundle() {
         mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, mSaveDataTab2SC);
     }
+
+
 }
