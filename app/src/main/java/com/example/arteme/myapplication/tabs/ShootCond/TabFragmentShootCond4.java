@@ -14,10 +14,9 @@ import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1SmallTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
-import com.example.arteme.myapplication.tabs.ShohtingTables;
+import com.example.arteme.myapplication.tabs.ShotingTables.Charge2s3OF25;
 
 import java.text.DecimalFormat;
 
@@ -34,7 +33,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private SaveDataTab2SC mSaveDataTab2SC;
     private SaveDataTab1GeneralTable mSaveDataTab1GeneralTable;
     private Bundle mBundle;
-    private ShohtingTables mSaveShohtingTables;
+    private Charge2s3OF25 mSaveCharge2s3OF25;
     Button btnSСCalculate;
 
     public static TabFragmentShootCond4 getInstance(){
@@ -99,7 +98,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
             @Override
             public void onClick(View v) {
 
-                mSaveShohtingTables = new ShohtingTables();
+                mSaveCharge2s3OF25 = new Charge2s3OF25();
 
                 double workSystem[][] = new double[][] {};
                 workSystem = arrSystemCharge();
@@ -120,6 +119,9 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                     double test = retYbull(workSystem, karetDal);
                     double delDTv = 0.1 * retDelXtv(workSystem, karetDal, karet) * Double.parseDouble(retTbull(retKaretMeteo(test)));
 
+                    String test1= mSaveDataTab2SC.vosum;
+                    Double test2 = Double.parseDouble(test1);
+
                     double delDVo = retDelXvo(workSystem, karetDal, karet) * Double.parseDouble(mSaveDataTab2SC.vosum);
 
                     double delDTz = 0.1 * retDelXtz(workSystem, karetDal, karet) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
@@ -129,7 +131,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                     //#########################################################
 
                     String formattedDouble = new DecimalFormat("#0.00").format(delDsum);
-                    String doubleDal = new DecimalFormat("#0.00").format(delDalSum);
+                    String doubleDal = new DecimalFormat("#0").format(delDalSum);
 
 
                     if (karet < maxDal) {
@@ -195,10 +197,10 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                     case 0:
                         switch (mSaveDataTab1CO.spinnerChargePosition) {
                             case 0:
-                                retArr = mSaveShohtingTables.charge2s3_3_of25;
+                                retArr = mSaveCharge2s3OF25.charge2s3_3_of25;
                                 break;
                             case 1:
-                                retArr = mSaveShohtingTables.charge2s3_6_of25;
+                                retArr = mSaveCharge2s3OF25.charge2s3_6_of25;
                                 break;
                         }
                         break;
@@ -211,8 +213,8 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
     public  double retDelDsum(double arrCharge[][], int retKaret, int dal)
     {
-        double delZw = retDelZw(arrCharge, retKaret, dal) * 0.01;
-        double Z = retZ(arrCharge, retKaret, dal) * 0.01;
+        double delZw = retDelZw(arrCharge, retKaret, dal);
+        double Z = retZ(arrCharge, retKaret, dal);
 
         int wz = retWz(arrCharge, retKaret);
         double delDwz = (0.1 * delZw * wz);
@@ -250,21 +252,21 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     {
         double z = arrCharge[5][retKaret] - (((arrCharge[5][retKaret] - arrCharge[5][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
 
-        return z;
+        return z * (-1);
     }
 
     public  double retDelZw(double arrCharge[][], int retKaret, int dal)
     {
         double delZw = arrCharge[6][retKaret] - (((arrCharge[6][retKaret] - arrCharge[6][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
 
-        return delZw;
+        return delZw * (-1);
     }
 
     public double retDelXw(double arrCharge[][], int retKaret, int dal)
     {
         double delXw = arrCharge[7][retKaret] - (((arrCharge[7][retKaret] - arrCharge[7][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
 
-        return delXw;
+        return delXw * (-1);
     }
 
     public double retDelXh(double arrCharge[][], int retKaret, int dal)
@@ -278,31 +280,33 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     {
         double delXtv = arrCharge[10][retKaret] - (((arrCharge[10][retKaret] - arrCharge[10][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
 
-        return delXtv;
+        return delXtv * (-1);
     }
 
     public double retDelXvo(double arrCharge[][], int retKaret, int dal)
     {
         double delXvo = arrCharge[12][retKaret] - (((arrCharge[12][retKaret] - arrCharge[12][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
 
-        return delXvo;
+        return delXvo*(-1);
     }
 
     public double retDelXtz(double arrCharge[][], int retKaret, int dal)
     {
         double delXtz = arrCharge[11][retKaret] - (((arrCharge[11][retKaret] - arrCharge[11][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
 
-        return delXtz;
+        return delXtz * (-1);
     }
 
     public double retDelH()
     {
-        double retH = Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.delH);
+        int retH = Integer.parseInt(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.delH);
         double hMeteo = (Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.meteO) - Double.parseDouble(mSaveDataTab2CO.Hop))/10;
 
-        retH = retH - hMeteo;
+        double retVar = 0;
 
-        return retH;
+        retVar = retH + hMeteo;
+
+        return retVar;
     }
     
 
@@ -446,7 +450,13 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                 break;
         }
 
-        return retT;
+        int intVar = Integer.parseInt(retT);
+        if(intVar > 50)
+            intVar = (intVar - 50)*(-1);
+        if(intVar == 50)
+            intVar = 0;
+
+        return String.valueOf(intVar);
     }
 
     public int retWz(double arrCharge[][], int retKaret)
@@ -461,7 +471,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
         int awCell = (int)Math.ceil(aw);
         int vwCell = (int)Math.ceil(wBull);
-        int retWz = mSaveShohtingTables.arWz[awCell][vwCell];
+        int retWz = mSaveCharge2s3OF25.arWz[awCell][vwCell];
 
         return retWz;
     }
@@ -477,7 +487,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
         int awCell = (int)Math.ceil(aw);
         int vwCell = (int)Math.ceil(wBull);
-        int retWx = mSaveShohtingTables.arWx[awCell][vwCell];
+        int retWx = mSaveCharge2s3OF25.arWx[awCell][vwCell - 1];
 
         return retWx;
     }

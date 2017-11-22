@@ -80,9 +80,9 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
         ArrayAdapter<CharSequence> adapterSystem = ArrayAdapter.createFromResource(getContext(),
                 R.array.system_array, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapterPacket = ArrayAdapter.createFromResource(getContext(),
-                R.array.packet_array, android.R.layout.simple_spinner_item);
+                R.array.packet_array_2s3, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapterCharge = ArrayAdapter.createFromResource(getContext(),
-                R.array.charge_array, android.R.layout.simple_spinner_item);
+                R.array.charge_array_2s3of25, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapterFuse = ArrayAdapter.createFromResource(getContext(),
                 R.array.fuse_array, android.R.layout.simple_spinner_item);
 

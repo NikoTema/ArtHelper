@@ -21,11 +21,29 @@
 
     <string-array name="system_array">
         <item>2C3</item>
+        <item>2С19</item>
     </string-array>
-    <string-array name="packet_array">
+    <string-array name="packet_array_2s3">
         <item>ОФ25</item>
     </string-array>
-    <string-array name="charge_array">
+    <string-array name="packet_array_2s19">
+        <item>ОФ25</item>
+        <item>ОФ45</item>
+    </string-array>
+    <string-array name="charge_array_2s19of25">
+        <item>Полный</item>
+        <item>Второй</item>
+        <item>Третий</item>
+        <item>Четвертый</item>
+    </string-array>
+    <string-array name="charge_array_2s19of45">
+        <item>Дальнобойный</item>
+        <item>Полный</item>
+        <item>Второй</item>
+        <item>Третий</item>
+        <item>Четвертый</item>
+    </string-array>
+    <string-array name="charge_array_2s3of25">
         <item>Третий</item>
         <item>Шестой</item>
     </string-array>
