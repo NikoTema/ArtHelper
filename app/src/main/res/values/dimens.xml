@@ -5,6 +5,7 @@
     <dimen name="main_btn_width">350dp</dimen>
     <dimen name="main_btn_height">70dp</dimen>
     <dimen name="main_bettwen_btn">20dp</dimen>
+    <dimen name="main_bettwen_lr_btn">16dp</dimen>
     <dimen name="text_tab_size">18dp</dimen>
     <dimen name="size_tabl">25dp</dimen>
 </resources>

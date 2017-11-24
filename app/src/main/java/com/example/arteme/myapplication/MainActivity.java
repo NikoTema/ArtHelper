@@ -34,4 +34,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void sendFireTask(View view){
+        Intent intent = new Intent(this, ActivityFireTask.class);
+        startActivity(intent);
+    }
+
 }

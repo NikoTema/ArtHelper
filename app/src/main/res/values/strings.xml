@@ -58,6 +58,7 @@
     <string name="tab1_press">Давление:</string>
     <string name="tab1_temper">Температура:</string>
     <string name="tab1_direction">Направление ветра:</string>
+    <string name="tab1_firetask">Установки для стрельбы</string>
     <string-array name="wind_speed_array">
         <item>Скорость ветра:</item>
         <item>Дальность сноса пуль:</item>
@@ -81,6 +82,21 @@
     <string name="tab4_press">давл</string>
     <string name="tab4_temper">темп</string>
     <string name="btn_back">Назад</string>
+
+    <string name="tab1_firetask_pr">Пр</string>
+    <string name="tab1_firetask_ur">Ур</string>
+    <string name="tab1_firetask_di">dи</string>
+    <string name="tab1_firetask_ku">КУ</string>
+    <string name="tab1_firetask_shu">ШУ</string>
+    <string name="tab1_firetask_op">ОП</string>
+    <string name="tab1_firetask_Dt">Дт</string>
+    <string name="tab1_firetask_At">Ат</string>
+    <string name="tab1_firetask_dt">dт</string>
+    <string name="tab1_firetask_Ec">Ец</string>
+    <string name="tab1_firetask_Di">Ди</string>
+    <string name="tab1_firetask_Ai">Аи</string>
+    <string name="tab1_firetask_ps">ПС</string>
+    <string name="tab1_firetask_delx">Xтыс</string>
 
     <string name="meteo_connection_error">Ошибка загрузки метеоданных! Проверьте подключение сети!</string>
     <string name="meteo_gps_error">Ошибка загрузки метеоданных! Активируйте GPS!</string>

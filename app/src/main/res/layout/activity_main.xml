@@ -13,8 +13,10 @@
     <Button
         android:id="@+id/btnComOrd"
         android:onClick="sendComOrd"
-        android:layout_width="@dimen/main_btn_width"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/main_btn_height"
+        android:layout_marginLeft="@dimen/main_bettwen_lr_btn"
+        android:layout_marginRight="@dimen/main_bettwen_lr_btn"
         android:layout_gravity="center"
         android:text="@string/btn_1"
         android:textColor="@color/textButton"
@@ -23,8 +25,10 @@
     <Button
         android:id="@+id/btnShootCond"
         android:onClick="sendShootCond"
-        android:layout_width="@dimen/main_btn_width"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/main_btn_height"
+        android:layout_marginLeft="@dimen/main_bettwen_lr_btn"
+        android:layout_marginRight="@dimen/main_bettwen_lr_btn"
         android:layout_gravity="center"
         android:text="@string/btn_2"
         android:textColor="@color/textButton"
@@ -34,8 +38,11 @@
 
     <Button
         android:id="@+id/btnFireTask"
-        android:layout_width="@dimen/main_btn_width"
+        android:onClick="sendFireTask"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/main_btn_height"
+        android:layout_marginLeft="@dimen/main_bettwen_lr_btn"
+        android:layout_marginRight="@dimen/main_bettwen_lr_btn"
         android:layout_gravity="center"
         android:text="@string/btn_3"
         android:textColor="@color/textButton"
