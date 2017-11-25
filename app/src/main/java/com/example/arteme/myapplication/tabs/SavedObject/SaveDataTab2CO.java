@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class SaveDataTab2CO implements Serializable{
 
-    public String  Xknp;
+    public String Xknp;
     public String Yknp;
     public String Hknp;
     public String Xop;

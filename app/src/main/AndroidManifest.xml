@@ -26,6 +26,10 @@
             android:theme="@style/AppTheme"
             android:label="Условия стрельбы">
         </activity>
+        <activity android:name=".ActivityFireTask"
+            android:theme="@style/AppTheme"
+            android:label="Огневая задача">
+        </activity>
     </application>
 
 </manifest>
