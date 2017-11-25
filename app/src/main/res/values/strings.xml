@@ -19,6 +19,16 @@
     <string name="tab1_ricoshet">Рикошетная:</string>
     <string name="tab1_mort">Мортирная:</string>
 
+    <string-array name="name_of_arrays">
+        <item>system_array</item>
+        <item>packet_array_2s3</item>
+        <item>packet_array_2s19</item>
+        <item>charge_array_2s19of25</item>
+        <item>charge_array_2s19of45</item>
+        <item>charge_array_2s3of25</item>
+        <item>fuse_array</item>
+    </string-array>
+
     <string-array name="system_array">
         <item>2C3</item>
         <item>2С19</item>
