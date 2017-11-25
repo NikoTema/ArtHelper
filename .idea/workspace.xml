@@ -10,11 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79eacfdf-1055-46ee-814f-7233d7231850" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ActivityFireTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/FireTask/TabFragmentFireTask1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/TabsPagerFrAdFireTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_firetask.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -24,10 +19,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <list id="b10eba7c-6064-4182-acd6-8a839130857f" name="New changelist" comment="" />
@@ -61,48 +55,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tab1_firetask.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml">
+      <file leaf-file-name="TabFragmentShootCond3.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+            <state relative-caret-position="180">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
-                <element signature="e#492#515#0" expanded="true" />
-                <element signature="e#1042#1060#0" expanded="true" />
-                <element signature="e#1351#1377#0" expanded="true" />
-                <element signature="e#1965#1991#0" expanded="true" />
-                <element signature="e#2531#2557#0" expanded="true" />
-                <element signature="e#3070#3088#0" expanded="true" />
-                <element signature="e#5032#5050#0" expanded="true" />
-                <element signature="e#5341#5367#0" expanded="true" />
-                <element signature="e#5955#5982#0" expanded="true" />
-                <element signature="e#6522#6548#0" expanded="true" />
-                <element signature="e#7061#7079#0" expanded="true" />
-                <element signature="e#9024#9042#0" expanded="true" />
-                <element signature="e#9333#9359#0" expanded="true" />
-                <element signature="e#10441#10467#0" expanded="true" />
-                <element signature="e#11474#11492#0" expanded="true" />
-                <element signature="e#11783#11809#0" expanded="true" />
-                <element signature="e#12797#12823#0" expanded="true" />
-                <element signature="e#13735#13753#0" expanded="true" />
-                <element signature="e#14044#14070#0" expanded="true" />
-                <element signature="e#15058#15084#0" expanded="true" />
-                <element signature="e#15996#16014#0" expanded="true" />
-                <element signature="e#16305#16331#0" expanded="true" />
-                <element signature="e#17319#17347#0" expanded="true" />
+                <element signature="e#2089#3573#0" expanded="true" />
+                <element signature="e#2349#2377#0" expanded="true" />
+                <element signature="e#2530#2558#0" expanded="true" />
+                <element signature="e#2883#2914#0" expanded="true" />
+                <element signature="e#3105#3136#0" expanded="true" />
+                <element signature="e#3572#3573#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <file leaf-file-name="SaveDataTab2CO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="105">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -111,23 +85,30 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+            <state relative-caret-position="331">
+              <caret line="105" column="29" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab4_shootcond.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab4_shootcond.xml">
+      <file leaf-file-name="ToastUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4668">
-              <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+            <state relative-caret-position="478">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="TabFragmentShootCond2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="67" column="67" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="67" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -2717,12 +2698,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab4_shootcond.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/SaveData/SavedDataTab1ShootCond.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ISavedData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1SC.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/TabsPagerFrAdShootCond.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/TabsPagerFrAdComOrd.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1CO.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ActivityComOrd.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2SC.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond2.java" />
@@ -2733,7 +2712,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1BulAw.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1BulW.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ComOrd/TabFragmentComOrd2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1GeneralTable.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ActivityShootCond.java" />
@@ -2756,8 +2734,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_firetask.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" />
       </list>
     </option>
   </component>
@@ -2893,6 +2874,54 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="myapplication" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtHelper" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myapplication" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtHelper" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myapplication" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShootCond" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3417,7 +3446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511366543353</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added FireTask">
+      <created>1511545846027</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1511545846027</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3439,11 +3475,12 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27705976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29461756" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22804533" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3455,7 +3492,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3482,7 +3518,8 @@
     <MESSAGE value="Added read savedData tab1/tab2 comOrd to tab3/tab4, respectively" />
     <MESSAGE value="change ShootCond4" />
     <MESSAGE value="added Charge" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Charge" />
+    <MESSAGE value="added FireTask" />
+    <option name="LAST_COMMIT_MESSAGE" value="added FireTask" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3529,46 +3566,12 @@
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ComOrd/TabFragmentComOrd1.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="176" />
+      <option name="time" value="184" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1GeneralTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/weather/YahooWeatherAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4785" column="0" selection-start-line="4785" selection-start-column="0" selection-end-line="4785" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab2_comord.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -3674,16 +3677,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ComOrd/TabFragmentComOrd1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab2_shootcond.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -3715,22 +3708,6 @@
             <element signature="method#retAwBull#0;class#TabFragmentShootCond4#0" expanded="false" />
             <element signature="method#retWbull#0;class#TabFragmentShootCond4#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3796,14 +3773,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ComOrd/TabFragmentComOrd2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3977,25 +3946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab4_shootcond.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4668">
-          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -4006,7 +3956,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="795">
           <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
           <folding>
             <element signature="e#492#515#0" expanded="true" />
@@ -4037,6 +3987,90 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab4_shootcond.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4668">
+          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ComOrd/TabFragmentComOrd2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ComOrd/TabFragmentComOrd1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="67" column="67" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/ToastUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab2CO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#2089#3573#0" expanded="true" />
+            <element signature="e#2349#2377#0" expanded="true" />
+            <element signature="e#2530#2558#0" expanded="true" />
+            <element signature="e#2883#2914#0" expanded="true" />
+            <element signature="e#3105#3136#0" expanded="true" />
+            <element signature="e#3572#3573#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

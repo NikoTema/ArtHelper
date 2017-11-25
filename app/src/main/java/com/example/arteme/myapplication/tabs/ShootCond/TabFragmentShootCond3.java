@@ -13,6 +13,7 @@ import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 
@@ -60,12 +61,29 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
         btnSСPGZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double ac = (Double.parseDouble(edtAc1.getText().toString()) + Double.parseDouble(edtAc1.getText().toString()) * 0.01) * 6;
-                int[] arrXYc = {0, 0};
-                arrXYc = Pgz(Double.parseDouble(edtDk.getText().toString()), ac, Integer.parseInt(mSaveDataTab2CO.Xknp), Integer.parseInt(mSaveDataTab2CO.Yknp));
 
-                edtXc.setText(String.valueOf(arrXYc[0]));
-                edtYc.setText(String.valueOf(arrXYc[1]));
+                ToastUtil.hideKeyboard(getActivity());
+
+                if(edtDk.getText().length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_Dk));
+                else if(edtAc1.getText().length() == 0 || edtAc2.getText().length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_Ac));
+                else {
+                    double ac = (Double.parseDouble(edtAc1.getText().toString()) + Double.parseDouble(edtAc2.getText().toString()) * 0.01) * 6;
+                    int[] arrXYc = {0, 0};
+
+                    if(mSaveDataTab2CO == null )
+                      ToastUtil.showErrorToast(getActivity(), getString(R.string.error_XYknp));
+                    else {
+                        if(mSaveDataTab2CO.Xknp.isEmpty() || mSaveDataTab2CO.Yknp.isEmpty())
+                            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_XYknp));
+                        else {
+                            arrXYc = Pgz(Double.parseDouble(edtDk.getText().toString()), ac, Integer.parseInt(mSaveDataTab2CO.Xknp), Integer.parseInt(mSaveDataTab2CO.Yknp));
+                            edtXc.setText(String.valueOf(arrXYc[0]));
+                            edtYc.setText(String.valueOf(arrXYc[1]));
+                        }
+                    }
+                }
             }
         });
     }

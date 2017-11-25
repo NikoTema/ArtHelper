@@ -101,5 +101,8 @@
     <string name="meteo_connection_error">Ошибка загрузки метеоданных! Проверьте подключение сети!</string>
     <string name="meteo_gps_error">Ошибка загрузки метеоданных! Активируйте GPS!</string>
     <string name="succ_save_data">Данные успешно сохранены</string>
+    <string name="error_Ac">Для рассчета введите Aц</string>
+    <string name="error_Dk">Для рассчета введите Дк</string>
+    <string name="error_XYknp">Для рассчета введите координаты КНП в Боевом порядке</string>
 
 </resources>
