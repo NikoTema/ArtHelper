@@ -11,7 +11,7 @@
         android:textColor="@color/colorTextHeader"
         android:text="@string/tab1_firetask"
         android:layout_gravity="center"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
     <LinearLayout

@@ -57,8 +57,8 @@ public class ActivityFireTask extends AppCompatActivity {
         TabsPagerFrAdFireTask adapter = new TabsPagerFrAdFireTask(getSupportFragmentManager(), getBundleHashMap());
         viewPager.setAdapter(adapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutFireTask);
-        tabLayout.setupWithViewPager(viewPager);
+       // TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutFireTask);
+        //tabLayout.setupWithViewPager(viewPager);
     }
 
     private HashMap<String, Bundle> getBundleHashMap() {
