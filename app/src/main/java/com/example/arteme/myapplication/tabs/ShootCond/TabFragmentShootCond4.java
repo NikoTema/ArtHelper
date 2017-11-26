@@ -12,6 +12,7 @@ import android.widget.EditText;
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
@@ -98,51 +99,66 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
             @Override
             public void onClick(View v) {
 
-                mSaveCharge2s3OF25 = new Charge2s3OF25();
+                ToastUtil.hideKeyboard(getActivity());
 
-                double workSystem[][] = new double[][] {};
-                workSystem = arrSystemCharge();
-                int karet = 2000;
-                double maxDal = workSystem[0][workSystem[0].length - 1];
+                if(mSaveDataTab1CO == null)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_destruct));
+                else if(mSaveDataTab1GeneralTable == null)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_meteo));
+                else {
+                    if(mSaveDataTab2SC == null)
+                        ToastUtil.showErrorToast(getActivity(), getString(R.string.error_ballistic));
+                    else{
+                        if(mSaveDataTab2SC.temperCharge == null || mSaveDataTab2SC.temperCharge.isEmpty() )
+                            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_Tz));
+                        else if(mSaveDataTab2SC.vosum == null || mSaveDataTab2SC.vosum.isEmpty())
+                            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_Vosum));
+                        else if(edtApop1.length() == 0 || edtApop2.length() == 0)
+                            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_A));
+                        else{
+                            mSaveCharge2s3OF25 = new Charge2s3OF25();
 
-                for(int i = 0; i < 7; i++)
-                {
-                    int karetDal = retDalKaret(karet, workSystem);
-                    double delDsum = retDelDsum(workSystem, karetDal, karet);
+                            double workSystem[][] = new double[][]{};
+                            workSystem = arrSystemCharge();
+                            int karet = 2000;
+                            double maxDal = workSystem[0][workSystem[0].length - 1];
 
-                     //###################__D___##############################
+                            for (int i = 0; i < 7; i++) {
+                                int karetDal = retDalKaret(karet, workSystem);
+                                double delDsum = retDelDsum(workSystem, karetDal, karet);
 
-                    double delDwx = 0.1 * retDelXw(workSystem, karetDal, karet) * retWx(workSystem, karetDal);
+                                //###################__D___##############################
 
-                    double delDh =  0.1 * retDelXh(workSystem, karetDal, karet) * retDelH();
+                                double delDwx = 0.1 * retDelXw(workSystem, karetDal, karet) * retWx(workSystem, karetDal);
 
-                    double test = retYbull(workSystem, karetDal);
-                    double delDTv = 0.1 * retDelXtv(workSystem, karetDal, karet) * Double.parseDouble(retTbull(retKaretMeteo(test)));
+                                double delDh = 0.1 * retDelXh(workSystem, karetDal, karet) * retDelH();
 
-                    String test1= mSaveDataTab2SC.vosum;
-                    Double test2 = Double.parseDouble(test1);
+                                double test = retYbull(workSystem, karetDal);
+                                double delDTv = 0.1 * retDelXtv(workSystem, karetDal, karet) * Double.parseDouble(retTbull(retKaretMeteo(test)));
 
-                    double delDVo = retDelXvo(workSystem, karetDal, karet) * Double.parseDouble(mSaveDataTab2SC.vosum);
+                                double delDVo = retDelXvo(workSystem, karetDal, karet) * Double.parseDouble(mSaveDataTab2SC.vosum);
 
-                    double delDTz = 0.1 * retDelXtz(workSystem, karetDal, karet) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
+                                double delDTz = 0.1 * retDelXtz(workSystem, karetDal, karet) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
 
-                    double delDalSum = delDwx + delDh + delDTv + delDVo + delDTz;
+                                double delDalSum = delDwx + delDh + delDTv + delDVo + delDTz;
 
-                    //#########################################################
+                                //#########################################################
 
-                    String formattedDouble = new DecimalFormat("#0.00").format(delDsum);
-                    String doubleDal = new DecimalFormat("#0").format(delDalSum);
+                                String formattedDouble = new DecimalFormat("#0.00").format(delDsum);
+                                String doubleDal = new DecimalFormat("#0").format(delDalSum);
 
 
-                    if (karet < maxDal) {
-                        arrEditModA[i].setText(formattedDouble);
-                        arrEditModD[i].setText(doubleDal);
+                                if (karet < maxDal) {
+                                    arrEditModA[i].setText(formattedDouble);
+                                    arrEditModD[i].setText(doubleDal);
+                                } else {
+                                    arrEditModA[i].setText("not");
+                                    arrEditModD[i].setText("not");
+                                }
+                                karet += 2000;
+                            }
+                        }
                     }
-                    else {
-                        arrEditModA[i].setText("not");
-                        arrEditModD[i].setText("not");
-                    }
-                    karet += 2000;
                 }
 
             }
@@ -300,7 +316,16 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     public double retDelH()
     {
         int retH = Integer.parseInt(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.delH);
-        double hMeteo = (Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.meteO) - Double.parseDouble(mSaveDataTab2CO.Hop))/10;
+        double hop;
+        if(mSaveDataTab2CO == null)
+            hop = 0;
+        else{
+            if(mSaveDataTab2CO.Hop.isEmpty())
+                hop = 0;
+            else
+                hop = Double.parseDouble(mSaveDataTab2CO.Hop);
+        }
+        double hMeteo = (Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.meteO) - hop)/10;
 
         double retVar = 0;
 
