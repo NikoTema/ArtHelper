@@ -12,16 +12,25 @@ import java.util.HashMap;
 public class AdapterFactory {
 
     private HashMap<String,ArrayAdapter<CharSequence>> mArrayAdapterHashMap;
+    private Context mContext;
 
     public AdapterFactory(Context context, @LayoutRes int textViewResId) {
-        String[] names = context.getResources().getStringArray(R.array.name_of_arrays);
+        mContext = context;
+
+        createArrayAdapterHashMap(textViewResId);
+    }
+
+    private void createArrayAdapterHashMap(@LayoutRes int textViewResId) {
+        mArrayAdapterHashMap = new HashMap<>();
+
+        String[] names = mContext.getResources().getStringArray(R.array.name_of_arrays);
 
         for (String name: names) {
-            Integer idOfName = context.getResources().getIdentifier(name,"array", context.getPackageName());
+            Integer idOfName = mContext.getResources().getIdentifier(name,"array", mContext.getPackageName());
 
-            ArrayAdapter<CharSequence> add = ArrayAdapter.createFromResource(context, idOfName, textViewResId);
+            ArrayAdapter<CharSequence> add = ArrayAdapter.createFromResource(mContext, idOfName, textViewResId);
 
-            mArrayAdapterHashMap.put(name,add);
+            mArrayAdapterHashMap.put(name, add);
         }
     }
 

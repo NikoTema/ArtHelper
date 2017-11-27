@@ -19,10 +19,28 @@ import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab1_comord;
+
+    public static final int SYSTEM_SPINNER = 0;
+    public static final int PACKET_SPINNER = 1;
+    public static final int CHARGE_SPINNER = 2;
+    public static final int FUSE_SPINNER = 3;
+
+    public final static String SYSTEM_ARRAY = "system_array";
+    public final static int FIRST_POSITION_ON_ADAPTER = 0;
+
+
     private Spinner spinnerSystem, spinnerPacket, spinnerCharge, spinnerFuse;
     private View view;
     private SaveDataTab1CO mSaveDataTab1CO;
     private Bundle mBundle;
+    private AdapterFactory mAdapterFactory;
+    private ComOrdSpinnerData mComOrdSpinnerData;
+
+    private ArrayAdapter<CharSequence> mAdapterSystem;
+    private ArrayAdapter<CharSequence> mAdapterPacket;
+    private ArrayAdapter<CharSequence> mAdapterCharge;
+    private ArrayAdapter<CharSequence> mAdapterFuse;
+
 
     @Override
     public void onResume() {
@@ -61,12 +79,17 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanseState) {
         view = inflater.inflate(LAYOUT, container, false);
+
+        mComOrdSpinnerData = new ComOrdSpinnerData(getContext());
+
         initSpinner();
+
         if(getArguments() != null) reStoreData(mBundle = getArguments());
         else {
             mSaveDataTab1CO = new SaveDataTab1CO(0,0,0,0);
             mBundle = new Bundle();
         }
+
         return view;
     }
 
@@ -77,24 +100,15 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
         spinnerCharge = (Spinner) view.findViewById(R.id.charge_spinner);
         spinnerFuse = (Spinner) view.findViewById(R.id.fuse_spinner);
 
-        AdapterFactory adapterFactory = new AdapterFactory(getContext(), android.R.layout.simple_spinner_item);
+        mAdapterFactory = new AdapterFactory(getContext(), android.R.layout.simple_spinner_item);
 
-        ArrayAdapter<CharSequence> adapterSystem = ArrayAdapter.createFromResource(getContext(),
-                R.array.system_array, android.R.layout.simple_spinner_item);
-        ArrayAdapter<CharSequence> adapterPacket = ArrayAdapter.createFromResource(getContext(),
-                R.array.packet_array_2s3, android.R.layout.simple_spinner_item);
-        ArrayAdapter<CharSequence> adapterCharge = ArrayAdapter.createFromResource(getContext(),
-                R.array.charge_array_2s3of25, android.R.layout.simple_spinner_item);
+        initAdapters();
 
-
-        ArrayAdapter<CharSequence> adapterFuse = ArrayAdapter.createFromResource(getContext(),
-                R.array.fuse_array, android.R.layout.simple_spinner_item);
-
-        spinnerSystem.setAdapter(adapterSystem);
+        spinnerSystem.setAdapter(mAdapterSystem);
         spinnerSystem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                CharSequence s = (CharSequence) parent.getSelectedItem();
+                updateSpinner(SYSTEM_SPINNER, parent.getSelectedItem().toString());
                 mSaveDataTab1CO.spinnerSystemPosition = position;
                 storeDataInBundle();
             }
@@ -104,10 +118,12 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
             }
         });
-        spinnerPacket.setAdapter(adapterPacket);
+        spinnerPacket.setAdapter(mAdapterPacket);
         spinnerPacket.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                updateSpinner(PACKET_SPINNER, parent.getSelectedItem().toString());
+
                 mSaveDataTab1CO.spinnerPacketPosition = position;
                 storeDataInBundle();
             }
@@ -117,10 +133,12 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
             }
         });
-        spinnerCharge.setAdapter(adapterCharge);
+        spinnerCharge.setAdapter(mAdapterCharge);
         spinnerCharge.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                updateSpinner(CHARGE_SPINNER, parent.getSelectedItem().toString());
+
                 mSaveDataTab1CO.spinnerChargePosition = position;
                 storeDataInBundle();
             }
@@ -130,10 +148,11 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
             }
         });
-        spinnerFuse.setAdapter(adapterFuse);
+        spinnerFuse.setAdapter(mAdapterFuse);
         spinnerFuse.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                updateSpinner(FUSE_SPINNER, parent.getSelectedItem().toString());
                 mSaveDataTab1CO.spinnerFusePosition = position;
                 storeDataInBundle();
             }
@@ -145,10 +164,53 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
         });
     }
 
+    private void initAdapters() {
+        mComOrdSpinnerData.initCurrentSpinnerNames(SYSTEM_ARRAY);
+
+        mAdapterSystem = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterSystemName());
+        mAdapterPacket = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterPacketName());
+        mAdapterCharge = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterChargeName());
+        mAdapterFuse = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterFuseName());
+
+    }
+
+    private void updateSpinner(int parentSpinner, String item) {
+        String key = null;
+        switch (parentSpinner) {
+            case SYSTEM_SPINNER:
+                key = mComOrdSpinnerData.getAssociativeKey(SYSTEM_SPINNER, item);
+
+                if (key != null) {
+                    mAdapterPacket = mAdapterFactory.getArrayAdapter(key);
+                    spinnerPacket.setAdapter(mAdapterPacket);
+                }
+                break;
+            case PACKET_SPINNER:
+                key = mComOrdSpinnerData.getAssociativeKey(PACKET_SPINNER, item);
+
+                if (key != null) {
+                    mAdapterCharge = mAdapterFactory.getArrayAdapter(key);
+                    spinnerCharge.setAdapter(mAdapterCharge);
+                }
+                break;
+            case CHARGE_SPINNER:
+                key = mComOrdSpinnerData.getAssociativeKey(CHARGE_SPINNER, item);
+
+                if (key != null) {
+                    mAdapterFuse = mAdapterFactory.getArrayAdapter(key);
+                    spinnerFuse.setAdapter(mAdapterFuse);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
     @Override
     public void storeDataInBundle() {
         mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, mSaveDataTab1CO);
     }
+
 
 
 }

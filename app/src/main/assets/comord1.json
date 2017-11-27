@@ -1,0 +1,34 @@
+{
+    "system_array": {
+      "2C3": "packet_array_2s3",
+      "2С19": "packet_array_2s19"
+    },
+    "packet_array_2s3": {
+      "ОФ25": "charge_array_2s3of25"
+    },
+    "packet_array_2s19": {
+      "ОФ25": "charge_array_2s19of25",
+      "ОФ45": "charge_array_2s19of45"
+    },
+    "charge_array_2s19of25": {
+      "Полный":"",
+      "Второй":"",
+      "Третий":"",
+      "Четвертый":""
+    },
+    "charge_array_2s19of45": {
+      "Дальнобойный":"",
+      "Полный":"",
+      "Второй":"",
+      "Третий":"",
+      "Четвертый":""
+    },
+    "charge_array_2s3of25": {
+      "Третий":"",
+      "Шестой":""
+    },
+    "fuse_array": {
+      "РГМ2": ""
+    }
+}
+
