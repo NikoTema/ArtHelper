@@ -78,11 +78,15 @@ public class ActivityShootCond extends AppCompatActivity {
         String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
         mBundleTab1 = new Bundle();
         mBundleTab1.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab1Meteo.class));
+
+        json = mSharedPreferences.getString(SHOOTCOND_TAB2,"");
         mBundleTab2 = new Bundle();
         mBundleTab2.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab2SC.class));
+
         json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
         mBundleTab3 = new Bundle();
         mBundleTab3.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab3SC.class));
+
         json = mSharedPreferences.getString(SHOOTCOND_TAB4, "");
         mBundleTab4 = new Bundle();
         //TODO mBundleTab4.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SavedDataFromTab4ShootCond.class));
@@ -150,7 +154,6 @@ public class ActivityShootCond extends AppCompatActivity {
         editor.apply();
 
     }
-
 
     public void saveBundle(int tag, Bundle bundle) {
         switch (tag) {
