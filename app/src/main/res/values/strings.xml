@@ -4,6 +4,7 @@
     <string name="btn_2">Условия стрельбы</string>
     <string name="btn_3">Огневая задача</string>
     <string name="btn_sc_compose">Составить</string>
+    <string name="btn_ft_calculate">Рассчитать</string>
     <string name="btn_sc_fill">Заполнить</string>
     <string name="btn_sc_download">Загрузить</string>
     <string name="btn_save">Сохранить</string>
@@ -79,6 +80,7 @@
     <string name="tab2_vo_sum">Vo сум:</string>
     <string name="tab3_dk">Дк:</string>
     <string name="tab3_ac">Aц:</string>
+    <string name="tab2_aon">Aон:</string>
     <string name="btn_pgz">ПГЗ</string>
 
     <string name="tab4_opor">Опорн.</string>
@@ -114,5 +116,16 @@
     <string name="error_Ac">Для рассчета введите Aц</string>
     <string name="error_Dk">Для рассчета введите Дк</string>
     <string name="error_XYknp">Для рассчета введите координаты КНП в Боевом порядке</string>
+    <string name="error_H">Для составления введите Давление</string>
+    <string name="error_T">Для составления введите Температуру</string>
+    <string name="error_W">Для составления введите Направление ветра</string>
+    <string name="error_DorV">Для составления введите Скорость ветра (Дальность сноса пуль)</string>
+    <string name="error_hmp">Для составления введите Высоту метеопоста</string>
+    <string name="error_meteo">Для расчета составьте метеосредний</string>
+    <string name="error_ballistic">Для расчета введите данные Баллистика</string>
+    <string name="error_Tz">Для расчета введите Температуру заряда в Условиях стрельбы, вкладка Баллистика</string>
+    <string name="error_Vosum">Для расчета введите Voсум заряда в Условиях стрельбы, вкладка Баллистика</string>
+    <string name="error_A">Для расчета введите угол "В направлении"</string>
+    <string name="error_destruct">Для расчета выберите Средства поражения в Боевом порядке"</string>
 
 </resources>

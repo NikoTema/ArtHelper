@@ -33,7 +33,10 @@ import com.example.arteme.myapplication.weather.Interfaces.IWeatherReceiver;
 import com.example.arteme.myapplication.weather.WeatherGetter;
 import com.example.arteme.myapplication.weather.data.Item;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
@@ -156,110 +159,126 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         btnSССompose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eathContitionsLayout.setVisibility(LinearLayout.GONE);
-                meteoSrLayout.setVisibility(LinearLayout.VISIBLE);
 
-                //<----------------------Tv--------------------------->
+                ToastUtil.hideKeyboard(getActivity());
 
-                EditText[] arrEditMeteoT = new EditText[9];
-                edtMeteoT02 = (EditText) view.findViewById(R.id.edtMeteoT02);
-                arrEditMeteoT[0] = edtMeteoT02;
-                edtMeteoT04 = (EditText) view.findViewById(R.id.edtMeteoT04);
-                arrEditMeteoT[1] = edtMeteoT04;
-                edtMeteoT08 = (EditText) view.findViewById(R.id.edtMeteoT08);
-                arrEditMeteoT[2] = edtMeteoT08;
-                edtMeteoT12 = (EditText) view.findViewById(R.id.edtMeteoT12);
-                arrEditMeteoT[3] = edtMeteoT12;
-                edtMeteoT16 = (EditText) view.findViewById(R.id.edtMeteoT16);
-                arrEditMeteoT[4] = edtMeteoT16;
-                edtMeteoT20 = (EditText) view.findViewById(R.id.edtMeteoT20);
-                arrEditMeteoT[5] = edtMeteoT20;
-                edtMeteoT24 = (EditText) view.findViewById(R.id.edtMeteoT24);
-                arrEditMeteoT[6] = edtMeteoT24;
-                edtMeteoT30 = (EditText) view.findViewById(R.id.edtMeteoT30);
-                arrEditMeteoT[7] = edtMeteoT30;
-                edtMeteoT40 = (EditText) view.findViewById(R.id.edtMeteoT40);
-                arrEditMeteoT[8] = edtMeteoT40;
-                ArrayList<String> strDelArray = new ArrayList<>();
-                for(int i = 0; i < arrEditMeteoT.length; i++) {
-                    String strDelTv = strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), i));
-                    strDelArray.add(strDelTv);
-                    arrEditMeteoT[i].setText(strDelTv);
+                if(editPress.length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_H));
+                else if(editTemper.length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_T));
+                else if(editDirection.length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_W));
+                else if(editWindSpeed.length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_DorV));
+                else if(editHeightMeteo.length() == 0)
+                    ToastUtil.showErrorToast(getActivity(), getString(R.string.error_hmp));
+                else {
+
+                    eathContitionsLayout.setVisibility(LinearLayout.GONE);
+                    meteoSrLayout.setVisibility(LinearLayout.VISIBLE);
+
+                    //<----------------------Tv--------------------------->
+
+                    EditText[] arrEditMeteoT = new EditText[9];
+                    edtMeteoT02 = (EditText) view.findViewById(R.id.edtMeteoT02);
+                    arrEditMeteoT[0] = edtMeteoT02;
+                    edtMeteoT04 = (EditText) view.findViewById(R.id.edtMeteoT04);
+                    arrEditMeteoT[1] = edtMeteoT04;
+                    edtMeteoT08 = (EditText) view.findViewById(R.id.edtMeteoT08);
+                    arrEditMeteoT[2] = edtMeteoT08;
+                    edtMeteoT12 = (EditText) view.findViewById(R.id.edtMeteoT12);
+                    arrEditMeteoT[3] = edtMeteoT12;
+                    edtMeteoT16 = (EditText) view.findViewById(R.id.edtMeteoT16);
+                    arrEditMeteoT[4] = edtMeteoT16;
+                    edtMeteoT20 = (EditText) view.findViewById(R.id.edtMeteoT20);
+                    arrEditMeteoT[5] = edtMeteoT20;
+                    edtMeteoT24 = (EditText) view.findViewById(R.id.edtMeteoT24);
+                    arrEditMeteoT[6] = edtMeteoT24;
+                    edtMeteoT30 = (EditText) view.findViewById(R.id.edtMeteoT30);
+                    arrEditMeteoT[7] = edtMeteoT30;
+                    edtMeteoT40 = (EditText) view.findViewById(R.id.edtMeteoT40);
+                    arrEditMeteoT[8] = edtMeteoT40;
+                    ArrayList<String> strDelArray = new ArrayList<>();
+                    for (int i = 0; i < arrEditMeteoT.length; i++) {
+                        String strDelTv = strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), i));
+                        strDelArray.add(strDelTv);
+                        arrEditMeteoT[i].setText(strDelTv);
+                    }
+                    mSaveDataTab1BulTem = new SaveDataTab1BulTem(strDelArray);
+
+                    //<------------------------------------------------------------>
+
+                    //<------------------------Aw----------------------------------->
+
+                    EditText[] arrEditMeteoAw = new EditText[9];
+                    edtMeteoAw02 = (EditText) view.findViewById(R.id.edtMeteoAw02);
+                    arrEditMeteoAw[0] = edtMeteoAw02;
+                    edtMeteoAw04 = (EditText) view.findViewById(R.id.edtMeteoAw04);
+                    arrEditMeteoAw[1] = edtMeteoAw04;
+                    edtMeteoAw08 = (EditText) view.findViewById(R.id.edtMeteoAw08);
+                    arrEditMeteoAw[2] = edtMeteoAw08;
+                    edtMeteoAw12 = (EditText) view.findViewById(R.id.edtMeteoAw12);
+                    arrEditMeteoAw[3] = edtMeteoAw12;
+                    edtMeteoAw16 = (EditText) view.findViewById(R.id.edtMeteoAw16);
+                    arrEditMeteoAw[4] = edtMeteoAw16;
+                    edtMeteoAw20 = (EditText) view.findViewById(R.id.edtMeteoAw20);
+                    arrEditMeteoAw[5] = edtMeteoAw20;
+                    edtMeteoAw24 = (EditText) view.findViewById(R.id.edtMeteoAw24);
+                    arrEditMeteoAw[6] = edtMeteoAw24;
+                    edtMeteoAw30 = (EditText) view.findViewById(R.id.edtMeteoAw30);
+                    arrEditMeteoAw[7] = edtMeteoAw30;
+                    edtMeteoAw40 = (EditText) view.findViewById(R.id.edtMeteoAw40);
+                    arrEditMeteoAw[8] = edtMeteoAw40;
+                    strDelArray.clear();
+                    for (int i = 0; i < arrEditMeteoAw.length; i++) {
+                        String strDelTv = strDelTv(delAw(Double.parseDouble(editDirection.getText().toString()), i));
+                        strDelArray.add(strDelTv);
+                        arrEditMeteoAw[i].setText(strDelTv);
+                    }
+                    mSaveDataTab1BulAw = new SaveDataTab1BulAw(strDelArray);
+                    //<------------------------------------------------------------>
+
+                    //<------------------------W----------------------------------->
+
+                    EditText[] arrEditMeteoW = new EditText[9];
+                    edtMeteoW02 = (EditText) view.findViewById(R.id.edtMeteoW02);
+                    arrEditMeteoW[0] = edtMeteoW02;
+                    edtMeteoW04 = (EditText) view.findViewById(R.id.edtMeteoW04);
+                    arrEditMeteoW[1] = edtMeteoW04;
+                    edtMeteoW08 = (EditText) view.findViewById(R.id.edtMeteoW08);
+                    arrEditMeteoW[2] = edtMeteoW08;
+                    edtMeteoW12 = (EditText) view.findViewById(R.id.edtMeteoW12);
+                    arrEditMeteoW[3] = edtMeteoW12;
+                    edtMeteoW16 = (EditText) view.findViewById(R.id.edtMeteoW16);
+                    arrEditMeteoW[4] = edtMeteoW16;
+                    edtMeteoW20 = (EditText) view.findViewById(R.id.edtMeteoW20);
+                    arrEditMeteoW[5] = edtMeteoW20;
+                    edtMeteoW24 = (EditText) view.findViewById(R.id.edtMeteoW24);
+                    arrEditMeteoW[6] = edtMeteoW24;
+                    edtMeteoW30 = (EditText) view.findViewById(R.id.edtMeteoW30);
+                    arrEditMeteoW[7] = edtMeteoW30;
+                    edtMeteoW40 = (EditText) view.findViewById(R.id.edtMeteoW40);
+                    arrEditMeteoW[8] = edtMeteoW40;
+                    strDelArray.clear();
+                    for (int i = 0; i < arrEditMeteoW.length; i++) {
+                        String strDelTv = strDelTv(delW(Double.parseDouble(editWindSpeed.getText().toString()), i));
+                        strDelArray.add(strDelTv);
+                        arrEditMeteoW[i].setText(strDelTv);
+                    }
+                    mSaveDataTab1BulW = new SaveDataTab1BulW(strDelArray);
+                    //<------------------------------------------------------------>
+                    //<------------------------Top Field----------------------------------->
+                    edtData = (EditText) view.findViewById(R.id.edtDataMeteo);
+                    edthMeteo = (EditText) view.findViewById(R.id.edtHMeteo);
+                    edtdelH = (EditText) view.findViewById(R.id.edtDelHMeteo);
+                    edtDelT = (EditText) view.findViewById(R.id.edtDelTMeteo);
+
+                    edtData.setText(getData());
+                    edthMeteo.setText(parsHMeteo(Integer.valueOf(editHeightMeteo.getText().toString())));
+                    edtdelH.setText(parsDelHMeteo(Integer.valueOf(editPress.getText().toString())));
+                    edtDelT.setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), 9)));
+                    mSaveDataTab1SmallTable = new SaveDataTab1SmallTable(edtData.getText().toString(), edthMeteo.getText().toString(), edtdelH.getText().toString(), edtDelT.getText().toString());
                 }
-                mSaveDataTab1BulTem = new SaveDataTab1BulTem(strDelArray);
-
-                //<------------------------------------------------------------>
-
-                //<------------------------Aw----------------------------------->
-
-                EditText[] arrEditMeteoAw = new EditText[9];
-                edtMeteoAw02 = (EditText) view.findViewById(R.id.edtMeteoAw02);
-                arrEditMeteoAw[0] = edtMeteoAw02;
-                edtMeteoAw04 = (EditText) view.findViewById(R.id.edtMeteoAw04);
-                arrEditMeteoAw[1] = edtMeteoAw04;
-                edtMeteoAw08 = (EditText) view.findViewById(R.id.edtMeteoAw08);
-                arrEditMeteoAw[2] = edtMeteoAw08;
-                edtMeteoAw12 = (EditText) view.findViewById(R.id.edtMeteoAw12);
-                arrEditMeteoAw[3] = edtMeteoAw12;
-                edtMeteoAw16 = (EditText) view.findViewById(R.id.edtMeteoAw16);
-                arrEditMeteoAw[4] = edtMeteoAw16;
-                edtMeteoAw20 = (EditText) view.findViewById(R.id.edtMeteoAw20);
-                arrEditMeteoAw[5] = edtMeteoAw20;
-                edtMeteoAw24 = (EditText) view.findViewById(R.id.edtMeteoAw24);
-                arrEditMeteoAw[6] = edtMeteoAw24;
-                edtMeteoAw30 = (EditText) view.findViewById(R.id.edtMeteoAw30);
-                arrEditMeteoAw[7] = edtMeteoAw30;
-                edtMeteoAw40 = (EditText) view.findViewById(R.id.edtMeteoAw40);
-                arrEditMeteoAw[8] = edtMeteoAw40;
-                strDelArray.clear();
-                for(int i = 0; i < arrEditMeteoAw.length; i++) {
-                    String strDelTv = strDelTv(delAw(Double.parseDouble(editDirection.getText().toString()), i));
-                    strDelArray.add(strDelTv);
-                    arrEditMeteoAw[i].setText(strDelTv);
-                }
-                mSaveDataTab1BulAw = new SaveDataTab1BulAw(strDelArray);
-                //<------------------------------------------------------------>
-
-                //<------------------------W----------------------------------->
-
-                EditText[] arrEditMeteoW = new EditText[9];
-                edtMeteoW02 = (EditText) view.findViewById(R.id.edtMeteoW02);
-                arrEditMeteoW[0] = edtMeteoW02;
-                edtMeteoW04 = (EditText) view.findViewById(R.id.edtMeteoW04);
-                arrEditMeteoW[1] = edtMeteoW04;
-                edtMeteoW08 = (EditText) view.findViewById(R.id.edtMeteoW08);
-                arrEditMeteoW[2] = edtMeteoW08;
-                edtMeteoW12 = (EditText) view.findViewById(R.id.edtMeteoW12);
-                arrEditMeteoW[3] = edtMeteoW12;
-                edtMeteoW16 = (EditText) view.findViewById(R.id.edtMeteoW16);
-                arrEditMeteoW[4] = edtMeteoW16;
-                edtMeteoW20 = (EditText) view.findViewById(R.id.edtMeteoW20);
-                arrEditMeteoW[5] = edtMeteoW20;
-                edtMeteoW24 = (EditText) view.findViewById(R.id.edtMeteoW24);
-                arrEditMeteoW[6] = edtMeteoW24;
-                edtMeteoW30 = (EditText) view.findViewById(R.id.edtMeteoW30);
-                arrEditMeteoW[7] = edtMeteoW30;
-                edtMeteoW40 = (EditText) view.findViewById(R.id.edtMeteoW40);
-                arrEditMeteoW[8] = edtMeteoW40;
-                strDelArray.clear();
-                for(int i = 0; i < arrEditMeteoW.length; i++) {
-                    String strDelTv = strDelTv(delW(Double.parseDouble(editWindSpeed.getText().toString()), i));
-                    strDelArray.add(strDelTv);
-                    arrEditMeteoW[i].setText(strDelTv);
-                }
-                mSaveDataTab1BulW = new SaveDataTab1BulW(strDelArray);
-                //<------------------------------------------------------------>
-                //<------------------------Top Field----------------------------------->
-                edtData = (EditText) view.findViewById(R.id.edtDataMeteo);
-                edthMeteo = (EditText) view.findViewById(R.id.edtHMeteo);
-                edtdelH = (EditText) view.findViewById(R.id.edtDelHMeteo);
-                edtDelT = (EditText) view.findViewById(R.id.edtDelTMeteo);
-
-                edtData.setText("19103");
-                edthMeteo.setText(parsHMeteo(Integer.valueOf(editHeightMeteo.getText().toString())));
-                edtdelH.setText(parsDelHMeteo(Integer.valueOf(editPress.getText().toString())));
-                edtDelT.setText(strDelTv(delTv(Integer.valueOf(editTemper.getText().toString()), 9)));
-                mSaveDataTab1SmallTable = new SaveDataTab1SmallTable(edtData.getText().toString(),edthMeteo.getText().toString(),edtdelH.getText().toString(),edtDelT.getText().toString());
             }
         });
 
@@ -267,7 +286,6 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         btnSСDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //mToastUtil.showErrorToast(getString(R.string.meteo_connection_error));
                 if(!isConnectivityEnabled()) {
                     ToastUtil.showErrorToast(getActivity(), getString(R.string.meteo_connection_error));
                     return;
@@ -354,6 +372,20 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         editDirection = (EditText) view.findViewById(R.id.editDirection);
         editWindSpeed = (EditText) view.findViewById(R.id.editWindSpeed);
         editHeightMeteo = (EditText) view.findViewById(R.id.editHeightMeteo);
+    }
+
+    private String getData(){
+        DateFormat df = new SimpleDateFormat("ddHH");
+        DateFormat dm = new SimpleDateFormat("mm");
+        String minute = dm.format(Calendar.getInstance().getTime());
+        if(Integer.parseInt(minute) < 10)
+            minute = "0";
+        else
+            minute = String.valueOf(Integer.parseInt(minute)/10);
+
+        String date = df.format(Calendar.getInstance().getTime()) + minute;
+
+        return date;
     }
 
     private String parsHMeteo(int hMeteo){

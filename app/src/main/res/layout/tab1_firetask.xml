@@ -11,7 +11,7 @@
         android:textColor="@color/colorTextHeader"
         android:text="@string/tab1_firetask"
         android:layout_gravity="center"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
     <LinearLayout
@@ -415,5 +415,16 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFTCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/btn_ft_calculate"
+        android:textColor="@color/textButton"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>

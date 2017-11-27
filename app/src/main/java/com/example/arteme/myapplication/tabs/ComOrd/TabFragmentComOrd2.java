@@ -23,7 +23,7 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab2_comord;
     private View view;
-    private EditText edtXknp, edtYknp, edtHknp, edtXop, edtYop, edtHop;
+    private EditText edtXknp, edtYknp, edtHknp, edtXop, edtYop, edtHop, edtAon1, edtAon2;
     private SaveDataTab2CO mSaveDataTab2CO;
     private Bundle mBundle;
     private Button btnCOSave;
@@ -50,7 +50,7 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
     public void reStoreData(Bundle bundle) {
         mSaveDataTab2CO = (SaveDataTab2CO) mBundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
         if (mSaveDataTab2CO == null) {
-            mSaveDataTab2CO = new SaveDataTab2CO("","","","","","");
+            mSaveDataTab2CO = new SaveDataTab2CO("","","","","","","", "");
             return;
         }
         edtXknp.setText(mSaveDataTab2CO.Xknp);
@@ -59,6 +59,9 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
         edtXop.setText(mSaveDataTab2CO.Xop);
         edtYop.setText(mSaveDataTab2CO.Yop);
         edtHop.setText(mSaveDataTab2CO.Hop);
+        edtAon1.setText(mSaveDataTab2CO.Aon1);
+        edtAon2.setText(mSaveDataTab2CO.Aon2);
+
     }
 
     @Override
@@ -85,7 +88,9 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
                                 edtHknp.getText().toString(),
                                 edtXop.getText().toString(),
                                 edtYop.getText().toString(),
-                                edtHop.getText().toString());
+                                edtHop.getText().toString(),
+                                edtAon1.getText().toString(),
+                                edtAon2.getText().toString());
                 storeDataInBundle();
                 hideKeyBoard();
                 ToastUtil.showSuccessToast(getActivity(), getString(R.string.succ_save_data));
@@ -98,6 +103,8 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
         edtXop = (EditText) view.findViewById(R.id.edtXop);
         edtYop = (EditText) view.findViewById(R.id.edtYop);
         edtHop = (EditText) view.findViewById(R.id.edtHop);
+        edtAon1 = (EditText) view.findViewById(R.id.edtAon1);
+        edtAon2 = (EditText) view.findViewById(R.id.edtAon2);
     }
 
     private void hideKeyBoard() {
