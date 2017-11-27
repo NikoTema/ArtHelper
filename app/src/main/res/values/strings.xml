@@ -4,6 +4,7 @@
     <string name="btn_2">Условия стрельбы</string>
     <string name="btn_3">Огневая задача</string>
     <string name="btn_sc_compose">Составить</string>
+    <string name="btn_ft_calculate">Рассчитать</string>
     <string name="btn_sc_fill">Заполнить</string>
     <string name="btn_sc_download">Загрузить</string>
     <string name="btn_save">Сохранить</string>
@@ -69,6 +70,7 @@
     <string name="tab2_vo_sum">Vo сум:</string>
     <string name="tab3_dk">Дк:</string>
     <string name="tab3_ac">Aц:</string>
+    <string name="tab2_aon">Aон:</string>
     <string name="btn_pgz">ПГЗ</string>
 
     <string name="tab4_opor">Опорн.</string>

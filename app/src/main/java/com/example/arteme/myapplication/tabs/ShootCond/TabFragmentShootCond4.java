@@ -124,29 +124,12 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                             double maxDal = workSystem[0][workSystem[0].length - 1];
 
                             for (int i = 0; i < 7; i++) {
+
                                 int karetDal = retDalKaret(karet, workSystem);
                                 double delDsum = retDelDsum(workSystem, karetDal, karet);
-
-                                //###################__D___##############################
-
-                                double delDwx = 0.1 * retDelXw(workSystem, karetDal, karet) * retWx(workSystem, karetDal);
-
-                                double delDh = 0.1 * retDelXh(workSystem, karetDal, karet) * retDelH();
-
-                                double test = retYbull(workSystem, karetDal);
-                                double delDTv = 0.1 * retDelXtv(workSystem, karetDal, karet) * Double.parseDouble(retTbull(retKaretMeteo(test)));
-
-                                double delDVo = retDelXvo(workSystem, karetDal, karet) * Double.parseDouble(mSaveDataTab2SC.vosum);
-
-                                double delDTz = 0.1 * retDelXtz(workSystem, karetDal, karet) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
-
-                                double delDalSum = delDwx + delDh + delDTv + delDVo + delDTz;
-
-                                //#########################################################
-
+                                double delDalSum = retdelDalSum(workSystem, karetDal, karet);
                                 String formattedDouble = new DecimalFormat("#0.00").format(delDsum);
                                 String doubleDal = new DecimalFormat("#0").format(delDalSum);
-
 
                                 if (karet < maxDal) {
                                     arrEditModA[i].setText(formattedDouble);
@@ -200,6 +183,25 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
     @Override
     public void storeDataInBundle() {
+
+    }
+
+    public double retdelDalSum(double arrCharge[][], int retKaret, int dal)
+    {
+        double delDwx = 0.1 * retDelXw(arrCharge, retKaret, dal) * retWx(arrCharge, retKaret);
+
+        double delDh = 0.1 * retDelXh(arrCharge, retKaret, dal) * retDelH();
+
+        double test = retYbull(arrCharge, retKaret);
+        double delDTv = 0.1 * retDelXtv(arrCharge, retKaret, dal) * Double.parseDouble(retTbull(retKaretMeteo(test)));
+
+        double delDVo = retDelXvo(arrCharge, retKaret, dal) * Double.parseDouble(mSaveDataTab2SC.vosum);
+
+        double delDTz = 0.1 * retDelXtz(arrCharge, retKaret, dal) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
+
+        double delDalSum = delDwx + delDh + delDTv + delDVo + delDTz;
+
+        return delDalSum;
 
     }
 

@@ -10,7 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.arteme.myapplication.tabs.FireTask.TabFragmentFireTask1;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.TabsPagerFrAdFireTask;
+import com.google.gson.Gson;
 
 import java.util.HashMap;
 
@@ -60,6 +62,7 @@ public class ActivityFireTask extends AppCompatActivity {
        // TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutFireTask);
         //tabLayout.setupWithViewPager(viewPager);
     }
+
 
     private HashMap<String, Bundle> getBundleHashMap() {
         HashMap<String, Bundle> result = new HashMap<>();

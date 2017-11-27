@@ -11,14 +11,19 @@ public class SaveDataTab2CO implements Serializable{
     public String Xop;
     public String Yop;
     public String Hop;
+    public String Aon1;
+    public String Aon2;
 
-    public SaveDataTab2CO(String xknp, String yknp, String hknp, String xop, String yop, String hop) {
+    public SaveDataTab2CO(String xknp, String yknp, String hknp, String xop, String yop, String hop,
+                          String aon1, String aon2) {
         Xknp = xknp;
         Yknp = yknp;
         Hknp = hknp;
         Xop = xop;
         Yop = yop;
         Hop = hop;
+        Aon1 = aon1;
+        Aon2 = aon2;
     }
 
 }
