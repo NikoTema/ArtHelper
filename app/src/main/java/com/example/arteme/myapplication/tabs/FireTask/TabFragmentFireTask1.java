@@ -8,11 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.arteme.myapplication.ActivityComOrd;
 import com.example.arteme.myapplication.ActivityFireTask;
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
+import com.example.arteme.myapplication.ToastUtil;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 
 
@@ -21,8 +26,14 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
     public static final int LAYOUT = R.layout.tab1_firetask;
     private Button btnFTСalculate;
     private View view;
+
+    private SaveDataTab1Meteo mSaveDataTab1Meteo;
+    private SaveDataTab2SC mSaveDataTab2SC;
     private SaveDataTab3SC mSaveDataTab3SC;
+
     private SaveDataTab2CO mSaveDataTab2CO;
+    private SaveDataTab1CO mSaveDataTab1CO;
+
 
     public static TabFragmentFireTask1 getInstance(){
         Bundle args = new Bundle();
@@ -36,6 +47,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanseState) {
         view = inflater.inflate(LAYOUT, container, false);
+        readDataFromActivities();
         initButtons();
         return view;
     }
@@ -58,6 +70,23 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
             }
         });
+    }
+
+    private void readDataFromActivities() {
+        mSaveDataTab1Meteo = (SaveDataTab1Meteo) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityShootCond.SHOOTCOND_TAB1);
+        if (mSaveDataTab1Meteo == null) ToastUtil.showErrorToast(getActivity(),"");
+
+        mSaveDataTab2SC = (SaveDataTab2SC) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityShootCond.SHOOTCOND_TAB2);
+        if (mSaveDataTab2SC == null) ToastUtil.showErrorToast(getActivity(),"");
+
+        mSaveDataTab3SC = (SaveDataTab3SC) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityShootCond.SHOOTCOND_TAB3);
+        if (mSaveDataTab2SC == null) ToastUtil.showErrorToast(getActivity(),"");
+
+        mSaveDataTab1CO = (SaveDataTab1CO) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityComOrd.COMORD_TAB1);
+        if (mSaveDataTab2SC == null) ToastUtil.showErrorToast(getActivity(),"");
+
+        mSaveDataTab2CO = (SaveDataTab2CO) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityComOrd.COMORD_TAB2);
+        if (mSaveDataTab2SC == null) ToastUtil.showErrorToast(getActivity(),"");
     }
 
     @Override

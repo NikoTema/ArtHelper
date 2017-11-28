@@ -143,7 +143,6 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                         }
                     }
                 }
-
             }
         });
     }
