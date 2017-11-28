@@ -116,32 +116,7 @@ public class ActivityFireTask extends AppCompatActivity {
     private void readTabBundleFromShared() {
 
     }
-
-    private SaveDataTab1Meteo readDataShootCondTab1() {
-        String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
-        return (new Gson()).fromJson(json,SaveDataTab1Meteo.class);
-    }
-
-    private SaveDataTab2SC readDataShootCondTab2() {
-        String json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
-        return (new Gson()).fromJson(json,SaveDataTab2SC.class);
-    }
-
-    private SaveDataTab3SC readDataShootCondTab3() {
-        String json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
-        return (new Gson()).fromJson(json,SaveDataTab3SC.class);
-    }
-
-    private SaveDataTab1CO readDataComOrdTab1() {
-        String json = mSharedPreferences.getString(COMORD_TAB1, "");
-        return (new Gson()).fromJson(json, SaveDataTab1CO.class);
-    }
-
-    private SaveDataTab2CO readDataComOrdTab2() {
-        String json = mSharedPreferences.getString(COMORD_TAB2, "");
-        return (new Gson()).fromJson(json, SaveDataTab2CO.class);
-    }
-
+    
     public Serializable readDataFromSharedPrefs(String tab) {
         String json = null;
         switch (tab) {
