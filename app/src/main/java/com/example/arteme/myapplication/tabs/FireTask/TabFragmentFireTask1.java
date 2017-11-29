@@ -34,7 +34,6 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
     private SaveDataTab2CO mSaveDataTab2CO;
     private SaveDataTab1CO mSaveDataTab1CO;
 
-
     public static TabFragmentFireTask1 getInstance(){
         Bundle args = new Bundle();
         TabFragmentFireTask1 fragment = new TabFragmentFireTask1();
