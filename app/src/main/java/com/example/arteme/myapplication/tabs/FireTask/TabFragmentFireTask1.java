@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.example.arteme.myapplication.ActivityComOrd;
 import com.example.arteme.myapplication.ActivityFireTask;
 import com.example.arteme.myapplication.ActivityShootCond;
+import com.example.arteme.myapplication.CalculateFire;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
@@ -19,6 +20,7 @@ import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
+import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond4;
 
 
 public class TabFragmentFireTask1 extends Fragment implements ISavedData {
@@ -63,10 +65,18 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
                 double dirOpC = DirRumb(delXcOp, delYcOp);
                 double aon = Integer.valueOf(mSaveDataTab2CO.Aon1) + Integer.valueOf(mSaveDataTab2CO.Aon2)*0.01;
                 double dovtc = dirOpC - aon;
-                //dovic = dovtc + dovmet;
+                //dovic = dovtc + dovmet;*/
 
                 double dalTopo = DalInDel(delXcOp, delYcOp);
-                //dalic = dalTopo + dalmet;
+                double workSystem[][] = new double[][]{};
+
+                CalculateFire calculateFire = new CalculateFire();
+
+                workSystem = calculateFire.arrSystemCharge(mSaveDataTab1CO.spinnerSystemPosition, mSaveDataTab1CO.spinnerPacketPosition, mSaveDataTab1CO.spinnerChargePosition);
+                int karetDal = calculateFire.retDalKaret(dalTopo, workSystem);
+                double delDalSum = calculateFire.retdelDalSum(workSystem, karetDal, (int)dalTopo, Integer.valueOf(mSaveDataTab3SC.Ac1), Integer.valueOf(mSaveDataTab3SC.Ac2));
+                double dalic = dalTopo + delDalSum;
+                int a = 1 + 3;
 
             }
         });
@@ -112,7 +122,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
             dirCrn = 180 + rumb;
         else if( delX > 0 && delY < 0 )
             dirCrn = 360 - rumb;
-        return dirCrn;
+        return dirCrn/6;
     }
 
     public double DalInDel(double delX, double delY){

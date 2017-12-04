@@ -150,7 +150,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     private void readTab1ComOrd() {
         mSaveDataTab1CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab1CO();
         if(mSaveDataTab1CO == null) {
-            //TODO - 1 хз что делать смотри сам
+
         }
     }
 
