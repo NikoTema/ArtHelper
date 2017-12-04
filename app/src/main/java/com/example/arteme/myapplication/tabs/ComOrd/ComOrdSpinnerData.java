@@ -36,6 +36,10 @@ public class ComOrdSpinnerData {
         currentAdapterChargeName = getFirstValueFromJsonObject(currentAdapterPacketName);
     }
 
+    public void restoreCurrentSpinnerNames(ComOrdSpinnerData comOrdSpinnerData) {
+
+    }
+
     @Nullable
     private String getFirstValueFromJsonObject(String name) {
         String result = null;

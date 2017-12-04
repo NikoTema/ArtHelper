@@ -116,7 +116,7 @@ public class ActivityFireTask extends AppCompatActivity {
     private void readTabBundleFromShared() {
 
     }
-    
+
     public Serializable readDataFromSharedPrefs(String tab) {
         String json = null;
         switch (tab) {
