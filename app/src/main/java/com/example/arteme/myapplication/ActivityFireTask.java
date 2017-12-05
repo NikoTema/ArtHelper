@@ -9,22 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.arteme.myapplication.tabs.FireTask.TabFragmentFireTask1;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 import com.example.arteme.myapplication.tabs.TabsPagerFrAdFireTask;
-import com.google.gson.Gson;
 
-import java.io.Serializable;
 import java.util.HashMap;
-
-import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB1;
-import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
-import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB1;
-import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB2;
-import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB3;
 
 /**
  * Created by arteme on 24.11.17.
@@ -117,32 +104,4 @@ public class ActivityFireTask extends AppCompatActivity {
 
     }
 
-    public Serializable readDataFromSharedPrefs(String tab) {
-        String json = null;
-        switch (tab) {
-            case SHOOTCOND_TAB1:
-                json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
-                return (new Gson()).fromJson(json,SaveDataTab1Meteo.class);
-
-            case SHOOTCOND_TAB2:
-                json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
-                return (new Gson()).fromJson(json,SaveDataTab2SC.class);
-
-            case SHOOTCOND_TAB3:
-                json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
-                return (new Gson()).fromJson(json,SaveDataTab3SC.class);
-
-            case COMORD_TAB1:
-                json = mSharedPreferences.getString(COMORD_TAB1, "");
-                return (new Gson()).fromJson(json, SaveDataTab1CO.class);
-
-            case COMORD_TAB2:
-                json = mSharedPreferences.getString(COMORD_TAB2, "");
-                return (new Gson()).fromJson(json, SaveDataTab2CO.class);
-
-            default:
-                break;
-        }
-        return null;
-    }
 }

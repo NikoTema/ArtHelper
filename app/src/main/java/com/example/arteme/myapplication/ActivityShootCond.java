@@ -152,7 +152,6 @@ public class ActivityShootCond extends AppCompatActivity {
         json = gson.toJson(mBundleTab4.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB4,json);
         editor.apply();
-
     }
 
     public void saveBundle(int tag, Bundle bundle) {

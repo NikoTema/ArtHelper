@@ -8,19 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.arteme.myapplication.ActivityComOrd;
-import com.example.arteme.myapplication.ActivityFireTask;
-import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.CalculateFire;
 import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
-import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
-import com.example.arteme.myapplication.tabs.ShootCond.TabFragmentShootCond4;
 
 
 public class TabFragmentFireTask1 extends Fragment implements ISavedData {
@@ -48,7 +43,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanseState) {
         view = inflater.inflate(LAYOUT, container, false);
-        readDataFromActivities();
+        //readDataFromActivities();
         initButtons();
         return view;
     }
@@ -69,7 +64,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
                 double dalTopo = DalInDel(delXcOp, delYcOp);
                 double workSystem[][] = new double[][]{};
 
-                CalculateFire calculateFire = new CalculateFire();
+                CalculateFire calculateFire = new CalculateFire(getContext());
 
                 workSystem = calculateFire.arrSystemCharge(mSaveDataTab1CO.spinnerSystemPosition, mSaveDataTab1CO.spinnerPacketPosition, mSaveDataTab1CO.spinnerChargePosition);
                 int karetDal = calculateFire.retDalKaret(dalTopo, workSystem);
@@ -81,7 +76,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
         });
     }
 
-    private void readDataFromActivities() {
+/*    private void readDataFromActivities() {
         mSaveDataTab1Meteo = (SaveDataTab1Meteo) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityShootCond.SHOOTCOND_TAB1);
         if (mSaveDataTab1Meteo == null) ToastUtil.showErrorToast(getActivity(),"");
 
@@ -96,7 +91,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
         mSaveDataTab2CO = (SaveDataTab2CO) ((ActivityFireTask)getActivity()).readDataFromSharedPrefs(ActivityComOrd.COMORD_TAB2);
         if (mSaveDataTab2SC == null) ToastUtil.showErrorToast(getActivity(),"");
-    }
+    }*/
 
     @Override
     public void reStoreData(Bundle bundle) {

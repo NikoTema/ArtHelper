@@ -1,12 +1,28 @@
 package com.example.arteme.myapplication;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.support.annotation.Nullable;
+
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 import com.example.arteme.myapplication.tabs.ShotingTables.Charge2s19OF25;
 import com.example.arteme.myapplication.tabs.ShotingTables.Charge2s19OF45;
 import com.example.arteme.myapplication.tabs.ShotingTables.Charge2s3OF25;
+import com.google.gson.Gson;
+
+import java.io.Serializable;
+
+import static android.content.Context.MODE_PRIVATE;
+import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB1;
+import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
+import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB1;
+import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB2;
+import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB3;
 
 public class CalculateFire {
 
@@ -18,13 +34,22 @@ public class CalculateFire {
     private Charge2s19OF25 mSaveCharge2s19OF25;
     private Charge2s19OF45 mSaveCharge2s19OF45;
 
-    public CalculateFire()
+    private Context mContext;
+    private SharedPreferences mSharedPreferences;
+
+    public CalculateFire(Context context)
     {
         mSaveCharge2s3OF25 = new Charge2s3OF25();
         mSaveCharge2s19OF25 = new Charge2s19OF25();
         mSaveCharge2s19OF45 = new Charge2s19OF45();
         mSaveDataTab1GeneralTable = new SaveDataTab1GeneralTable();
 
+        mContext = context;
+        getSharedPrefs();
+    }
+
+    private void getSharedPrefs() {
+        mSharedPreferences = mContext.getSharedPreferences(MainActivity.APP_SHARED_PREFS, MODE_PRIVATE);
     }
 
 
@@ -373,6 +398,43 @@ public class CalculateFire {
 
     }
 
+    @Nullable
+    private  Serializable readDataFromSharedPrefs(String tab) {
+        String json = null;
+        switch (tab) {
+            case SHOOTCOND_TAB1:
+                json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
+                return (new Gson()).fromJson(json,SaveDataTab1Meteo.class);
 
+            case SHOOTCOND_TAB2:
+                json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");
+                return (new Gson()).fromJson(json,SaveDataTab2SC.class);
+
+            case SHOOTCOND_TAB3:
+                json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
+                return (new Gson()).fromJson(json,SaveDataTab3SC.class);
+
+            case COMORD_TAB1:
+                json = mSharedPreferences.getString(COMORD_TAB1, "");
+                return (new Gson()).fromJson(json, SaveDataTab1CO.class);
+
+            case COMORD_TAB2:
+                json = mSharedPreferences.getString(COMORD_TAB2, "");
+                return (new Gson()).fromJson(json, SaveDataTab2CO.class);
+
+            default:
+                break;
+        }
+        return null;
+    }
+
+    private void readTabsFromCO() {
+        mSaveDataTab1CO = (SaveDataTab1CO) readDataFromSharedPrefs(COMORD_TAB1);
+        mSaveDataTab2CO = (SaveDataTab2CO) readDataFromSharedPrefs(COMORD_TAB2);
+    }
+    
+    private void readTabsFromSC() {
+        mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB1);
+    }
 
 }
