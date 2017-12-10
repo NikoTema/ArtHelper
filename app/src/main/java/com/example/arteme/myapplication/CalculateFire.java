@@ -29,7 +29,9 @@ public class CalculateFire {
     private SaveDataTab1CO mSaveDataTab1CO;
     private SaveDataTab2CO mSaveDataTab2CO;
     private SaveDataTab2SC mSaveDataTab2SC;
+    private SaveDataTab3SC mSaveDataTab3SC;
     private SaveDataTab1GeneralTable mSaveDataTab1GeneralTable;
+
     private Charge2s3OF25 mSaveCharge2s3OF25;
     private Charge2s19OF25 mSaveCharge2s19OF25;
     private Charge2s19OF45 mSaveCharge2s19OF45;
@@ -434,7 +436,9 @@ public class CalculateFire {
     }
 
     private void readTabsFromSC() {
-        mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB1);
+        mSaveDataTab1GeneralTable = (SaveDataTab1GeneralTable) readDataFromSharedPrefs(SHOOTCOND_TAB1);
+        mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB2);
+        mSaveDataTab3SC = (SaveDataTab3SC) readDataFromSharedPrefs(SHOOTCOND_TAB3);
     }
 
     public SaveDataTab2SC getSaveDataTab2SC()
