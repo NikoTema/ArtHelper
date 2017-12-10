@@ -432,7 +432,7 @@ public class CalculateFire {
         mSaveDataTab1CO = (SaveDataTab1CO) readDataFromSharedPrefs(COMORD_TAB1);
         mSaveDataTab2CO = (SaveDataTab2CO) readDataFromSharedPrefs(COMORD_TAB2);
     }
-    
+
     private void readTabsFromSC() {
         mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB1);
     }
