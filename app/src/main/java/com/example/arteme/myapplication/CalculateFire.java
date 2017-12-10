@@ -437,4 +437,22 @@ public class CalculateFire {
         mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB1);
     }
 
+    public SaveDataTab2SC getSaveDataTab2SC()
+    {
+        readTabsFromSC();
+        return mSaveDataTab2SC;
+    }
+
+    public SaveDataTab1CO getSaveDataTab1CO()
+    {
+        readTabsFromCO();
+        return mSaveDataTab1CO;
+    }
+
+    public SaveDataTab2CO getSaveDataTab2CO()
+    {
+        readTabsFromCO();
+        return mSaveDataTab2CO;
+    }
+
 }

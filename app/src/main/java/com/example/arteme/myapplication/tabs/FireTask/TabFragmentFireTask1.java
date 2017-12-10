@@ -54,8 +54,10 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
             @Override
             public void onClick(View v) {
 
-                double delXcOp = Double.parseDouble(mSaveDataTab3SC.Xc) - Double.parseDouble(mSaveDataTab2CO.Xop);
-                double delYcOp = Double.parseDouble(mSaveDataTab3SC.Yc) - Double.parseDouble(mSaveDataTab2CO.Yop);
+                CalculateFire calculateFire = new CalculateFire(getContext());
+
+                double delXcOp = Double.parseDouble(mSaveDataTab3SC.Xc) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Xop);
+                double delYcOp = Double.parseDouble(mSaveDataTab3SC.Yc) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Yop);
                 double dirOpC = DirRumb(delXcOp, delYcOp);
                 double aon = Integer.valueOf(mSaveDataTab2CO.Aon1) + Integer.valueOf(mSaveDataTab2CO.Aon2)*0.01;
                 double dovtc = dirOpC - aon;
@@ -63,8 +65,6 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
                 double dalTopo = DalInDel(delXcOp, delYcOp);
                 double workSystem[][] = new double[][]{};
-
-                CalculateFire calculateFire = new CalculateFire(getContext());
 
                 workSystem = calculateFire.arrSystemCharge(mSaveDataTab1CO.spinnerSystemPosition, mSaveDataTab1CO.spinnerPacketPosition, mSaveDataTab1CO.spinnerChargePosition);
                 int karetDal = calculateFire.retDalKaret(dalTopo, workSystem);
