@@ -7,7 +7,7 @@ ext {
 //noinspection GroovyMissingReturnStatement
 android {
     compileSdkVersion 24
-    buildToolsVersion '23.0.3'
+    buildToolsVersion '26.0.2'
     lintOptions {
         abortOnError false
     }

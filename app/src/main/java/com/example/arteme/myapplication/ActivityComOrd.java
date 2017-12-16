@@ -18,12 +18,18 @@ import com.google.gson.Gson;
 
 import java.util.HashMap;
 
+import javax.inject.Inject;
+
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
+
 public class ActivityComOrd extends AppCompatActivity {
 
     public static final String COMORD_TAB1 = "comOrdTab1";
     public static final String COMORD_TAB2 = "comOrdTab2";
 
-    private SharedPreferences mSharedPreferences;
+    @Inject
+    SharedPreferences mSharedPreferences;
+
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
@@ -34,7 +40,8 @@ public class ActivityComOrd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comord);
-        mSharedPreferences = getSharedPreferences(MainActivity.APP_SHARED_PREFS, MODE_PRIVATE);
+        //mSharedPreferences = getSharedPreferences(APP_SHARED_PREFS, MODE_PRIVATE);
+        ArtHelperApplication.getInjectionComponent().injectComOrd(this);
         initToolbar();
         initNavigationView();
         initTabs();
@@ -57,10 +64,10 @@ public class ActivityComOrd extends AppCompatActivity {
     private void saveBundleInSharedPrefs() {
         SharedPreferences.Editor editor = mSharedPreferences.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(mBundleTab1.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
+        String json = gson.toJson(mBundleTab1.getSerializable(BUNDLE_SAVED_DATA_KEY));
         //TODO save..
         editor.putString(COMORD_TAB1, json);
-        json = gson.toJson(mBundleTab2.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
+        json = gson.toJson(mBundleTab2.getSerializable(BUNDLE_SAVED_DATA_KEY));
         editor.putString(COMORD_TAB2, json);
         editor.apply();
     }
@@ -90,11 +97,11 @@ public class ActivityComOrd extends AppCompatActivity {
         Gson gson = new Gson();
         String json = mSharedPreferences.getString(COMORD_TAB1,"");
         mBundleTab1 = new Bundle();
-        mBundleTab1.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab1CO.class));
+        mBundleTab1.putSerializable(BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab1CO.class));
         //TODO for tab2
         json = mSharedPreferences.getString(COMORD_TAB2, "");
         mBundleTab2 = new Bundle();
-        mBundleTab2.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab2CO.class));
+        mBundleTab2.putSerializable(BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab2CO.class));
     }
 
     @Override

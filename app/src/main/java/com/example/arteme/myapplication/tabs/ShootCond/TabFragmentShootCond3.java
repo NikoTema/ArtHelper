@@ -11,12 +11,12 @@ import android.widget.EditText;
 
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
-import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
@@ -112,7 +112,7 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
 
     @Override
     public void reStoreData(Bundle bundle) {
-        mSaveDataTab3SC = (SaveDataTab3SC) bundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+        mSaveDataTab3SC = (SaveDataTab3SC) bundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
         if (mSaveDataTab3SC == null) {
             mSaveDataTab3SC = new SaveDataTab3SC("","","","","","");
             return;
@@ -128,7 +128,7 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
     @Override
     public void storeDataInBundle() {
         getTextFromEdits();
-        mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY,mSaveDataTab3SC);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY,mSaveDataTab3SC);
         ((ActivityShootCond) getActivity()).saveBundle(LAYOUT, mBundle);
     }
 

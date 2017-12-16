@@ -12,10 +12,11 @@ import android.widget.EditText;
 
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
-import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
+
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 
 public class TabFragmentShootCond2 extends Fragment implements ISavedData {
 
@@ -90,7 +91,7 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
 
     @Override
     public void reStoreData(Bundle bundle) {
-        mSaveDataTab2SC = (SaveDataTab2SC) bundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+        mSaveDataTab2SC = (SaveDataTab2SC) bundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
         if (mSaveDataTab2SC == null) {
             mSaveDataTab2SC = new SaveDataTab2SC("","");
             return;
@@ -101,7 +102,7 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
 
     @Override
     public void storeDataInBundle() {
-        mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, mSaveDataTab2SC);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY, mSaveDataTab2SC);
     }
 
 

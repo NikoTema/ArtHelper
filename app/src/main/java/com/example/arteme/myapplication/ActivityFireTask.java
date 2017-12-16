@@ -13,15 +13,16 @@ import com.example.arteme.myapplication.tabs.TabsPagerFrAdFireTask;
 
 import java.util.HashMap;
 
-/**
- * Created by arteme on 24.11.17.
- */
+import javax.inject.Inject;
+
 
 public class ActivityFireTask extends AppCompatActivity {
 
     public static final String FIRE_TASK_TAB1 = "fireTaskTab1";
 
-    private SharedPreferences mSharedPreferences;
+    @Inject
+    SharedPreferences mSharedPreferences;
+
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
@@ -39,7 +40,8 @@ public class ActivityFireTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firetask);
-        mSharedPreferences = getSharedPreferences(MainActivity.APP_SHARED_PREFS, MODE_PRIVATE);
+        //mSharedPreferences = getSharedPreferences(APP_SHARED_PREFS, MODE_PRIVATE);
+        ArtHelperApplication.getInjectionComponent().injectFireTask(this);
         initToolbar();
         initNavigationView();
         initTabs();

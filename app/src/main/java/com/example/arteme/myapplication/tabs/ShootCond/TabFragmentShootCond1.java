@@ -19,7 +19,6 @@ import android.widget.Spinner;
 
 import com.example.arteme.myapplication.ActivityShootCond;
 import com.example.arteme.myapplication.ISavedData;
-import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1BulAw;
@@ -37,6 +36,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 
 public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
@@ -69,7 +70,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
     @Override
     public void reStoreData(Bundle bundle) {
-        SaveDataTab1Meteo saveDataTab1Meteo = (SaveDataTab1Meteo) bundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+        SaveDataTab1Meteo saveDataTab1Meteo = (SaveDataTab1Meteo) bundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
         if (saveDataTab1Meteo == null) return;
         editPress.setText(saveDataTab1Meteo.press);
         editDirection.setText(saveDataTab1Meteo.windD);
@@ -95,7 +96,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
                         editWindSpeed.getText().toString(),
                         editHeightMeteo.getText().toString());
         mBundle = new Bundle();
-        mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, saveDataTab1Meteo);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY, saveDataTab1Meteo);
         mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY_GEN_TABLE, new SaveDataTab1GeneralTable(mSaveDataTab1BulAw, mSaveDataTab1BulTem, mSaveDataTab1BulW, mSaveDataTab1SmallTable));
 
     }

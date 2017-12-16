@@ -23,6 +23,7 @@ import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
 import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB1;
 import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB2;
 import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB3;
+import static com.example.arteme.myapplication.ArtHelperApplication.APP_SHARED_PREFS;
 
 public class CalculateFire {
 
@@ -51,7 +52,7 @@ public class CalculateFire {
     }
 
     private void getSharedPrefs() {
-        mSharedPreferences = mContext.getSharedPreferences(MainActivity.APP_SHARED_PREFS, MODE_PRIVATE);
+        mSharedPreferences = mContext.getSharedPreferences(APP_SHARED_PREFS, MODE_PRIVATE);
     }
 
 

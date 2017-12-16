@@ -12,10 +12,11 @@ import android.widget.Spinner;
 
 import com.example.arteme.myapplication.ActivityComOrd;
 import com.example.arteme.myapplication.ISavedData;
-import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveSpinnerItemSlected;
+
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 
 public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
@@ -27,7 +28,6 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
     public static final int FUSE_SPINNER = 3;
 
     public final static String SYSTEM_ARRAY = "system_array";
-    public final static int FIRST_POSITION_ON_ADAPTER = 0;
 
 
     private Spinner spinnerSystem, spinnerPacket, spinnerCharge, spinnerFuse;
@@ -48,12 +48,11 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
         super.onResume();
         if(mBundle != null) reStoreData(mBundle);
         else mBundle = new Bundle();
-
     }
 
     @Override
     public void reStoreData(Bundle bundle) {
-        mSaveDataTab1CO = (SaveDataTab1CO) bundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+        mSaveDataTab1CO = (SaveDataTab1CO) bundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
         if (mSaveDataTab1CO == null) {
             mSaveDataTab1CO = new SaveDataTab1CO();
             return;
@@ -230,7 +229,7 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
     @Override
     public void storeDataInBundle() {
-        mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, mSaveDataTab1CO);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY, mSaveDataTab1CO);
     }
 
 

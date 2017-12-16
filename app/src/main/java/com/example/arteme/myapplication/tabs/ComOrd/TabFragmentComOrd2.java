@@ -14,10 +14,11 @@ import android.widget.EditText;
 
 import com.example.arteme.myapplication.ActivityComOrd;
 import com.example.arteme.myapplication.ISavedData;
-import com.example.arteme.myapplication.MainActivity;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
+
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 
 public class TabFragmentComOrd2 extends Fragment implements ISavedData {
 
@@ -48,7 +49,7 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
 
     @Override
     public void reStoreData(Bundle bundle) {
-        mSaveDataTab2CO = (SaveDataTab2CO) mBundle.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+        mSaveDataTab2CO = (SaveDataTab2CO) mBundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
         if (mSaveDataTab2CO == null) {
             mSaveDataTab2CO = new SaveDataTab2CO("","","","","","","", "");
             return;
@@ -72,7 +73,7 @@ public class TabFragmentComOrd2 extends Fragment implements ISavedData {
 
     @Override
     public void storeDataInBundle() {
-        mBundle.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, mSaveDataTab2CO);
+        mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY, mSaveDataTab2CO);
         ((ActivityComOrd)getActivity()).saveBundle(LAYOUT,mBundle);
     }
 

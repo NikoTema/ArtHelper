@@ -24,6 +24,10 @@ import com.google.gson.Gson;
 
 import java.util.HashMap;
 
+import javax.inject.Inject;
+
+import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
+
 public class ActivityShootCond extends AppCompatActivity {
 
     public static final String SHOOTCOND_TAB1 = "shootCondTab1";
@@ -31,7 +35,7 @@ public class ActivityShootCond extends AppCompatActivity {
     public static final String SHOOTCOND_TAB3 = "shootCondTab3";
     public static final String SHOOTCOND_TAB4 = "shootCondTab4";
 
-    private SharedPreferences mSharedPreferences;
+
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
@@ -40,11 +44,14 @@ public class ActivityShootCond extends AppCompatActivity {
     private Bundle mBundleTab3;
     private Bundle mBundleTab4;
 
+    @Inject
+    SharedPreferences mSharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shootcond);
-        mSharedPreferences = getSharedPreferences(MainActivity.APP_SHARED_PREFS, MODE_PRIVATE);
+        ArtHelperApplication.getInjectionComponent().injectShootCond(this);
         initToolbar();
         initNavigationView();
         initTabs();
@@ -77,19 +84,19 @@ public class ActivityShootCond extends AppCompatActivity {
     private void readTabBundleFromShared() {
         String json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
         mBundleTab1 = new Bundle();
-        mBundleTab1.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab1Meteo.class));
+        mBundleTab1.putSerializable(BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab1Meteo.class));
 
         json = mSharedPreferences.getString(SHOOTCOND_TAB2,"");
         mBundleTab2 = new Bundle();
-        mBundleTab2.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab2SC.class));
+        mBundleTab2.putSerializable(BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab2SC.class));
 
         json = mSharedPreferences.getString(SHOOTCOND_TAB3, "");
         mBundleTab3 = new Bundle();
-        mBundleTab3.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab3SC.class));
+        mBundleTab3.putSerializable(BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SaveDataTab3SC.class));
 
         json = mSharedPreferences.getString(SHOOTCOND_TAB4, "");
         mBundleTab4 = new Bundle();
-        //TODO mBundleTab4.putSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SavedDataFromTab4ShootCond.class));
+        //TODO mBundleTab4.putSerializable(BUNDLE_SAVED_DATA_KEY, (new Gson()).fromJson(json, SavedDataFromTab4ShootCond.class));
     }
 
     public SaveDataTab1CO readFromSharedSaveDataTab1CO() {
@@ -106,7 +113,7 @@ public class ActivityShootCond extends AppCompatActivity {
         String js = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
         SaveDataTab2SC result = (new Gson()).fromJson(js, SaveDataTab2SC.class);
         if (result == null) {
-            result = (SaveDataTab2SC) mBundleTab2.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY);
+            result = (SaveDataTab2SC) mBundleTab2.getSerializable(BUNDLE_SAVED_DATA_KEY);
         }
         return result;
     }
@@ -143,13 +150,13 @@ public class ActivityShootCond extends AppCompatActivity {
     private void saveBundleInSharedPrefs() {
         SharedPreferences.Editor editor = mSharedPreferences.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(mBundleTab1.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
+        String json = gson.toJson(mBundleTab1.getSerializable(BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB1,json);
-        json = gson.toJson(mBundleTab2.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
+        json = gson.toJson(mBundleTab2.getSerializable(BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB2,json);
-        json = gson.toJson(mBundleTab3.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
+        json = gson.toJson(mBundleTab3.getSerializable(BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB3,json);
-        json = gson.toJson(mBundleTab4.getSerializable(MainActivity.BUNDLE_SAVED_DATA_KEY));
+        json = gson.toJson(mBundleTab4.getSerializable(BUNDLE_SAVED_DATA_KEY));
         editor.putString(SHOOTCOND_TAB4,json);
         editor.apply();
     }
