@@ -8,16 +8,16 @@
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view_list_item.xml",

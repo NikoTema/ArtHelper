@@ -24,16 +24,16 @@
         "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/src/main/res/layout/supertoast_progress_circle.xml"
     },
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_toolbar.xml"
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/tocommit/ArtHelper/library/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",

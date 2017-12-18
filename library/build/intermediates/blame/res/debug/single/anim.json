@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/anim/abc_slide_in_top.xml"
-    },
-    {
         "merged": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
         "source": "/Users/nikitakononenko/AndroidStudioProjects/test/ArtHelperFromTeam/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/nikitakononenko/AndroidStudioProjects/ArtHelper/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "/Users/arteme/AndroidStudioProjects/ArtHelper/library/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
