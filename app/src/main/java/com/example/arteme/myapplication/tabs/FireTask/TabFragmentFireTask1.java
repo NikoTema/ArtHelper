@@ -17,6 +17,8 @@ import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 
+import static java.lang.Math.abs;
+
 
 public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
@@ -56,22 +58,56 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
                 CalculateFire calculateFire = new CalculateFire(getContext());
 
-                double delXcOp = Double.parseDouble(mSaveDataTab3SC.Xc) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Xop);
-                double delYcOp = Double.parseDouble(mSaveDataTab3SC.Yc) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Yop);
-                double dirOpC = DirRumb(delXcOp, delYcOp);
-                double aon = Integer.valueOf(mSaveDataTab2CO.Aon1) + Integer.valueOf(mSaveDataTab2CO.Aon2)*0.01;
-                double dovtc = dirOpC - aon;
-                //dovic = dovtc + dovmet;*/
-
-                double dalTopo = DalInDel(delXcOp, delYcOp);
                 double workSystem[][] = new double[][]{};
+                workSystem = calculateFire.arrSystemCharge(calculateFire.getSaveDataTab1CO().spinnerSystemPosition,
+                        calculateFire.getSaveDataTab1CO().spinnerPacketPosition,
+                        calculateFire.getSaveDataTab1CO().spinnerChargePosition);
 
-                workSystem = calculateFire.arrSystemCharge(mSaveDataTab1CO.spinnerSystemPosition, mSaveDataTab1CO.spinnerPacketPosition, mSaveDataTab1CO.spinnerChargePosition);
+                double delXcOp = Double.parseDouble(calculateFire.getSaveDataTab3SC().Xc) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Xop);
+                double delYcOp = Double.parseDouble(calculateFire.getSaveDataTab3SC().Yc) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Yop);
+
+                double dalTopo = DalInDel(delXcOp, delYcOp);    // Дальность топографическая
                 int karetDal = calculateFire.retDalKaret(dalTopo, workSystem);
-                double delDalSum = calculateFire.retdelDalSum(workSystem, karetDal, (int)dalTopo, Integer.valueOf(mSaveDataTab3SC.Ac1), Integer.valueOf(mSaveDataTab3SC.Ac2));
-                double dalic = dalTopo + delDalSum;
-                int a = 1 + 3;
 
+                double dirOpC = DirRumb(delXcOp, delYcOp);  // Дирикционный угол с ОП на Ц
+                double aon = Integer.valueOf(calculateFire.getSaveDataTab2CO().Aon1) + Integer.valueOf(calculateFire.getSaveDataTab2CO().Aon2)*0.01;
+                double dovtc = dirOpC - aon;    //Доворот топографический по цели
+                double dovmet = calculateFire.retDeldsum(workSystem, karetDal, (int)dalTopo, dirOpC);
+                double dovic = dovtc + dovmet;  // Доворот исчисленный
+
+                double delDalSum = calculateFire.retdelDalSum(workSystem, karetDal,
+                        (int)dalTopo, Integer.valueOf(calculateFire.getSaveDataTab3SC().Ac1) +
+                        Integer.valueOf(calculateFire.getSaveDataTab3SC().Ac2)*0.01);
+
+                int dalic = (int)dalTopo + (int)delDalSum; // Дальность исчисленная по цели
+
+                double Ur = 30; // Уровень
+
+                if(!calculateFire.getSaveDataTab3SC().Hc.isEmpty() || !calculateFire.getSaveDataTab2CO().Hop.isEmpty())
+                    Ur = (Double.parseDouble(calculateFire.getSaveDataTab3SC().Hc) -
+                        Double.parseDouble(calculateFire.getSaveDataTab2CO().Hop)/0.001*dalTopo)*0.95; // Уровень
+
+
+                karetDal = calculateFire.retDalKaret(dalic, workSystem);
+                double pr = calculateFire.retPr(workSystem, karetDal, dalic);  //Прицел
+                double xtis = calculateFire.retDelXtis(workSystem, karetDal, dalic); // Xтыс
+
+                double delXknpOp = Double.parseDouble(calculateFire.getSaveDataTab2CO().Xop) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Xop);
+                double delYknpOp = Double.parseDouble(calculateFire.getSaveDataTab2CO().Yop) - Double.parseDouble(calculateFire.getSaveDataTab2CO().Yop);
+
+                double dalKom = DalInDel(delXknpOp, delYknpOp);
+                double dirKnpC = DirRumb(delXknpOp, delYknpOp);  // Дирикционный угол с КНП на Ц
+
+                double Ku = dalKom/dalTopo;     //Ку
+                double PS = dirKnpC - dirOpC;   //ПС
+                double Sugl = abs(PS)/0.01*dalTopo;  //Шу
+
+                String OP = "";
+
+                if(PS < 0)
+                    OP = "Слева";
+                else
+                    OP = "Справа";
             }
         });
     }
@@ -105,7 +141,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
     public double DirRumb(double delX, double delY){
 
-        double rumb = Math.atan(Math.abs(delY/delX)*(180/Math.PI));
+        double rumb = Math.atan(abs(delY/delX)*(180/Math.PI));
         double dirCrn = 0;
 
         if ( delX > 0 && delY > 0 )

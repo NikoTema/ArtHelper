@@ -159,6 +159,33 @@ public class CalculateFire {
         return delXtz * (-1);
     }
 
+    public  double retDelZw(double arrCharge[][], int retKaret, int dal)
+    {
+        double delZw = arrCharge[6][retKaret] - (((arrCharge[6][retKaret] - arrCharge[6][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
+
+        return delZw * (-1);
+    }
+
+    public double retZ(double arrCharge[][], int retKaret, int dal)
+    {
+        double z = arrCharge[5][retKaret] - (((arrCharge[5][retKaret] - arrCharge[5][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
+
+        return z * (-1);
+    }
+
+    public double retPr(double arrCharge[][], int retKaret, int dal)
+    {
+        double pr = arrCharge[1][retKaret] - (((arrCharge[1][retKaret] - arrCharge[1][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
+
+        return pr;
+    }
+
+    public double retDelXtis(double arrCharge[][], int retKaret, int dal)
+    {
+        double xtis = arrCharge[2][retKaret] - (((arrCharge[2][retKaret] - arrCharge[2][retKaret - 1])/200 * (arrCharge[0][retKaret] - dal)));
+
+        return xtis;
+    }
 
     public int retDalKaret(double dalTopo, double arrCharge[][])
     {
@@ -338,17 +365,16 @@ public class CalculateFire {
         return String.valueOf(intVar);
     }
 
-    public double retAw(double awBull, int A1, int A2)
+    public double retAw(double awBull, double A)
     {
-        double aon = A1 + A2*0.01;
-        double aw = aon - (awBull);
+        double aw = A - (awBull);
         if (aw < 0)
             aw = aw + 60;
 
         return aw;
     }
 
-    public int retWz(double arrCharge[][], int retKaret, int A1, int A2)
+    public int retWz(double arrCharge[][], int retKaret, double A)
     {
 
         double yBull = retYbull(arrCharge, retKaret);
@@ -356,7 +382,7 @@ public class CalculateFire {
         double awBull = Double.parseDouble(retAwBull(karetMeteo));
         double wBull = Double.parseDouble(retWbull(karetMeteo));
 
-        double aw = retAw(awBull, A1, A2);
+        double aw = retAw(awBull, A);
 
         int awCell = (int)Math.ceil(aw);
         int vwCell = (int)Math.ceil(wBull);
@@ -365,14 +391,14 @@ public class CalculateFire {
         return retWz;
     }
 
-    public int retWx(double arrCharge[][], int retKaret, int A1, int A2)
+    public int retWx(double arrCharge[][], int retKaret, double A)
     {
         double yBull = retYbull(arrCharge, retKaret);
         int karetMeteo = retKaretMeteo(yBull);
         double awBull = Double.parseDouble(retAwBull(karetMeteo));
         double wBull = Double.parseDouble(retWbull(karetMeteo));
 
-        double aw = retAw(awBull, A1, A2);
+        double aw = retAw(awBull, A);
 
         int awCell = (int)Math.ceil(aw);
         int vwCell = (int)Math.ceil(wBull);
@@ -381,9 +407,23 @@ public class CalculateFire {
         return retWx;
     }
 
-    public double retdelDalSum(double arrCharge[][], int retKaret, int dal, int A1, int A2)
+    public  double retDeldsum(double arrCharge[][], int retKaret, int dal, double A)
     {
-        double delDwx = 0.1 * retDelXw(arrCharge, retKaret, dal) * retWx(arrCharge, retKaret, A1, A2);
+        double delZw = retDelZw(arrCharge, retKaret, dal);
+        double Z = retZ(arrCharge, retKaret, dal);
+
+        int wz = retWz(arrCharge, retKaret, A);
+        double delDwz = (0.1 * delZw * wz);
+        double delDsum = Z + delDwz;
+
+        return delDsum;
+    }
+
+
+
+    public double retdelDalSum(double arrCharge[][], int retKaret, int dal, double A)
+    {
+        double delDwx = 0.1 * retDelXw(arrCharge, retKaret, dal) * retWx(arrCharge, retKaret, A);
 
         double delDh = 0.1 * retDelXh(arrCharge, retKaret, dal) * retDelH();
 
@@ -457,6 +497,12 @@ public class CalculateFire {
     {
         readTabsFromCO();
         return mSaveDataTab2CO;
+    }
+
+    public SaveDataTab3SC getSaveDataTab3SC()
+    {
+        readTabsFromSC();
+        return mSaveDataTab3SC;
     }
 
 }

@@ -3,7 +3,7 @@ package com.example.arteme.myapplication.tabs.ShotingTables;
 
 public class Charge2s3OF25 {
 
-    //1 - дальность(15) //2 - ѕ//3 - ’тыс//4 - ¬д //5 - ¬б //6 - Z//7 - Zw//8 - Xw
+    //1 - дальность(15) //2 - Прицел//3 - Xтыс//4 - ¬д //5 - ¬б //6 - Z//7 - Zw//8 - Xw
     // 9 - Xн//10 - Xнн//11 - Xт//12 - Xтз//13 - Xvo//14 - Xm//15 - Qc //16 - Yбюл
 
      public double charge2s3_3_of25[][] =
