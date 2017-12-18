@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
-import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
@@ -20,6 +19,7 @@ import java.io.Serializable;
 import static android.content.Context.MODE_PRIVATE;
 import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB1;
 import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
+import static com.example.arteme.myapplication.ActivityShootCond.BUNDLE_SAVED_DATA_KEY_GEN_TABLE;
 import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB1;
 import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB2;
 import static com.example.arteme.myapplication.ActivityShootCond.SHOOTCOND_TAB3;
@@ -406,8 +406,8 @@ public class CalculateFire {
         String json = null;
         switch (tab) {
             case SHOOTCOND_TAB1:
-                json = mSharedPreferences.getString(SHOOTCOND_TAB1, "");
-                return (new Gson()).fromJson(json,SaveDataTab1Meteo.class);
+                json = mSharedPreferences.getString(BUNDLE_SAVED_DATA_KEY_GEN_TABLE, "");
+                return (new Gson()).fromJson(json, SaveDataTab1GeneralTable.class);
 
             case SHOOTCOND_TAB2:
                 json = mSharedPreferences.getString(SHOOTCOND_TAB2, "");

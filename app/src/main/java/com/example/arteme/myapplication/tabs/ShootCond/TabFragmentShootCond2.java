@@ -1,5 +1,6 @@
 package com.example.arteme.myapplication.tabs.ShootCond;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -66,6 +68,7 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
             public void onClick(View v) {
                 storeDataInBundle();
                 ((ActivityShootCond)getActivity()).saveBundle(LAYOUT, mBundle);
+                hideKeyBoard();
                 ToastUtil.showSuccessToast(getActivity(), getString(R.string.succ_save_data));
             }
         });
@@ -105,5 +108,15 @@ public class TabFragmentShootCond2 extends Fragment implements ISavedData {
         mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY, mSaveDataTab2SC);
     }
 
+    private void hideKeyBoard() {
+        try {
+            InputMethodManager inputManager = (InputMethodManager)
+                    (getActivity()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
+            inputManager.hideSoftInputFromWindow((getActivity()).getCurrentFocus().getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+        } catch (NullPointerException e ) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -3,8 +3,10 @@ package com.example.arteme.myapplication;
 import android.app.Application;
 
 import com.example.arteme.myapplication.di.ContextModule;
+import com.example.arteme.myapplication.di.DaggerInjectionComponent;
 import com.example.arteme.myapplication.di.InjectionComponent;
 import com.example.arteme.myapplication.di.SharedPrefsModule;
+import com.example.arteme.myapplication.di.StoreModule;
 
 
 public class ArtHelperApplication extends Application {
@@ -24,6 +26,7 @@ public class ArtHelperApplication extends Application {
         return DaggerInjectionComponent.builder()
                 .contextModule(new ContextModule(getApplicationContext()))
                 .sharedPrefsModule(new SharedPrefsModule())
+                .storeModule(new StoreModule())
                 .build();
     }
 

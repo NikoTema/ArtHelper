@@ -37,12 +37,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import static com.example.arteme.myapplication.ActivityShootCond.BUNDLE_SAVED_DATA_KEY_GEN_TABLE;
 import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 
 public class TabFragmentShootCond1 extends Fragment implements ISavedData {
 
     public static final int LAYOUT = R.layout.tab1_shootcond;
-    public static final String BUNDLE_SAVED_DATA_KEY_GEN_TABLE = "generalTable";
     private View view;
     ArrayAdapter<CharSequence> adapterWindSpeed;
     Spinner spinnerWindSpeed;

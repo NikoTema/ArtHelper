@@ -28,13 +28,6 @@ public class ActivityFireTask extends AppCompatActivity {
     private ViewPager viewPager;
     private Bundle mBundleTab1;
 
-    private Bundle mBundleSCTab1;
-    private Bundle mBundleSCTab2;
-    private Bundle mBundleSCTab3;
-
-    private Bundle mBundleCOTab1;
-    private Bundle mBundleCOTab2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +38,7 @@ public class ActivityFireTask extends AppCompatActivity {
         initToolbar();
         initNavigationView();
         initTabs();
+
     }
 
     private void initToolbar(){

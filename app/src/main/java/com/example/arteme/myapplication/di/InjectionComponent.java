@@ -8,10 +8,11 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 
-@Component(modules = {ContextModule.class, SharedPrefsModule.class})
+@Component(modules = {ContextModule.class, SharedPrefsModule.class, StoreModule.class})
 @Singleton
 public interface InjectionComponent {
     void injectComOrd(ActivityComOrd activityComOrd);
     void injectShootCond(ActivityShootCond activityShootCond);
     void injectFireTask(ActivityFireTask activityFireTask);
+    //CalculateFire calculateFire();
 }

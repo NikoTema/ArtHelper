@@ -1,6 +1,5 @@
 package com.example.arteme.myapplication;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -14,8 +13,8 @@ import com.example.arteme.myapplication.tabs.ComOrd.TabFragmentComOrd2;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.TabsPagerFrAdComOrd;
-import com.google.gson.Gson;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 import javax.inject.Inject;
@@ -28,11 +27,14 @@ public class ActivityComOrd extends AppCompatActivity {
     public static final String COMORD_TAB2 = "comOrdTab2";
 
     @Inject
-    SharedPreferences mSharedPreferences;
+    DataStore mDataStore;
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
+
+    private HashMap<String, Bundle> mBundleHashMap;
+
     private Bundle mBundleTab1;
     private Bundle mBundleTab2;
 
@@ -40,14 +42,15 @@ public class ActivityComOrd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comord);
-        //mSharedPreferences = getSharedPreferences(APP_SHARED_PREFS, MODE_PRIVATE);
+
         ArtHelperApplication.getInjectionComponent().injectComOrd(this);
+
         initToolbar();
         initNavigationView();
         initTabs();
     }
 
-    private void initToolbar(){
+    private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbarComOrd);
         toolbar.setTitle("Боевой порядок");
         setSupportActionBar(toolbar);
@@ -62,52 +65,44 @@ public class ActivityComOrd extends AppCompatActivity {
     }
 
     private void saveBundleInSharedPrefs() {
-        SharedPreferences.Editor editor = mSharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(mBundleTab1.getSerializable(BUNDLE_SAVED_DATA_KEY));
-        //TODO save..
-        editor.putString(COMORD_TAB1, json);
-        json = gson.toJson(mBundleTab2.getSerializable(BUNDLE_SAVED_DATA_KEY));
-        editor.putString(COMORD_TAB2, json);
-        editor.apply();
+        mDataStore.saveBundleInSharedPrefs(mBundleHashMap);
     }
 
-    private void initNavigationView(){
+    private void initNavigationView() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_comord);
     }
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPagerComOrd);
-        readTabBundleFromShared();
-        TabsPagerFrAdComOrd adapter = new TabsPagerFrAdComOrd(getSupportFragmentManager(), getBundleHashMap());
+        readTabsBundleFromShared();
+        TabsPagerFrAdComOrd adapter = new TabsPagerFrAdComOrd(getSupportFragmentManager(), mBundleHashMap);
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutComOrd);
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    private HashMap<String,Bundle> getBundleHashMap() {
-        HashMap<String, Bundle> result = new HashMap<>();
-        result.put(COMORD_TAB1, mBundleTab1);
-        result.put(COMORD_TAB2, mBundleTab2);
-        return result;
+    private void readTabsBundleFromShared() {
+        mBundleHashMap = new HashMap<>();
+
+        readOneTab(COMORD_TAB1, SaveDataTab1CO.class);
+        readOneTab(COMORD_TAB2, SaveDataTab2CO.class);
     }
 
-    private void readTabBundleFromShared() {
-        Gson gson = new Gson();
-        String json = mSharedPreferences.getString(COMORD_TAB1,"");
-        mBundleTab1 = new Bundle();
-        mBundleTab1.putSerializable(BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab1CO.class));
-        //TODO for tab2
-        json = mSharedPreferences.getString(COMORD_TAB2, "");
-        mBundleTab2 = new Bundle();
-        mBundleTab2.putSerializable(BUNDLE_SAVED_DATA_KEY, gson.fromJson(json, SaveDataTab2CO.class));
+    private void readOneTab(String tabKey, Class<?> cls) {
+        Bundle readTab = new Bundle();
+        readTab.putSerializable(BUNDLE_SAVED_DATA_KEY, readSerializableTab(tabKey, cls));
+        mBundleHashMap.put(tabKey, readTab);
+    }
+
+    public Serializable readSerializableTab(String tabKey, Class<?> cls) {
+        return (Serializable) mDataStore.readSavedTabInstanceFromShared(tabKey, cls);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == android.R.id.home){
+        if(id == android.R.id.home) {
             finish();
         }
         return super.onOptionsItemSelected(item);
@@ -116,14 +111,13 @@ public class ActivityComOrd extends AppCompatActivity {
     public void saveBundle(int tag, Bundle bundle) {
         switch (tag) {
             case TabFragmentComOrd1.LAYOUT:
-                mBundleTab1 = bundle;
+                mBundleHashMap.put(COMORD_TAB1, bundle);
                 break;
             case TabFragmentComOrd2.LAYOUT:
-                mBundleTab2 = bundle;
+                mBundleHashMap.put(COMORD_TAB2, bundle);
                 break;
             default:
                 break;
         }
     }
-
 }

@@ -21,6 +21,9 @@ import com.example.arteme.myapplication.tabs.ShotingTables.Charge2s3OF25;
 
 import java.text.DecimalFormat;
 
+import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB1;
+import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
+
 public class TabFragmentShootCond4 extends Fragment implements ISavedData{
 
     public static final int LAYOUT = R.layout.tab4_shootcond;
@@ -148,7 +151,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     }
 
     private void readTab1ComOrd() {
-        mSaveDataTab1CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab1CO();
+        mSaveDataTab1CO = (SaveDataTab1CO) ((ActivityShootCond) getActivity()).readSerializableTab(COMORD_TAB1, SaveDataTab1CO.class);
         if(mSaveDataTab1CO == null) {
 
         }
@@ -162,14 +165,14 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
     }
 
     private void readTab2ShootCond() {
-        mSaveDataTab2SC = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2SC();
+        mSaveDataTab2SC = (SaveDataTab2SC) ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2SC();
         if(mSaveDataTab2SC == null) {
             //TODO - 3 хз что делать смотри сам
         }
     }
 
     private void readTab2ComOrd() {
-        mSaveDataTab2CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2CO();
+        mSaveDataTab2CO = (SaveDataTab2CO) ((ActivityShootCond) getActivity()).readSerializableTab(COMORD_TAB2, SaveDataTab2CO.class);
         if(mSaveDataTab2CO == null) {
             //TODO хз что делать смотри сам
         }

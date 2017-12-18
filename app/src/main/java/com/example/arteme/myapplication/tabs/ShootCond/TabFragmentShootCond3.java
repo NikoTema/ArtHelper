@@ -16,6 +16,7 @@ import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 
+import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
 import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
@@ -49,7 +50,7 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
     }
 
     private void readTab2ComOrd() {
-        mSaveDataTab2CO = ((ActivityShootCond) getActivity()).readFromSharedSaveDataTab2CO();
+        mSaveDataTab2CO = (SaveDataTab2CO) ((ActivityShootCond) getActivity()).readSerializableTab(COMORD_TAB2, SaveDataTab2CO.class);;
         if(mSaveDataTab2CO == null) {
             //TODO хз что делать смотри сам
         }
