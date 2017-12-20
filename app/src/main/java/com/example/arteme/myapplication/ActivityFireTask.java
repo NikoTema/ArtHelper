@@ -39,6 +39,10 @@ public class ActivityFireTask extends AppCompatActivity {
         initNavigationView();
         initTabs();
 
+        //test
+
+        CalculateFire calculateFire = new CalculateFire(getApplicationContext());
+
     }
 
     private void initToolbar(){

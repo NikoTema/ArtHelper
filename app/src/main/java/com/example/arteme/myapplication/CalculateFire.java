@@ -49,6 +49,10 @@ public class CalculateFire {
 
         mContext = context;
         getSharedPrefs();
+
+        //test
+        readTabsFromCO();
+        //readTabsFromSC();
     }
 
     private void getSharedPrefs() {
