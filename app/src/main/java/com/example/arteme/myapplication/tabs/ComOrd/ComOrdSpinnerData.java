@@ -13,8 +13,6 @@ public class ComOrdSpinnerData {
 
     private final static String JSON_SPINNER_VALUES = "comord1.json";
 
-    private String[] NamesOfJsonObjects;
-    private Context mContext;
     private JsonParserUtil mJsonParserUtil;
     private JSONObject mJSONObjects;
 
@@ -34,10 +32,6 @@ public class ComOrdSpinnerData {
         currentAdapterSystemName = systemArrayName;
         currentAdapterPacketName = getFirstValueFromJsonObject(currentAdapterSystemName);
         currentAdapterChargeName = getFirstValueFromJsonObject(currentAdapterPacketName);
-    }
-
-    public void restoreCurrentSpinnerNames(ComOrdSpinnerData comOrdSpinnerData) {
-
     }
 
     @Nullable

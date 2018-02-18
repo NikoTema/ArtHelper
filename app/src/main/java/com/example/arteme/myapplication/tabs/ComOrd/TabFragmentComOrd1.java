@@ -47,26 +47,18 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
     public void onResume() {
         super.onResume();
         if(mBundle != null) reStoreData(mBundle);
-        else mBundle = new Bundle();
     }
 
     @Override
     public void reStoreData(Bundle bundle) {
-        mSaveDataTab1CO = (SaveDataTab1CO) bundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
-        if (mSaveDataTab1CO == null) {
-            mSaveDataTab1CO = new SaveDataTab1CO();
-            return;
-        }
-        //spinnerSystem.setSelection(mSaveDataTab1CO.spinnerSystemPosition);
-        //spinnerCharge.setSelection(mSaveDataTab1CO.spinnerChargePosition);
-        //spinnerPacket.setSelection(mSaveDataTab1CO.spinnerPacketPosition);
-        //spinnerFuse.setSelection(mSaveDataTab1CO.spinnerFusePosition);
-
         restoreSpinners();
     }
 
     private void restoreSpinners() {
-
+        spinnerSystem.setSelection(mSaveDataTab1CO.spinnerSystemPosition);
+        spinnerPacket.setSelection(mSaveDataTab1CO.spinnerPacketPosition);
+        spinnerCharge.setSelection(mSaveDataTab1CO.spinnerChargePosition);
+        spinnerFuse.setSelection(mSaveDataTab1CO.spinnerFusePosition);
     }
 
     @Override
@@ -89,92 +81,20 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
         mComOrdSpinnerData = new ComOrdSpinnerData(getContext());
         mAdapterFactory = new AdapterFactory(getContext(), android.R.layout.simple_spinner_item);
 
+        if (getArguments() != null) {
+            mBundle = getArguments();
+            mSaveDataTab1CO = (SaveDataTab1CO) mBundle.getSerializable(BUNDLE_SAVED_DATA_KEY);
+
+            if (mSaveDataTab1CO == null) {
+                mSaveDataTab1CO = new SaveDataTab1CO();
+            }
+        }
+
         initSpinner();
         initAdapters();
         setSpinners();
 
-
-        if(getArguments() != null) reStoreData(mBundle = getArguments());
-        else {
-            mSaveDataTab1CO = new SaveDataTab1CO();
-            mBundle = new Bundle();
-        }
-
         return view;
-    }
-
-    private void setSpinners() {
-        spinnerSystem.setAdapter(mAdapterSystem);
-        spinnerSystem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateSpinner(SYSTEM_SPINNER, parent.getSelectedItem().toString());
-
-                //mSaveDataTab1CO.spinnerSystemPosition = position;
-                mSaveDataTab1CO.systemSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterSystemName(), id);
-
-                storeDataInBundle();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        spinnerPacket.setAdapter(mAdapterPacket);
-        spinnerPacket.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateSpinner(PACKET_SPINNER, parent.getSelectedItem().toString());
-
-                //mSaveDataTab1CO.spinnerPacketPosition = position;
-                mSaveDataTab1CO.packetSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterPacketName(), id);
-
-                storeDataInBundle();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        spinnerCharge.setAdapter(mAdapterCharge);
-        spinnerCharge.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateSpinner(CHARGE_SPINNER, parent.getSelectedItem().toString());
-
-                //mSaveDataTab1CO.spinnerChargePosition = position;
-                mSaveDataTab1CO.chargeSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterChargeName(), id);
-
-                storeDataInBundle();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        spinnerFuse.setAdapter(mAdapterFuse);
-        spinnerFuse.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateSpinner(FUSE_SPINNER, parent.getSelectedItem().toString());
-
-                //mSaveDataTab1CO.spinnerFusePosition = position;
-                mSaveDataTab1CO.fuseSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterFuseName(), id);
-
-                storeDataInBundle();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     private void initSpinner() {
@@ -189,10 +109,136 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
         mComOrdSpinnerData.initCurrentSpinnerNames(SYSTEM_ARRAY);
 
         mAdapterSystem = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterSystemName());
-        mAdapterPacket = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterPacketName());
-        mAdapterCharge = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterChargeName());
-        mAdapterFuse = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterFuseName());
 
+        String selected = mAdapterSystem.getItem(mSaveDataTab1CO.spinnerSystemPosition).toString();
+        String key = mComOrdSpinnerData.getAssociativeKey(SYSTEM_SPINNER, selected);
+        mAdapterPacket = mAdapterFactory.getArrayAdapter(key);
+
+        selected = mAdapterPacket.getItem(mSaveDataTab1CO.spinnerPacketPosition).toString();
+        key = mComOrdSpinnerData.getAssociativeKey(PACKET_SPINNER, selected);
+        mAdapterCharge = mAdapterFactory.getArrayAdapter(key);
+
+        selected = mAdapterCharge.getItem(mSaveDataTab1CO.spinnerChargePosition).toString();
+        key = mComOrdSpinnerData.getAssociativeKey(CHARGE_SPINNER, selected);
+        mAdapterFuse = mAdapterFactory.getArrayAdapter(key);
+    }
+
+    AdapterView.OnItemSelectedListener mSystemSpinnerListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            updateSpinner(SYSTEM_SPINNER, parent.getSelectedItem().toString());
+
+            mSaveDataTab1CO.spinnerSystemPosition = position;
+            mSaveDataTab1CO.systemSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterSystemName(), id);
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
+
+    AdapterView.OnItemSelectedListener mPacketSpinnerListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            updateSpinner(PACKET_SPINNER, parent.getSelectedItem().toString());
+
+            mSaveDataTab1CO.spinnerPacketPosition = position;
+            mSaveDataTab1CO.packetSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterPacketName(), id);
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
+
+    AdapterView.OnItemSelectedListener mChargeSpinnerListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            updateSpinner(CHARGE_SPINNER, parent.getSelectedItem().toString());
+
+            mSaveDataTab1CO.spinnerChargePosition = position;
+            mSaveDataTab1CO.chargeSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterChargeName(), id);
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
+
+    AdapterView.OnItemSelectedListener mFuseSpinnerListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            updateSpinner(FUSE_SPINNER, parent.getSelectedItem().toString());
+
+            mSaveDataTab1CO.spinnerFusePosition = position;
+            mSaveDataTab1CO.fuseSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterFuseName(), id);
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
+
+    private void setSpinners() {
+        spinnerSystem.setAdapter(mAdapterSystem);
+        spinnerSystem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                spinnerSystem.setOnItemSelectedListener(mSystemSpinnerListener);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        spinnerPacket.setAdapter(mAdapterPacket);
+        spinnerPacket.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                spinnerPacket.setOnItemSelectedListener(mPacketSpinnerListener);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        spinnerCharge.setAdapter(mAdapterCharge);
+        spinnerCharge.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                spinnerCharge.setOnItemSelectedListener(mChargeSpinnerListener);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        spinnerFuse.setAdapter(mAdapterFuse);
+        spinnerFuse.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                spinnerFuse.setOnItemSelectedListener(mFuseSpinnerListener);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void updateSpinner(int parentSpinner, String item) {
@@ -231,7 +277,4 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
     public void storeDataInBundle() {
         mBundle.putSerializable(BUNDLE_SAVED_DATA_KEY, mSaveDataTab1CO);
     }
-
-
-
 }

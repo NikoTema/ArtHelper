@@ -35,9 +35,6 @@ public class ActivityComOrd extends AppCompatActivity {
 
     private HashMap<String, Bundle> mBundleHashMap;
 
-    private Bundle mBundleTab1;
-    private Bundle mBundleTab2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

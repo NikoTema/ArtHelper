@@ -9,13 +9,11 @@ public class SaveDataTab1CO implements Serializable {
     public SaveSpinnerItemSlected chargeSpinner;
     public SaveSpinnerItemSlected fuseSpinner;
 
-    public SaveDataTab1CO() {}
-
-    public SaveDataTab1CO(int sysPos, int packSys, int charPos, int fusePos) {
-        spinnerSystemPosition = sysPos;
-        spinnerPacketPosition = packSys;
-        spinnerChargePosition = charPos;
-        spinnerFusePosition = fusePos;
+    public SaveDataTab1CO() {
+        spinnerSystemPosition = 0;
+        spinnerPacketPosition = 0;
+        spinnerChargePosition = 0;
+        spinnerFusePosition = 0;
     }
 
 }
