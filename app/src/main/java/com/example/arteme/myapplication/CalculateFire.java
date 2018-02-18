@@ -1,5 +1,6 @@
 package com.example.arteme.myapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
@@ -219,6 +220,11 @@ public class CalculateFire {
 
         double retVar = 0;
 
+        if(retH > 500)
+            retH = (retH - 500)*(-1);
+        if(retH == 500)
+            retH = 0;
+
         retVar = retH + hMeteo;
 
         return retVar;
@@ -380,14 +386,14 @@ public class CalculateFire {
 
         double yBull = retYbull(arrCharge, retKaret);
         int karetMeteo = retKaretMeteo(yBull);
-        double awBull = Double.parseDouble(retAwBull(karetMeteo));
-        double wBull = Double.parseDouble(retWbull(karetMeteo));
+        double awBull = Double.parseDouble(retAwBull(karetMeteo - 1));
+        double wBull = Double.parseDouble(retWbull(karetMeteo - 1));
 
         double aw = retAw(awBull, A);
 
         int awCell = (int)Math.ceil(aw);
         int vwCell = (int)Math.ceil(wBull);
-        int retWz = mSaveCharge2s3OF25.arWz[awCell][vwCell];
+        int retWz = mSaveCharge2s3OF25.arWz[awCell][vwCell - 1];// -1
 
         return retWz;
     }
@@ -396,8 +402,8 @@ public class CalculateFire {
     {
         double yBull = retYbull(arrCharge, retKaret);
         int karetMeteo = retKaretMeteo(yBull);
-        double awBull = Double.parseDouble(retAwBull(karetMeteo));
-        double wBull = Double.parseDouble(retWbull(karetMeteo));
+        double awBull = Double.parseDouble(retAwBull(karetMeteo - 1));
+        double wBull = Double.parseDouble(retWbull(karetMeteo - 1));
 
         double aw = retAw(awBull, A);
 
@@ -433,7 +439,9 @@ public class CalculateFire {
 
         double delDVo = retDelXvo(arrCharge, retKaret, dal) * Double.parseDouble(mSaveDataTab2SC.vosum);
 
-        double delDTz = 0.1 * retDelXtz(arrCharge, retKaret, dal) * (Double.parseDouble(mSaveDataTab2SC.temperCharge) - 15);
+        double temZar = Double.parseDouble(mSaveDataTab2SC.temperCharge);
+
+        double delDTz = 0.1 * retDelXtz(arrCharge, retKaret, dal) * (temZar - 15);
 
         double delDalSum = delDwx + delDh + delDTv + delDVo + delDTz;
 
@@ -471,38 +479,48 @@ public class CalculateFire {
         return null;
     }
 
-    private void readTabsFromCO() {
+    private void readTabsFromCO(Activity activity) {
         mSaveDataTab1CO = (SaveDataTab1CO) readDataFromSharedPrefs(COMORD_TAB1);
+        if( mSaveDataTab1CO == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_destruct));
         mSaveDataTab2CO = (SaveDataTab2CO) readDataFromSharedPrefs(COMORD_TAB2);
+        if (mSaveDataTab2CO == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_bp));
     }
 
-    private void readTabsFromSC() {
+    private void readTabsFromSC(Activity activity) {
         mSaveDataTab1GeneralTable = (SaveDataTab1GeneralTable) readDataFromSharedPrefs(SHOOTCOND_TAB1);
+        if(mSaveDataTab1GeneralTable == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_meteo));
         mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB2);
+            if(mSaveDataTab2SC == null)
+                ToastUtil.showErrorToast(activity, activity.getString(R.string.error_ballistic));
         mSaveDataTab3SC = (SaveDataTab3SC) readDataFromSharedPrefs(SHOOTCOND_TAB3);
+        if(mSaveDataTab3SC == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_target));
     }
 
-    public SaveDataTab2SC getSaveDataTab2SC()
+    public SaveDataTab2SC getSaveDataTab2SC(Activity activity)
     {
-        readTabsFromSC();
+        readTabsFromSC(activity);
         return mSaveDataTab2SC;
     }
 
-    public SaveDataTab1CO getSaveDataTab1CO()
+    public SaveDataTab1CO getSaveDataTab1CO(Activity activity)
     {
-        readTabsFromCO();
+        readTabsFromCO(activity);
         return mSaveDataTab1CO;
     }
 
-    public SaveDataTab2CO getSaveDataTab2CO()
+    public SaveDataTab2CO getSaveDataTab2CO(Activity activity)
     {
-        readTabsFromCO();
+        readTabsFromCO(activity);
         return mSaveDataTab2CO;
     }
 
-    public SaveDataTab3SC getSaveDataTab3SC()
+    public SaveDataTab3SC getSaveDataTab3SC(Activity activity)
     {
-        readTabsFromSC();
+        readTabsFromSC(activity);
         return mSaveDataTab3SC;
     }
 

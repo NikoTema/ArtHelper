@@ -97,7 +97,7 @@
 
     <string name="tab1_firetask_pr">Пр</string>
     <string name="tab1_firetask_ur">Ур</string>
-    <string name="tab1_firetask_di">dи</string>
+    <string name="tab1_firetask_dovi">dи</string>
     <string name="tab1_firetask_ku">КУ</string>
     <string name="tab1_firetask_shu">ШУ</string>
     <string name="tab1_firetask_op">ОП</string>
@@ -127,5 +127,10 @@
     <string name="error_Vosum">Для расчета введите Voсум заряда в Условиях стрельбы, вкладка Баллистика</string>
     <string name="error_A">Для расчета введите угол "В направлении"</string>
     <string name="error_destruct">Для расчета выберите Средства поражения в Боевом порядке"</string>
+    <string name="error_bp">Для расчета введите координаты в Боевом порядке"</string>
+    <string name="error_target">Для расчета введите координаты Цели в Условиях стрельбы"</string>
+    <string name="error_aon">Для расчета введите основное направление стельбы в Боевом порядке</string>
+    <string name="error_op">Для расчета введите координаты огневой позиции в Боевом порядке</string>
+    <string name="error_knp">Для расчета введите координаты КНП в Боевом порядке</string>
 
 </resources>

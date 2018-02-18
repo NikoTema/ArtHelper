@@ -56,7 +56,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/tab1_firetask_di"
+                android:text="@string/tab1_firetask_dovi"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:textColor="@color/textBlack"
@@ -95,7 +95,7 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
             <EditText
-                android:id="@+id/edtdi"
+                android:id="@+id/edtdovi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -217,129 +217,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/tab1_firetask_Dt"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:textColor="@color/textBlack"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtDt"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:text="@string/tab1_firetask_Di"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:textColor="@color/textBlack"
                 android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtDi"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
-                android:layout_weight="1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_tabl"
-            android:layout_weight="1"
-            android:background="@color/textBlack"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab1_firetask_At"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:textColor="@color/textBlack"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtAt"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab1_firetask_Ai"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:textColor="@color/textBlack"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtAi"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
-                android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_tabl"
-            android:layout_weight="1"
-            android:background="@color/textBlack"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab1_firetask_dt"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:textColor="@color/textBlack"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtdt"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
                 android:layout_weight="1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -349,47 +235,9 @@
                 android:textSize="18dp"
                 android:textColor="@color/textBlack"
                 android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtps"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
-                android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_tabl"
-            android:layout_weight="1"
-            android:background="@color/textBlack"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab1_firetask_Ec"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:textColor="@color/textBlack"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/colorHeaderTab"
-                android:layout_weight="1"/>
-            <EditText
-                android:id="@+id/edtec"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:inputType="none"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:background="@color/textButton"
                 android:layout_weight="1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -399,11 +247,41 @@
                 android:textSize="18dp"
                 android:textColor="@color/textBlack"
                 android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/colorHeaderTab"
                 android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_tabl"
+            android:layout_weight="1"
+            android:background="@color/textBlack"
+            android:orientation="horizontal">
             <EditText
-                android:id="@+id/edtdelx"
+                android:id="@+id/edtDic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:inputType="none"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/textButton"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/edtPs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:inputType="none"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/textButton"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/edtdelXt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -413,14 +291,13 @@
                 android:background="@color/textButton"
                 android:layout_weight="1"/>
         </LinearLayout>
-
     </LinearLayout>
 
     <Button
         android:id="@+id/btnFTCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="@string/btn_ft_calculate"

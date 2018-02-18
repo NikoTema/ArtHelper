@@ -47,7 +47,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
     ArrayAdapter<CharSequence> adapterWindSpeed;
     Spinner spinnerWindSpeed;
     int posWindSpeed;
-    private Button btnSССompose, btnSСDownload, btnSСFill, btnSCBack;
+    private Button btnSССompose, btnSСDownload, btnSСFill, btnSCBack, btnSCSave;
     private LinearLayout eathContitionsLayout, meteoSrLayout;
     private EditText editPress, editTemper, editDirection, editWindSpeed, editHeightMeteo;
     private EditText edtMeteoT02, edtMeteoT04, edtMeteoT08, edtMeteoT12, edtMeteoT16, edtMeteoT20, edtMeteoT24, edtMeteoT30, edtMeteoT40;
@@ -309,12 +309,29 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
             public void onClick(View v){
                 eathContitionsLayout.setVisibility(LinearLayout.VISIBLE);
                 meteoSrLayout.setVisibility(LinearLayout.GONE);
+            }
+        });
+
+        btnSCSave = (Button) view.findViewById(R.id.btnSaveMeteo);
+        btnSCSave.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
                 saveEditMeteoAWT();
                 storeDataInBundle();
                 ((ActivityShootCond) getActivity()).saveBundle(LAYOUT, mBundle);
+                ToastUtil.showSuccessToast(getActivity(), getString(R.string.succ_save_data));
             }
         });
-        //btnSСFill = (Button) view.findViewById(R.id.btnSСFill);
+
+        btnSСFill = (Button) view.findViewById(R.id.btnSСFill);
+        btnSСFill.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                eathContitionsLayout.setVisibility(LinearLayout.GONE);
+                meteoSrLayout.setVisibility(LinearLayout.VISIBLE);
+
+            }
+        });
     }
 
     private void saveEditMeteoAWT() {
@@ -423,9 +440,9 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         double arrDelTv[] = {0.5, 1, 1.5, 2, 3.5, 4.5};
         double retDelTv = 0;
 
-        if(realT < 0)
+        if(realT <= 0)
             retDelTv = realT - 15.9;
-        else if(realT >= 0 & realT <= 5)
+        else if(realT > 0 & realT <= 5)
             retDelTv = (realT + arrDelTv[0]) - 15.9;
         else if(realT > 5 & realT < 10)
             retDelTv = (realT + arrDelTv[0] + 0.1*(realT - 5)) - 15.9;
@@ -442,7 +459,7 @@ public class TabFragmentShootCond1 extends Fragment implements ISavedData {
         else
             retDelTv = (realT + arrDelTv[5]) - 15.9;
 
-        retDelTv = Math.round(retDelTv);
+        retDelTv = Math.round(retDelTv);// поменять
 
         if(retDelTv < 0) {
             switch (hYbull) {

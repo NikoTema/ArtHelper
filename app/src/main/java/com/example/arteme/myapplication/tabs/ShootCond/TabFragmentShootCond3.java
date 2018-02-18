@@ -102,8 +102,8 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
         int[] arrXY = {0, 0};
         double delX, delY;
 
-        delX = Dk*cos(Ac*6);
-        delY = Dk*sin(Ac*6);
+        delX = Dk*cos(Math.toRadians(Ac));
+        delY = Dk*sin(Math.toRadians(Ac));
 
         arrXY[0] = (int)delX + Xknp;
         arrXY[1] = (int)delY + Yknp;
