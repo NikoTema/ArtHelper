@@ -10,456 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79eacfdf-1055-46ee-814f-7233d7231850" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_shrink_fade_out_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_borderless_text_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_color_highlight_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_btn_checkable.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_edittext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_seek_thumb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_spinner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_thumb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_track.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_btn_colored_borderless_text_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_disable_only_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_disable_only_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_search_url_text.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_secondary_text_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_secondary_text_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_btn_checkable.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_edittext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_seek_thumb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_spinner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_switch_thumb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/abc_tint_switch_track.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/switch_thumb_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/color/switch_thumb_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_action_bar_item_background_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_btn_colored_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_edit_text_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v21/selector_button_kitkat.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v21/selector_button_lollipop.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v21/selector_button_standard.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-v23/abc_control_background_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_borderless_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_check_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_colored_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_default_mtrl_shape.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_radio_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_cab_background_internal_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_cab_background_top_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_dialog_material_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_edit_text_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_ab_back_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_clear_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_go_search_api_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_menu_overflow_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_search_api_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ic_voice_search_api_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_item_background_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_item_background_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_list_selector_background_transition_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_list_selector_background_transition_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_list_selector_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_list_selector_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_indicator_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_small_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_thumb_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_tick_mark_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_track_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_spinner_textfield_background_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_switch_thumb_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_tab_indicator_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_text_cursor_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_textfield_search_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/selector_button_kitkat.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/selector_button_lollipop.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/drawable/selector_button_standard.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_title_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_up_container.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_close_item_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_button_bar_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_dialog_title_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_expanded_menu_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_checkbox.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_icon.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_radio.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_header_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple_overlay_action_mode.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_toolbar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_search_dropdown_item_icons_2line.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_search_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_media_cancel_action.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media_narrow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_lines.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_media.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_chronometer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_time.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_item_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_multichoice_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_singlechoice_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/supertoast.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/supertoast_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/supertoast_progress_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/supertoast_progress_circle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/layout/support_simple_spinner_dropdown_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-af/values-af.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-am/values-am.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ar/values-ar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-az-rAZ/values-az-rAZ.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-b+sr+Latn/values-b+sr+Latn.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-be-rBY/values-be-rBY.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-bg/values-bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-bn-rBD/values-bn-rBD.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-bs-rBA/values-bs-rBA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ca/values-ca.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-cs/values-cs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-da/values-da.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-el/values-el.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-en-rAU/values-en-rAU.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-en-rGB/values-en-rGB.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-en-rIN/values-en-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-es-rUS/values-es-rUS.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-et-rEE/values-et-rEE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-eu-rES/values-eu-rES.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-fa/values-fa.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-fi/values-fi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-fr-rCA/values-fr-rCA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-gl-rES/values-gl-rES.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-gu-rIN/values-gu-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-h720dp-v13/values-h720dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-hdpi-v4/values-hdpi-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-hi/values-hi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-hr/values-hr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-hu/values-hu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-hy-rAM/values-hy-rAM.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-in/values-in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-is-rIS/values-is-rIS.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-iw/values-iw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ja/values-ja.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ka-rGE/values-ka-rGE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-kk-rKZ/values-kk-rKZ.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-km-rKH/values-km-rKH.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-kn-rIN/values-kn-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ky-rKG/values-ky-rKG.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-land/values-land.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-large-v4/values-large-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ldltr-v21/values-ldltr-v21.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-lo-rLA/values-lo-rLA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-lt/values-lt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-lv/values-lv.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-mk-rMK/values-mk-rMK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ml-rIN/values-ml-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-mn-rMN/values-mn-rMN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-mr-rIN/values-mr-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ms-rMY/values-ms-rMY.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-my-rMM/values-my-rMM.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-nb/values-nb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ne-rNP/values-ne-rNP.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-night-v8/values-night-v8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-nl/values-nl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-pa-rIN/values-pa-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-port/values-port.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-pt-rPT/values-pt-rPT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-pt/values-pt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ro/values-ro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-si-rLK/values-si-rLK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sk/values-sk.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sl/values-sl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sq-rAL/values-sq-rAL.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sr/values-sr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sv/values-sv.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sw/values-sw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-sw600dp-v13/values-sw600dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ta-rIN/values-ta-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-te-rIN/values-te-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-th/values-th.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-tl/values-tl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-tr/values-tr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-uk/values-uk.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-ur-rPK/values-ur-rPK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-uz-rUZ/values-uz-rUZ.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v11/values-v11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v12/values-v12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v13/values-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v14/values-v14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v17/values-v17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v18/values-v18.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v21/values-v21.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v22/values-v22.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-v23/values-v23.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-vi/values-vi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-xlarge-v4/values-xlarge-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-zh-rCN/values-zh-rCN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-zh-rHK/values-zh-rHK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-zh-rTW/values-zh-rTW.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values-zu/values-zu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/merged/androidTest/debug/values/values.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/CalculateFire.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/CalculateFire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/FireTask/TabFragmentFireTask1.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/FireTask/TabFragmentFireTask1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond4.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/tab1_shootcond.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tab1_shootcond.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/tab3_shootcond.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tab3_shootcond.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/r/androidTest/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/library/build/generated/source/r/androidTest/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/r/androidTest/debug/com/github/johnpersano/supertoasts/library/R.java" afterPath="$PROJECT_DIR$/library/build/generated/source/r/androidTest/debug/com/github/johnpersano/supertoasts/library/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/r/androidTest/debug/com/github/johnpersano/supertoasts/library/test/R.java" afterPath="$PROJECT_DIR$/library/build/generated/source/r/androidTest/debug/com/github/johnpersano/supertoasts/library/test/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/library/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/r/debug/com/github/johnpersano/supertoasts/library/R.java" afterPath="$PROJECT_DIR$/library/build/generated/source/r/debug/com/github/johnpersano/supertoasts/library/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/bundles/debug/R.txt" afterPath="$PROJECT_DIR$/library/build/intermediates/bundles/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/library/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/library/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/library/build/intermediates/incremental/packageDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/library/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/intermediates/symbols/androidTest/debug/R.txt" afterPath="$PROJECT_DIR$/library/build/intermediates/symbols/androidTest/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
     </list>
     <list id="b10eba7c-6064-4182-acd6-8a839130857f" name="New changelist" comment="" />
     <ignored path="ArtHelper.iws" />
@@ -505,36 +60,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TabFragmentFireTask1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/FireTask/TabFragmentFireTask1.java">
+      <file leaf-file-name="TabFragmentShootCond4.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3510">
-              <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
-              <folding>
-                <element signature="e#2710#7097#0" expanded="true" />
-                <element signature="e#7096#7097#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1455">
+              <caret line="120" column="28" lean-forward="false" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="97" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TabFragmentShootCond1.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java">
+      <file leaf-file-name="TabFragmentShootCond3.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="330" column="66" lean-forward="false" selection-start-line="330" selection-start-column="66" selection-end-line="330" selection-end-column="66" />
-              <folding>
-                <element signature="e#16231#16265#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="25" />
+            <state relative-caret-position="-525">
+              <caret line="94" column="70" lean-forward="false" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -3189,7 +2729,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab2_comord.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/SavedObject/SaveDataTab1Bul.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/tab3_shootcond.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab4_shootcond.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/SaveData/SavedDataTab1ShootCond.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/MainActivity.java" />
@@ -3231,13 +2770,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShotingTables/Charge2s3OF25.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/CalculateFire.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond4.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab1_shootcond.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/FireTask/TabFragmentFireTask1.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/CalculateFire.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/tab3_shootcond.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java" />
       </list>
     </option>
   </component>
@@ -3261,9 +2801,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3489,7 +3029,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518973779509" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519146788235" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3537,7 +3077,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518973779509" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519146788235" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3699,7 +3239,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518973779511" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519146788239" />
       </method>
     </configuration>
     <list size="1">
@@ -3948,7 +3488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513622837475</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Доделаны расчеты по стрельбе">
+      <created>1518973847515</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1518973847515</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3964,15 +3511,13 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.66397417" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3286119" sideWeight="0.66397417" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24794745" sideWeight="0.43214864" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35855263" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.49676898" order="10" side_tool="false" content_ui="tabs" />
@@ -3986,7 +3531,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16997167" sideWeight="0.49030694" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16997167" sideWeight="0.49030694" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3997,7 +3542,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24787535" sideWeight="0.43214864" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -4054,7 +3601,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="276" />
+      <option name="time" value="277" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -4070,20 +3617,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/ViewGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="6580" column="0" lean-forward="false" selection-start-line="6580" selection-start-column="0" selection-end-line="6580" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/widget/LinearLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="688" column="0" lean-forward="false" selection-start-line="688" selection-start-column="0" selection-end-line="688" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/os/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -4310,13 +3843,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_firetask.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.1.0/support-fragment-25.1.0-sources.jar!/android/support/v4/app/Fragment.java">
@@ -4326,29 +3859,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="104" column="22" lean-forward="false" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1_firetask.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3345">
           <caret line="223" column="48" lean-forward="false" selection-start-line="223" selection-start-column="48" selection-end-line="223" selection-end-column="48" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShotingTables/Charge2s3OF25.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4356,79 +3880,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1_comord.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1252">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab2_comord.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-492">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1_shootcond.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1_shootcond.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9945">
           <caret line="848" column="23" lean-forward="false" selection-start-line="848" selection-start-column="23" selection-end-line="848" selection-end-column="23" />
-          <folding>
-            <element signature="e#39087#39105#0" expanded="true" />
-          </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="94" />
-          <folding>
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3132#3133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/CalculateFire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="120" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="97" />
-          <folding>
-            <element signature="e#5419#5446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4436,7 +3924,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
           <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/CalculateFire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2790">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -4444,20 +3945,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3510">
           <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
-          <folding>
-            <element signature="e#2710#7097#0" expanded="true" />
-            <element signature="e#7096#7097#0" expanded="true" />
-          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab4_shootcond.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab3_shootcond.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="219" column="49" lean-forward="true" selection-start-line="219" selection-start-column="49" selection-end-line="219" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="1926">
           <caret line="330" column="66" lean-forward="false" selection-start-line="330" selection-start-column="66" selection-end-line="330" selection-end-column="66" />
-          <folding>
-            <element signature="e#16231#16265#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="120" column="28" lean-forward="false" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/arteme/myapplication/tabs/ShootCond/TabFragmentShootCond3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="94" column="70" lean-forward="false" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>

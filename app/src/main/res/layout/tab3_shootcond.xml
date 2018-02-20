@@ -207,6 +207,51 @@
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp" />
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_tab_size"
+            android:gravity="center"
+            android:text="@string/tab3_mc"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textBlack"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/editMc1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textButton"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/text_tab_size"
+                android:background="@color/textButton"
+                android:gravity="center"
+                android:text="-"/>
+            <EditText
+                android:id="@+id/editMc2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/textButton"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

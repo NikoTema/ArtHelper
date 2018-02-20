@@ -19,6 +19,7 @@ import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab3SC;
 import static com.example.arteme.myapplication.ActivityComOrd.COMORD_TAB2;
 import static com.example.arteme.myapplication.ArtHelperApplication.BUNDLE_SAVED_DATA_KEY;
 import static java.lang.Math.cos;
+import static java.lang.Math.max;
 import static java.lang.Math.sin;
 
 public class TabFragmentShootCond3 extends Fragment implements ISavedData {
@@ -26,7 +27,7 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
     public static final int LAYOUT = R.layout.tab3_shootcond;
     private View view;
     private Button btnSСPGZ;
-    private EditText edtXc, edtYc, edtHc, edtDk, edtAc1, edtAc2;
+    private EditText edtXc, edtYc, edtHc, edtDk, edtAc1, edtAc2, edtMc1, edtMc2;
     private Bundle mBundle;
     private SaveDataTab3SC mSaveDataTab3SC;
     private SaveDataTab2CO mSaveDataTab2CO;
@@ -70,6 +71,15 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
                 else if(edtAc1.getText().length() == 0 || edtAc2.getText().length() == 0)
                     ToastUtil.showErrorToast(getActivity(), getString(R.string.error_Ac));
                 else {
+
+                    double hc = 0;
+
+                    if(edtMc1.getText().length() != 0 || edtMc2.getText().length() != 0 || mSaveDataTab2CO.Hknp.isEmpty())
+                        hc = rasMc(Double.parseDouble(edtMc1.getText().toString()) + Double.parseDouble(edtMc2.getText().toString()),
+                            Double.parseDouble(edtDk.getText().toString())) + Double.parseDouble(mSaveDataTab2CO.Hknp);
+                    else if(mSaveDataTab2CO.Hknp.isEmpty())
+                        hc = Double.parseDouble(mSaveDataTab2CO.Hknp);
+
                     double ac = (Double.parseDouble(edtAc1.getText().toString()) + Double.parseDouble(edtAc2.getText().toString()) * 0.01) * 6;
                     int[] arrXYc = {0, 0};
 
@@ -82,6 +92,7 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
                             arrXYc = Pgz(Double.parseDouble(edtDk.getText().toString()), ac, Integer.parseInt(mSaveDataTab2CO.Xknp), Integer.parseInt(mSaveDataTab2CO.Yknp));
                             edtXc.setText(String.valueOf(arrXYc[0]));
                             edtYc.setText(String.valueOf(arrXYc[1]));
+                            edtHc.setText(String.valueOf(Math.round(hc)));
                         }
                     }
                 }
@@ -96,6 +107,9 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
         edtDk = (EditText) view.findViewById(R.id.editDk);
         edtAc1 = (EditText) view.findViewById(R.id.editAc1);
         edtAc2 = (EditText) view.findViewById(R.id.editAc2);
+        edtMc1 = (EditText) view.findViewById(R.id.editMc1);
+        edtMc2 = (EditText) view.findViewById(R.id.editMc2);
+
     }
 
     private int[] Pgz(double Dk, double Ac, int Xknp, int Yknp) {
@@ -109,6 +123,13 @@ public class TabFragmentShootCond3 extends Fragment implements ISavedData {
         arrXY[1] = (int)delY + Yknp;
 
         return arrXY;
+    }
+
+    private double rasMc(double Mc, double Dk){
+
+        double h = 0.001*Dk*Mc;
+
+        return h;
     }
 
     @Override

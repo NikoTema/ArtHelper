@@ -52,7 +52,7 @@ public class CalculateFire {
         getSharedPrefs();
 
         //test
-        readTabsFromCO();
+        //readTabsFromCO();
         //readTabsFromSC();
     }
 
