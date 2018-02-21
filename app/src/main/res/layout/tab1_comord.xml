@@ -116,7 +116,9 @@
             android:textSize="@dimen/text_tab_size"
             android:layout_gravity="left"
             android:text="@string/tab1_max"/>
+
         <TextView
+            android:id="@+id/txtMax"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -136,7 +138,9 @@
             android:textSize="@dimen/text_tab_size"
             android:layout_gravity="left"
             android:text="@string/tab1_ricoshet"/>
+
         <TextView
+            android:id="@+id/txtRic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -156,7 +160,9 @@
             android:textSize="@dimen/text_tab_size"
             android:layout_gravity="left"
             android:text="@string/tab1_mort"/>
+
         <TextView
+            android:id="@+id/txtMor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

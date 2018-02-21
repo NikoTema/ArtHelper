@@ -15,7 +15,7 @@
     <string name="tab1_packet">Снаряд</string>
     <string name="tab1_charge">Заряд</string>
     <string name="tab1_fuse">Взрыватель</string>
-    <string name="tab1_range">Дальности:</string>
+    <string name="tab1_range">Дальности</string>
     <string name="tab1_max">Максимальная:</string>
     <string name="tab1_ricoshet">Рикошетная:</string>
     <string name="tab1_mort">Мортирная:</string>

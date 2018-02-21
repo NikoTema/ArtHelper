@@ -13,24 +13,11 @@ import java.io.InputStream;
 public class JsonParserUtil {
 
 
-    private Context mContext;
-    private JSONObject mJSONObject;
-
-    public JsonParserUtil(Context context, String jsonFile) {
-        mContext = context;
-
-        mJSONObject = loadJSONFromAsset(jsonFile);
-
-        //test();
-    }
-
-
-
     @Nullable
-    private JSONObject loadJSONFromAsset(String jsonFile) {
+    public static JSONObject loadJSONFromAsset(Context context, String jsonFile) {
         JSONObject json = null;
         try {
-            InputStream is = mContext.getAssets().open(jsonFile);
+            InputStream is = context.getAssets().open(jsonFile);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -44,10 +31,6 @@ public class JsonParserUtil {
             e.printStackTrace();
         }
         return json;
-    }
-
-    public JSONObject getJSONObject() {
-        return mJSONObject;
     }
 
 }

@@ -41,7 +41,7 @@ public class ActivityFireTask extends AppCompatActivity {
 
         //test
 
-        CalculateFire calculateFire = new CalculateFire(getApplicationContext());
+        //CalculateFire calculateFire = new CalculateFire(getApplicationContext());
 
     }
 
@@ -64,7 +64,7 @@ public class ActivityFireTask extends AppCompatActivity {
         TabsPagerFrAdFireTask adapter = new TabsPagerFrAdFireTask(getSupportFragmentManager(), getBundleHashMap());
         viewPager.setAdapter(adapter);
 
-       // TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutFireTask);
+        // TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayoutFireTask);
         //tabLayout.setupWithViewPager(viewPager);
     }
 

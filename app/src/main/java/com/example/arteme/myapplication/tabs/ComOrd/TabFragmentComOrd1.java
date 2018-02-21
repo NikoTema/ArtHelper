@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.arteme.myapplication.ActivityComOrd;
 import com.example.arteme.myapplication.ISavedData;
@@ -36,12 +37,16 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
     private Bundle mBundle;
     private AdapterFactory mAdapterFactory;
     private ComOrdSpinnerData mComOrdSpinnerData;
+    private Destination mDestination;
 
     private ArrayAdapter<CharSequence> mAdapterSystem;
     private ArrayAdapter<CharSequence> mAdapterPacket;
     private ArrayAdapter<CharSequence> mAdapterCharge;
     private ArrayAdapter<CharSequence> mAdapterFuse;
 
+    private TextView mTextViewMax;
+    private TextView mTextViewRic;
+    private TextView mTextViewMor;
 
     @Override
     public void onResume() {
@@ -92,7 +97,10 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
         initSpinner();
         initAdapters();
+        initTxtViews();
+
         setSpinners();
+        setTextViews(mDestination);
 
         return view;
     }
@@ -110,17 +118,38 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
 
         mAdapterSystem = mAdapterFactory.getArrayAdapter(mComOrdSpinnerData.getCurrentAdapterSystemName());
 
-        String selected = mAdapterSystem.getItem(mSaveDataTab1CO.spinnerSystemPosition).toString();
-        String key = mComOrdSpinnerData.getAssociativeKey(SYSTEM_SPINNER, selected);
+        String selectedSystem = mAdapterSystem.getItem(mSaveDataTab1CO.spinnerSystemPosition).toString();
+        String key = mComOrdSpinnerData.getAssociativeKey(SYSTEM_SPINNER, selectedSystem);
         mAdapterPacket = mAdapterFactory.getArrayAdapter(key);
 
-        selected = mAdapterPacket.getItem(mSaveDataTab1CO.spinnerPacketPosition).toString();
-        key = mComOrdSpinnerData.getAssociativeKey(PACKET_SPINNER, selected);
+        String selectedPacket = mAdapterPacket.getItem(mSaveDataTab1CO.spinnerPacketPosition).toString();
+        key = mComOrdSpinnerData.getAssociativeKey(PACKET_SPINNER, selectedPacket);
         mAdapterCharge = mAdapterFactory.getArrayAdapter(key);
 
-        selected = mAdapterCharge.getItem(mSaveDataTab1CO.spinnerChargePosition).toString();
-        key = mComOrdSpinnerData.getAssociativeKey(CHARGE_SPINNER, selected);
+        String selectedCharge = mAdapterCharge.getItem(mSaveDataTab1CO.spinnerChargePosition).toString();
+        key = mComOrdSpinnerData.getAssociativeKey(CHARGE_SPINNER, selectedCharge);
         mAdapterFuse = mAdapterFactory.getArrayAdapter(key);
+
+        mDestination = mComOrdSpinnerData.getDestination(selectedSystem, selectedPacket, selectedCharge);
+    }
+
+    private void initTxtViews() {
+        mTextViewRic = (TextView) view.findViewById(R.id.txtRic);
+        mTextViewMax = (TextView) view.findViewById(R.id.txtMax);
+        mTextViewMor = (TextView) view.findViewById(R.id.txtMor);
+    }
+
+    private void setTextViews(Destination destination) {
+        if (destination != null) {
+            mTextViewRic.setText(destination.getRic());
+            mTextViewMax.setText(destination.getMax());
+            mTextViewMor.setText(destination.getMor());
+        }
+        else {
+            mTextViewRic.setText("");
+            mTextViewMax.setText("");
+            mTextViewMor.setText("");
+        }
     }
 
     AdapterView.OnItemSelectedListener mSystemSpinnerListener = new AdapterView.OnItemSelectedListener() {
@@ -179,6 +208,10 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
             mSaveDataTab1CO.spinnerFusePosition = position;
             mSaveDataTab1CO.fuseSpinner = new SaveSpinnerItemSlected(mComOrdSpinnerData.getCurrentAdapterFuseName(), id);
 
+            setTextViews(mDestination = mComOrdSpinnerData.getDestination(
+                    spinnerSystem.getSelectedItem().toString(),
+                    spinnerPacket.getSelectedItem().toString(),
+                    spinnerCharge.getSelectedItem().toString()));
         }
 
         @Override
@@ -232,6 +265,7 @@ public class TabFragmentComOrd1 extends Fragment implements ISavedData {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 spinnerFuse.setOnItemSelectedListener(mFuseSpinnerListener);
+
             }
 
             @Override

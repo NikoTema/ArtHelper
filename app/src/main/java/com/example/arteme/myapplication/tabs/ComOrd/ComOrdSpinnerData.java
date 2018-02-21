@@ -12,20 +12,20 @@ import java.util.Iterator;
 public class ComOrdSpinnerData {
 
     private final static String JSON_SPINNER_VALUES = "comord1.json";
+    private final static String JSON_DEST_VALUES = "dest.json";
 
-    private JsonParserUtil mJsonParserUtil;
-    private JSONObject mJSONObjects;
+    private JSONObject mJSONArrays;
+    private JSONObject mJSONDest;
 
     private String currentAdapterSystemName = null;
     private String currentAdapterPacketName = null;
     private String currentAdapterChargeName = null;
     private String currentAdapterFuseName = "fuse_array";
 
-
     public ComOrdSpinnerData(Context context) {
         //mContext= context;
-        mJsonParserUtil = new JsonParserUtil(context, JSON_SPINNER_VALUES);
-        mJSONObjects = mJsonParserUtil.getJSONObject();
+        mJSONArrays = JsonParserUtil.loadJSONFromAsset(context, JSON_SPINNER_VALUES);
+        mJSONDest = JsonParserUtil.loadJSONFromAsset(context, JSON_DEST_VALUES);
     }
 
     public void initCurrentSpinnerNames(String systemArrayName) {
@@ -54,7 +54,7 @@ public class ComOrdSpinnerData {
     private JSONObject getJsonObject(String key) {
         JSONObject obj = null;
         try {
-            obj = mJSONObjects.getJSONObject(key);
+            obj = mJSONArrays.getJSONObject(key);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -65,7 +65,7 @@ public class ComOrdSpinnerData {
         String result = null;
 
         try {
-            JSONObject obj = mJSONObjects.getJSONObject(nameOfObject);
+            JSONObject obj = mJSONArrays.getJSONObject(nameOfObject);
 
             result = obj.getString(key);
         } catch (JSONException e) {
@@ -78,7 +78,7 @@ public class ComOrdSpinnerData {
         String result = null;
         switch (spinnerId) {
             case TabFragmentComOrd1.SYSTEM_SPINNER:
-                currentAdapterPacketName = getValueFromJsonObject(currentAdapterSystemName,value);
+                currentAdapterPacketName = getValueFromJsonObject(currentAdapterSystemName, value);
                 result = currentAdapterPacketName;
                 break;
             case TabFragmentComOrd1.PACKET_SPINNER:
@@ -96,6 +96,30 @@ public class ComOrdSpinnerData {
             default:
                 break;
         }
+        return result;
+    }
+
+    @Nullable
+    public Destination getDestination(String sysVal, String packVal, String chargVal) {
+        Destination result = null;
+
+        String packet = getValueFromJsonObject(currentAdapterSystemName, sysVal);
+        String charge = getValueFromJsonObject(currentAdapterPacketName, packVal);
+
+        try {
+            JSONObject jsonObject = mJSONDest.getJSONObject(packet);
+            jsonObject = jsonObject.getJSONObject(charge);
+            jsonObject = jsonObject.getJSONObject(chargVal);
+
+            String ric = (String) jsonObject.get("ric");
+            String mor = (String) jsonObject.get("mor");
+            String max = (String) jsonObject.get("max");
+
+            result = new Destination(ric, max, mor);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         return result;
     }
 
