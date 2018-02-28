@@ -104,6 +104,7 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
             public void onClick(View v) {
 
                 ToastUtil.hideKeyboard(getActivity());
+                CalculateFire calculateFire = new CalculateFire(getContext());
 
                 if(mSaveDataTab1CO == null)
                     ToastUtil.showErrorToast(getActivity(), getString(R.string.error_destruct));
@@ -120,7 +121,10 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                         else if(edtApop1.length() == 0 || edtApop2.length() == 0)
                             ToastUtil.showErrorToast(getActivity(), getString(R.string.error_A));
                         else{
-                            CalculateFire calculateFire = new CalculateFire(getContext());
+
+                           // mSaveDataTab1GeneralTable = calculateFire.getSaveDataTab1SC(getActivity());
+                           // mSaveDataTab2SC = calculateFire.getSaveDataTab2SC(getActivity());
+                            mSaveDataTab2CO = calculateFire.getSaveDataTab2CO(getActivity());
 
                             double workSystem[][] = new double[][]{};
                             workSystem = calculateFire.arrSystemCharge(calculateFire.getSaveDataTab1CO(getActivity()).spinnerSystemPosition,
@@ -135,8 +139,9 @@ public class TabFragmentShootCond4 extends Fragment implements ISavedData{
                             for (int i = 0; i < 7; i++) {
 
                                 int karetDal = calculateFire.retDalKaret(karet, workSystem);
-                                double delDsum = calculateFire.retDeldsum(workSystem, karetDal, karet, aras);
-                                double delDalSum = calculateFire.retdelDalSum(workSystem, karetDal, karet, aras);
+                                double delDsum = calculateFire.retDeldsum(workSystem, karetDal, karet, aras, mSaveDataTab1GeneralTable);
+                                double delDalSum = calculateFire.retdelDalSum(workSystem, karetDal, karet, aras, mSaveDataTab1GeneralTable,
+                                        mSaveDataTab2SC, mSaveDataTab2CO);
                                 String formattedDouble = new DecimalFormat("#0.00").format(delDsum);
                                 String doubleDal = new DecimalFormat("#0").format(delDalSum);
 

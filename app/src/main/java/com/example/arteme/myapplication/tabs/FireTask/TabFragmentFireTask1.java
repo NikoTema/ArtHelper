@@ -14,6 +14,7 @@ import com.example.arteme.myapplication.ISavedData;
 import com.example.arteme.myapplication.R;
 import com.example.arteme.myapplication.ToastUtil;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1CO;
+import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1GeneralTable;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab1Meteo;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2CO;
 import com.example.arteme.myapplication.tabs.SavedObject.SaveDataTab2SC;
@@ -33,6 +34,7 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
     private EditText edtPR, edtUr, edtDovi, edtKu, edtShu, edtOP, edtDi, edtPS, edtdelXtis;
 
     private SaveDataTab1Meteo mSaveDataTab1Meteo;
+    private SaveDataTab1GeneralTable mSaveDataTab1GeneralTable;
     private SaveDataTab2SC mSaveDataTab2SC;
     private SaveDataTab3SC mSaveDataTab3SC;
 
@@ -80,39 +82,46 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
                 if(checkFire(calculateFire)) {
 
                     double workSystem[][] = new double[][]{};
-                    workSystem = calculateFire.arrSystemCharge(calculateFire.getSaveDataTab1CO(getActivity()).spinnerSystemPosition,
-                            calculateFire.getSaveDataTab1CO(getActivity()).spinnerPacketPosition,
-                            calculateFire.getSaveDataTab1CO(getActivity()).spinnerChargePosition);
+                    mSaveDataTab1CO = calculateFire.getSaveDataTab1CO(getActivity());
+                    mSaveDataTab2CO = calculateFire.getSaveDataTab2CO(getActivity());
+                    mSaveDataTab2SC = calculateFire.getSaveDataTab2SC(getActivity());
+                    mSaveDataTab3SC = calculateFire.getSaveDataTab3SC(getActivity());
+                    mSaveDataTab1GeneralTable = calculateFire.getSaveDataTab1SC(getActivity());
 
-                    double delXcOp = Double.parseDouble(calculateFire.getSaveDataTab3SC(getActivity()).Xc) -
-                            Double.parseDouble(calculateFire.getSaveDataTab2CO(getActivity()).Xop);
-                    double delYcOp = Double.parseDouble(calculateFire.getSaveDataTab3SC(getActivity()).Yc) -
-                            Double.parseDouble(calculateFire.getSaveDataTab2CO(getActivity()).Yop);
+                    workSystem = calculateFire.arrSystemCharge(mSaveDataTab1CO.spinnerSystemPosition,
+                            mSaveDataTab1CO.spinnerPacketPosition,
+                            mSaveDataTab1CO.spinnerChargePosition);
+
+                    double delXcOp = Double.parseDouble(mSaveDataTab3SC.Xc) -
+                            Double.parseDouble(mSaveDataTab2CO.Xop);
+                    double delYcOp = Double.parseDouble(mSaveDataTab3SC.Yc) -
+                            Double.parseDouble(mSaveDataTab2CO.Yop);
 
                     double dalTopo = DalInDel(delXcOp, delYcOp);    // Дальность топографическая
                     int karetDal = calculateFire.retDalKaret(dalTopo, workSystem);
 
                     double dirOpC = dirRumb(delXcOp, delYcOp);  // Дирикционный угол с ОП на Ц
-                    double aon = Integer.valueOf(calculateFire.getSaveDataTab2CO(getActivity()).Aon1) +
-                            Integer.valueOf(calculateFire.getSaveDataTab2CO(getActivity()).Aon2) * 0.01;
+                    double aon = Integer.valueOf(mSaveDataTab2CO.Aon1) +
+                            Integer.valueOf(mSaveDataTab2CO.Aon2) * 0.01;
                     double dovtc = dirOpC - aon;    //Доворот топографический по цели
-                    double dovmet = calculateFire.retDeldsum(workSystem, karetDal, (int) dalTopo, aon);
+                    double dovmet = calculateFire.retDeldsum(workSystem, karetDal, (int) dalTopo, aon,
+                            mSaveDataTab1GeneralTable);
                     double dovic = dovtc + dovmet * 0.01;  // Доворот исчисленный
                     edtDovi.setText(roundThous(dovic * 0.01));
 
                     double delDalSum = calculateFire.retdelDalSum(workSystem, karetDal,
-                            (int) dalTopo, Integer.valueOf(calculateFire.getSaveDataTab3SC(getActivity()).Ac1) +
-                                    Integer.valueOf(calculateFire.getSaveDataTab3SC(getActivity()).Ac2) * 0.01);
+                            (int) dalTopo, Integer.valueOf(mSaveDataTab3SC.Ac1) +
+                                    Integer.valueOf(mSaveDataTab3SC.Ac2) * 0.01, mSaveDataTab1GeneralTable, mSaveDataTab2SC, mSaveDataTab2CO);
 
                     int dalic = (int) dalTopo + (int) delDalSum; // Дальность исчисленная по цели
                     edtDi.setText(String.valueOf(dalic));
 
                     double Ur = 30; // Уровень
 
-                    if (!calculateFire.getSaveDataTab3SC(getActivity()).Hc.isEmpty() ||
-                            !calculateFire.getSaveDataTab2CO(getActivity()).Hop.isEmpty())
-                        Ur = Ur + (((Double.parseDouble(calculateFire.getSaveDataTab3SC(getActivity()).Hc) -
-                                Double.parseDouble(calculateFire.getSaveDataTab2CO(getActivity()).Hop)) / (0.001 * dalTopo)) * (0.95 * 0.01));
+                    if (!mSaveDataTab3SC.Hc.isEmpty() ||
+                            !mSaveDataTab2CO.Hop.isEmpty())
+                        Ur = Ur + (((Double.parseDouble(mSaveDataTab3SC.Hc) -
+                                Double.parseDouble(mSaveDataTab2CO.Hop)) / (0.001 * dalTopo)) * (0.95 * 0.01));
                     // Уровень
                     edtUr.setText(roundThous(Ur));
 
@@ -123,10 +132,10 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
                     double xtis = calculateFire.retDelXtis(workSystem, karetDal, dalic); // Xтыс
                     edtdelXtis.setText(Double.toString(Math.round(xtis)));
 
-                    double delXknpC = Double.parseDouble(calculateFire.getSaveDataTab3SC(getActivity()).Xc) -
-                            Double.parseDouble(calculateFire.getSaveDataTab2CO(getActivity()).Xknp);
-                    double delYknpC = Double.parseDouble(calculateFire.getSaveDataTab3SC(getActivity()).Yc) -
-                            Double.parseDouble(calculateFire.getSaveDataTab2CO(getActivity()).Yknp);
+                    double delXknpC = Double.parseDouble(mSaveDataTab3SC.Xc) -
+                            Double.parseDouble(mSaveDataTab2CO.Xknp);
+                    double delYknpC = Double.parseDouble(mSaveDataTab3SC.Yc) -
+                            Double.parseDouble(mSaveDataTab2CO.Yknp);
 
                     double dalKom = DalInDel(delXknpC, delYknpC);
                     double dirKnpC = dirRumb(delXknpC, delYknpC);  // Дирикционный угол с КНП на Ц
@@ -219,44 +228,20 @@ public class TabFragmentFireTask1 extends Fragment implements ISavedData {
 
     public boolean checkFire(CalculateFire calculateFire)
     {
-        /*if(calculateFire.getSaveDataTab3SC(getActivity()).Xc == null ||
-                calculateFire.getSaveDataTab3SC(getActivity()).Yc == null)
+        boolean retVar = true;
 
-        {
-            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_target));
-            return false;
-        }
+        if(calculateFire.getSaveDataTab1CO(getActivity()) == null)
+            retVar =  false;
+        else if(calculateFire.getSaveDataTab2SC(getActivity()) == null)
+            retVar = false;
+        else if(calculateFire.getSaveDataTab3SC(getActivity()) == null)
+            retVar =  false;
+        else if(calculateFire.getSaveDataTab2CO(getActivity()) == null)
+            retVar =  false;
+        else if(calculateFire.getSaveDataTab1SC(getActivity()) == null)
+            retVar = false;
 
-        if(calculateFire.getSaveDataTab2CO(getActivity()).Xop.isEmpty() ||
-                calculateFire.getSaveDataTab2CO(getActivity()).Yop.isEmpty() )
-        {
-            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_op));
-            return false;
-        }
-
-        if(calculateFire.getSaveDataTab2CO(getActivity()).Xknp.isEmpty() ||
-                calculateFire.getSaveDataTab2CO(getActivity()).Yknp.isEmpty() )
-        {
-            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_knp));
-            return false;
-        }
-
-        if(calculateFire.getSaveDataTab2CO(getActivity()).Aon1.isEmpty() ||
-                calculateFire.getSaveDataTab2CO(getActivity()).Aon2.isEmpty())
-        {
-            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_aon));
-            return false;
-        }
-
-        if(calculateFire.getSaveDataTab3SC(getActivity()).Ac1.isEmpty() ||
-                calculateFire.getSaveDataTab3SC(getActivity()).Ac2.isEmpty())
-        {
-            ToastUtil.showErrorToast(getActivity(), getString(R.string.error_A));
-            return false;
-        }*/
-
-
-        return true;
+        return retVar;
     }
 
 }

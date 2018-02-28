@@ -40,6 +40,9 @@ public class CalculateFire {
 
     private Context mContext;
     private SharedPreferences mSharedPreferences;
+    private SaveDataTab1GeneralTable saveDataGeneral;
+    private SaveDataTab2SC saveTab2SC;
+    private SaveDataTab2CO saveTab2CO;
 
     public CalculateFire(Context context)
     {
@@ -208,19 +211,21 @@ public class CalculateFire {
         return retKaret;
     }
 
-    public double retDelH()
+    public double retDelH(SaveDataTab1GeneralTable saveDataGeneral, SaveDataTab2CO saveTab2CO)
     {
-        int retH = Integer.parseInt(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.delH);
+        this.saveDataGeneral = saveDataGeneral;
+        this.saveTab2CO = saveTab2CO;
+        int retH = Integer.parseInt(this.saveDataGeneral.mSaveDataTab1SmallTable.delH);
         double hop;
-        if(mSaveDataTab2CO == null)
+        if(this.saveTab2CO == null)
             hop = 0;
         else{
-            if(mSaveDataTab2CO.Hop.isEmpty())
+            if(this.saveTab2CO.Hop.isEmpty())
                 hop = 0;
             else
-                hop = Double.parseDouble(mSaveDataTab2CO.Hop);
+                hop = Double.parseDouble(this.saveTab2CO.Hop);
         }
-        double hMeteo = (Double.parseDouble(mSaveDataTab1GeneralTable.mSaveDataTab1SmallTable.meteO) - hop)/10;
+        double hMeteo = (Double.parseDouble(this.saveDataGeneral.mSaveDataTab1SmallTable.meteO) - hop)/10;
 
         double retVar = 0;
 
@@ -262,108 +267,112 @@ public class CalculateFire {
         return retKaretMeteo;
     }
 
-    public String retAwBull(int retKaretMeteo)
+    public String retAwBull(int retKaretMeteo, SaveDataTab1GeneralTable saveDataGeneral)
     {
+        this.saveDataGeneral = saveDataGeneral;
         String retAw = "";
         switch (retKaretMeteo){
             case 0:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw02;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw02;
                 break;
             case 1:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw04;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw04;
                 break;
             case 2:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw08;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw08;
                 break;
             case 3:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw12;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw12;
                 break;
             case 4:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw16;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw16;
                 break;
             case 5:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw20;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw20;
                 break;
             case 6:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw24;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw24;
                 break;
             case 7:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw30;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw30;
                 break;
             case 8:
-                retAw = mSaveDataTab1GeneralTable.mSaveDataTab1BulAw.meteoAw40;
+                retAw = this.saveDataGeneral.mSaveDataTab1BulAw.meteoAw40;
                 break;
         }
 
         return retAw;
     }
 
-    public String retWbull(int retKaretMeteo)
+    public String retWbull(int retKaretMeteo, SaveDataTab1GeneralTable saveDataGeneral)
     {
+        this.saveDataGeneral = saveDataGeneral;
         String retW = "";
         switch (retKaretMeteo){
             case 0:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW02;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW02;
                 break;
             case 1:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW04;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW04;
                 break;
             case 2:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW08;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW08;
                 break;
             case 3:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW12;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW12;
                 break;
             case 4:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW16;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW16;
                 break;
             case 5:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW20;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW20;
                 break;
             case 6:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW24;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW24;
                 break;
             case 7:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW30;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW30;
                 break;
             case 8:
-                retW = mSaveDataTab1GeneralTable.mSaveDataTab1BulW.meteoW40;
+                retW = this.saveDataGeneral.mSaveDataTab1BulW.meteoW40;
                 break;
         }
 
         return retW;
     }
 
-    public String retTbull(int retKaretMeteo)
+    public String retTbull(int retKaretMeteo, SaveDataTab1GeneralTable saveDataGeneral)
     {
+        this.saveDataGeneral= saveDataGeneral;
+
         String retT = "";
         switch (retKaretMeteo){
             case 0:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT02;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT02;
                 break;
             case 1:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT04;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT04;
                 break;
             case 2:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT08;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT08;
                 break;
             case 3:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT12;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT12;
                 break;
             case 4:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT16;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT16;
                 break;
             case 5:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT20;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT20;
                 break;
             case 6:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT24;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT24;
                 break;
             case 7:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT30;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT30;
                 break;
             case 8:
-                retT = mSaveDataTab1GeneralTable.mSaveDataTab1BulTem.meteoT40;
+                retT = this.saveDataGeneral.mSaveDataTab1BulTem.meteoT40;
                 break;
         }
 
@@ -385,13 +394,14 @@ public class CalculateFire {
         return aw;
     }
 
-    public int retWz(double arrCharge[][], int retKaret, double A)
+    public int retWz(double arrCharge[][], int retKaret, double A, SaveDataTab1GeneralTable saveDataGeneral)
     {
 
+        this.saveDataGeneral = saveDataGeneral;
         double yBull = retYbull(arrCharge, retKaret);
         int karetMeteo = retKaretMeteo(yBull);
-        double awBull = Double.parseDouble(retAwBull(karetMeteo - 1));
-        double wBull = Double.parseDouble(retWbull(karetMeteo - 1));
+        double awBull = Double.parseDouble(retAwBull(karetMeteo, this.saveDataGeneral));
+        double wBull = Double.parseDouble(retWbull(karetMeteo, this.saveDataGeneral));
 
         double aw = retAw(awBull, A);
 
@@ -402,12 +412,13 @@ public class CalculateFire {
         return retWz;
     }
 
-    public int retWx(double arrCharge[][], int retKaret, double A)
+    public int retWx(double arrCharge[][], int retKaret, double A, SaveDataTab1GeneralTable saveDataGeneral)
     {
+        this.saveDataGeneral = saveDataGeneral;
         double yBull = retYbull(arrCharge, retKaret);
         int karetMeteo = retKaretMeteo(yBull);
-        double awBull = Double.parseDouble(retAwBull(karetMeteo - 1));
-        double wBull = Double.parseDouble(retWbull(karetMeteo - 1));
+        double awBull = Double.parseDouble(retAwBull(karetMeteo, this.saveDataGeneral));
+        double wBull = Double.parseDouble(retWbull(karetMeteo, this.saveDataGeneral));
 
         double aw = retAw(awBull, A);
 
@@ -418,12 +429,14 @@ public class CalculateFire {
         return retWx;
     }
 
-    public  double retDeldsum(double arrCharge[][], int retKaret, int dal, double A)
+    public  double retDeldsum(double arrCharge[][], int retKaret, int dal, double A,
+                              SaveDataTab1GeneralTable saveDataGeneral)
     {
+        this.saveDataGeneral = saveDataGeneral;
         double delZw = retDelZw(arrCharge, retKaret, dal);
         double Z = retZ(arrCharge, retKaret, dal);
 
-        int wz = retWz(arrCharge, retKaret, A);
+        int wz = retWz(arrCharge, retKaret, A, this.saveDataGeneral);
         double delDwz = (0.1 * delZw * wz);
         double delDsum = Z + delDwz;
 
@@ -432,18 +445,23 @@ public class CalculateFire {
 
 
 
-    public double retdelDalSum(double arrCharge[][], int retKaret, int dal, double A)
+    public double retdelDalSum(double arrCharge[][], int retKaret, int dal, double A, SaveDataTab1GeneralTable saveDataGeneral,
+                               SaveDataTab2SC saveTab2SC, SaveDataTab2CO saveTab2CO)
     {
-        double delDwx = 0.1 * retDelXw(arrCharge, retKaret, dal) * retWx(arrCharge, retKaret, A);
+        this.saveDataGeneral = saveDataGeneral;
+        this.saveTab2SC = saveTab2SC;
+        this.saveTab2CO = saveTab2CO;
 
-        double delDh = 0.1 * retDelXh(arrCharge, retKaret, dal) * retDelH();
+        double delDwx = 0.1 * retDelXw(arrCharge, retKaret, dal) * retWx(arrCharge, retKaret, A, this.saveDataGeneral);
+
+        double delDh = 0.1 * retDelXh(arrCharge, retKaret, dal) * retDelH(this.saveDataGeneral, this.saveTab2CO);
 
         double test = retYbull(arrCharge, retKaret);
-        double delDTv = 0.1 * retDelXtv(arrCharge, retKaret, dal) * Double.parseDouble(retTbull(retKaretMeteo(test)));
+        double delDTv = 0.1 * retDelXtv(arrCharge, retKaret, dal) * Double.parseDouble(retTbull(retKaretMeteo(test), this.saveDataGeneral));
 
-        double delDVo = retDelXvo(arrCharge, retKaret, dal) * Double.parseDouble(mSaveDataTab2SC.vosum);
+        double delDVo = retDelXvo(arrCharge, retKaret, dal) * Double.parseDouble(this.saveTab2SC.vosum);
 
-        double temZar = Double.parseDouble(mSaveDataTab2SC.temperCharge);
+        double temZar = Double.parseDouble(this.saveTab2SC.temperCharge);
 
         double delDTz = 0.1 * retDelXtz(arrCharge, retKaret, dal) * (temZar - 15);
 
@@ -483,49 +501,46 @@ public class CalculateFire {
         return null;
     }
 
-    private void readTabsFromCO(Activity activity) {
-        mSaveDataTab1CO = (SaveDataTab1CO) readDataFromSharedPrefs(COMORD_TAB1);
-        if( mSaveDataTab1CO == null)
-            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_destruct));
-        mSaveDataTab2CO = (SaveDataTab2CO) readDataFromSharedPrefs(COMORD_TAB2);
-        if (mSaveDataTab2CO == null)
-            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_bp));
-    }
-
-    private void readTabsFromSC(Activity activity) {
+    public SaveDataTab1GeneralTable getSaveDataTab1SC(Activity activity)
+    {
         mSaveDataTab1GeneralTable = (SaveDataTab1GeneralTable) readDataFromSharedPrefs(SHOOTCOND_TAB1);
         if(mSaveDataTab1GeneralTable == null)
             ToastUtil.showErrorToast(activity, activity.getString(R.string.error_meteo));
-        mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB2);
-            if(mSaveDataTab2SC == null)
-                ToastUtil.showErrorToast(activity, activity.getString(R.string.error_ballistic));
-        mSaveDataTab3SC = (SaveDataTab3SC) readDataFromSharedPrefs(SHOOTCOND_TAB3);
-        if(mSaveDataTab3SC == null)
-            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_target));
+        return mSaveDataTab1GeneralTable;
     }
 
     public SaveDataTab2SC getSaveDataTab2SC(Activity activity)
     {
-        readTabsFromSC(activity);
+        mSaveDataTab2SC = (SaveDataTab2SC) readDataFromSharedPrefs(SHOOTCOND_TAB2);
+        if(mSaveDataTab2SC == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_ballistic));
         return mSaveDataTab2SC;
+    }
+
+    public SaveDataTab3SC getSaveDataTab3SC(Activity activity)
+    {
+        mSaveDataTab3SC = (SaveDataTab3SC) readDataFromSharedPrefs(SHOOTCOND_TAB3);
+        if(mSaveDataTab3SC == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_target));
+        return mSaveDataTab3SC;
     }
 
     public SaveDataTab1CO getSaveDataTab1CO(Activity activity)
     {
-        readTabsFromCO(activity);
+        mSaveDataTab1CO = (SaveDataTab1CO) readDataFromSharedPrefs(COMORD_TAB1);
+        if( mSaveDataTab1CO == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_destruct));
         return mSaveDataTab1CO;
     }
 
     public SaveDataTab2CO getSaveDataTab2CO(Activity activity)
     {
-        readTabsFromCO(activity);
+        mSaveDataTab2CO = (SaveDataTab2CO) readDataFromSharedPrefs(COMORD_TAB2);
+        if (mSaveDataTab2CO == null)
+            ToastUtil.showErrorToast(activity, activity.getString(R.string.error_bp));
         return mSaveDataTab2CO;
     }
 
-    public SaveDataTab3SC getSaveDataTab3SC(Activity activity)
-    {
-        readTabsFromSC(activity);
-        return mSaveDataTab3SC;
-    }
+
 
 }
